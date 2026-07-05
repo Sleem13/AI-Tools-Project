@@ -178,4 +178,20 @@ cython_debug/
 #  exclude from AI features like autocomplete and code analysis. Recommended for sensitive data
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
-.cursorindexingignore
+.cursorindexingignored
+# =========================
+# Custom Project Rules
+# =========================
+
+# Ignore all raw, processed, and split datasets
+data/
+
+# Ignore custom models/weights
+models/weights/*.pt
+models/weights/*.pth
+models/weights/*.h5
+models/weights/*.weights
+
+# Ignore generated reports
+reports/*.pdf
+reports/*.html
