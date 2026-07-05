@@ -1,0 +1,3852 @@
+{
+  "generated_by": "Dataset Inspector",
+  "datasets": {
+    "dataset_A": {
+      "total_images": 464,
+      "total_annotations": 462,
+      "total_issues": 241,
+      "corrupted_images": [],
+      "unreadable_images": [],
+      "zero_byte_files": [],
+      "unsupported_extensions": [],
+      "missing_labels": [
+        {
+          "file": "data\\raw\\dataset_A\\a8b8f6be161a4bdcabcc947b3e72f8b2.jpg",
+          "message": "Image has no corresponding annotation file",
+          "details": null
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Capture.JPG",
+          "message": "Image has no corresponding annotation file",
+          "details": null
+        }
+      ],
+      "orphan_labels": [],
+      "empty_annotations": [],
+      "invalid_bboxes": [],
+      "duplicate_filenames": [],
+      "duplicate_images": [],
+      "near_duplicates": [
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107210304.jpg",
+          "message": "Near-duplicate of frame0.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107210304.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame0.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107210333.jpg",
+          "message": "Near-duplicate of frame1.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107210333.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame1.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107210338.jpg",
+          "message": "Near-duplicate of frame2.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107210338.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame2.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107210347.jpg",
+          "message": "Near-duplicate of frame3.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107210347.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame3.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107210349.jpg",
+          "message": "Near-duplicate of frame4.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107210349.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame4.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107210403.jpg",
+          "message": "Near-duplicate of frame5.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107210403.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame5.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107210405.jpg",
+          "message": "Near-duplicate of frame6.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107210405.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame6.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107210407.jpg",
+          "message": "Near-duplicate of frame7.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107210407.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame7.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107210411.jpg",
+          "message": "Near-duplicate of frame8.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107210411.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame8.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107210417.jpg",
+          "message": "Near-duplicate of frame9.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107210417.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame9.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107210433.jpg",
+          "message": "Near-duplicate of frame10.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107210433.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame10.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107210442.jpg",
+          "message": "Near-duplicate of frame11.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107210442.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame11.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107210444.jpg",
+          "message": "Near-duplicate of frame12.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107210444.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame12.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107210529.jpg",
+          "message": "Near-duplicate of frame13.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107210529.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame13.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107210548.jpg",
+          "message": "Near-duplicate of frame14.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107210548.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame14.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107210552.jpg",
+          "message": "Near-duplicate of frame15.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107210552.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame15.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107210559.jpg",
+          "message": "Near-duplicate of frame16.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107210559.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame16.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107210600.jpg",
+          "message": "Near-duplicate of frame17.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107210600.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame17.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107210603.jpg",
+          "message": "Near-duplicate of frame18.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107210603.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame18.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107210614.jpg",
+          "message": "Near-duplicate of frame19.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107210614.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame19.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107210627.jpg",
+          "message": "Near-duplicate of frame20.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107210627.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame20.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107210628.jpg",
+          "message": "Near-duplicate of frame21.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107210628.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame21.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107210643.jpg",
+          "message": "Near-duplicate of frame22.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107210643.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame22.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107210649.jpg",
+          "message": "Near-duplicate of frame23.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107210649.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame23.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107210651.jpg",
+          "message": "Near-duplicate of frame24.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107210651.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame24.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221107211402.jpg",
+          "message": "Near-duplicate of frame25.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221107211402.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame25.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109100804.jpg",
+          "message": "Near-duplicate of frame26.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109100804.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame26.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109100805.jpg",
+          "message": "Near-duplicate of frame27.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109100805.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame27.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109100809.jpg",
+          "message": "Near-duplicate of frame28.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109100809.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame28.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109100815.jpg",
+          "message": "Near-duplicate of frame29.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109100815.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame29.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109100819.jpg",
+          "message": "Near-duplicate of frame30.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109100819.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame30.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109100905.jpg",
+          "message": "Near-duplicate of frame31.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109100905.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame31.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109100908.jpg",
+          "message": "Near-duplicate of frame32.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109100908.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame32.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109100924.jpg",
+          "message": "Near-duplicate of frame33.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109100924.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame33.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109100940.jpg",
+          "message": "Near-duplicate of frame34.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109100940.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame34.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109100941.jpg",
+          "message": "Near-duplicate of frame35.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109100941.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame35.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109100942.jpg",
+          "message": "Near-duplicate of frame36.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109100942.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame36.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101000.jpg",
+          "message": "Near-duplicate of frame37.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101000.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame37.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101014.jpg",
+          "message": "Near-duplicate of frame38.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101014.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame38.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101015.jpg",
+          "message": "Near-duplicate of frame39.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101015.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame39.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101024.jpg",
+          "message": "Near-duplicate of frame40.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101024.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame40.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101039.jpg",
+          "message": "Near-duplicate of frame41.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101039.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame41.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101041.jpg",
+          "message": "Near-duplicate of frame42.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101041.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame42.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101042.jpg",
+          "message": "Near-duplicate of frame43.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101042.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame43.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101044.jpg",
+          "message": "Near-duplicate of frame44.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101044.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame44.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101046.jpg",
+          "message": "Near-duplicate of frame45.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101046.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame45.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101049.jpg",
+          "message": "Near-duplicate of frame46.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101049.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame46.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101050.jpg",
+          "message": "Near-duplicate of frame47.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101050.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame47.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101139.jpg",
+          "message": "Near-duplicate of frame48.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101139.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame48.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101152.jpg",
+          "message": "Near-duplicate of frame49.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101152.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame49.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101210.jpg",
+          "message": "Near-duplicate of frame50.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101210.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame50.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101219.jpg",
+          "message": "Near-duplicate of frame51.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101219.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame51.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101220.jpg",
+          "message": "Near-duplicate of frame52.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101220.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame52.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101225.jpg",
+          "message": "Near-duplicate of frame53.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101225.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame53.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101229.jpg",
+          "message": "Near-duplicate of frame54.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101229.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame54.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101617.jpg",
+          "message": "Near-duplicate of frame55.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101617.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame55.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101621.jpg",
+          "message": "Near-duplicate of frame56.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101621.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame56.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101623.jpg",
+          "message": "Near-duplicate of frame57.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101623.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame57.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101624.jpg",
+          "message": "Near-duplicate of frame58.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101624.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame58.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101625.jpg",
+          "message": "Near-duplicate of frame59.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101625.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame59.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101626.jpg",
+          "message": "Near-duplicate of frame60.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101626.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame60.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101628.jpg",
+          "message": "Near-duplicate of frame61.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101628.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame61.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101629.jpg",
+          "message": "Near-duplicate of frame62.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101629.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame62.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101632.jpg",
+          "message": "Near-duplicate of frame63.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101632.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame63.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101633.jpg",
+          "message": "Near-duplicate of frame64.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101633.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame64.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101634.jpg",
+          "message": "Near-duplicate of frame65.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101634.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame65.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101635.jpg",
+          "message": "Near-duplicate of frame66.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101635.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame66.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101637.jpg",
+          "message": "Near-duplicate of frame67.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101637.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame67.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101638.jpg",
+          "message": "Near-duplicate of frame68.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101638.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame68.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101640.jpg",
+          "message": "Near-duplicate of frame69.jpg (Hamming distance: 4)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101640.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame69.jpg",
+            "hamming_distance": 4
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101643.jpg",
+          "message": "Near-duplicate of frame70.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101643.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame70.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101643_01.jpg",
+          "message": "Near-duplicate of frame71.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101643_01.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame71.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101645.jpg",
+          "message": "Near-duplicate of frame72.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101645.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame72.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101647.jpg",
+          "message": "Near-duplicate of frame73.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101647.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame73.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101649.jpg",
+          "message": "Near-duplicate of frame74.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101649.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame74.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101650.jpg",
+          "message": "Near-duplicate of frame75.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101650.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame75.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101650_01.jpg",
+          "message": "Near-duplicate of frame76.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101650_01.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame76.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101652.jpg",
+          "message": "Near-duplicate of frame77.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101652.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame77.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101653.jpg",
+          "message": "Near-duplicate of frame78.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101653.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame78.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101654.jpg",
+          "message": "Near-duplicate of frame79.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101654.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame79.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101655.jpg",
+          "message": "Near-duplicate of frame80.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101655.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame80.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101656.jpg",
+          "message": "Near-duplicate of frame81.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101656.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame81.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101657.jpg",
+          "message": "Near-duplicate of frame82.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101657.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame82.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101659.jpg",
+          "message": "Near-duplicate of frame83.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101659.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame83.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101700.jpg",
+          "message": "Near-duplicate of frame84.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101700.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame84.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109101715.jpg",
+          "message": "Near-duplicate of frame85.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109101715.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame85.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109120204.jpg",
+          "message": "Near-duplicate of frame86.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109120204.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame86.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109120207.jpg",
+          "message": "Near-duplicate of frame87.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109120207.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame87.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109120213.jpg",
+          "message": "Near-duplicate of IMG20221109120214.jpg (Hamming distance: 6)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109120213.jpg",
+            "file2": "data\\raw\\dataset_A\\Pics\\IMG20221109120214.jpg",
+            "hamming_distance": 6
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109120213.jpg",
+          "message": "Near-duplicate of frame88.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109120213.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame88.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109120213.jpg",
+          "message": "Near-duplicate of frame89.jpg (Hamming distance: 6)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109120213.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame89.jpg",
+            "hamming_distance": 6
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109120214.jpg",
+          "message": "Near-duplicate of frame88.jpg (Hamming distance: 8)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109120214.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame88.jpg",
+            "hamming_distance": 8
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109120214.jpg",
+          "message": "Near-duplicate of frame89.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109120214.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame89.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109120219.jpg",
+          "message": "Near-duplicate of frame90.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109120219.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame90.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109120220.jpg",
+          "message": "Near-duplicate of frame91.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109120220.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame91.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109120222.jpg",
+          "message": "Near-duplicate of frame92.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109120222.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame92.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109120227.jpg",
+          "message": "Near-duplicate of frame93.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109120227.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame93.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109120243.jpg",
+          "message": "Near-duplicate of frame94.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109120243.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame94.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109120246.jpg",
+          "message": "Near-duplicate of frame95.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109120246.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame95.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109120248.jpg",
+          "message": "Near-duplicate of frame96.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109120248.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame96.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109120250.jpg",
+          "message": "Near-duplicate of frame97.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109120250.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame97.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109120255.jpg",
+          "message": "Near-duplicate of frame98.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109120255.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame98.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109120257.jpg",
+          "message": "Near-duplicate of frame99.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109120257.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame99.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109152520.jpg",
+          "message": "Near-duplicate of frame100.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109152520.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame100.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109152524.jpg",
+          "message": "Near-duplicate of frame101.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109152524.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame101.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109152528.jpg",
+          "message": "Near-duplicate of frame102.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109152528.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame102.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109152920.jpg",
+          "message": "Near-duplicate of frame103.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109152920.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame103.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109152921.jpg",
+          "message": "Near-duplicate of frame104.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109152921.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame104.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153018.jpg",
+          "message": "Near-duplicate of frame105.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153018.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame105.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153019.jpg",
+          "message": "Near-duplicate of frame106.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153019.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame106.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153113.jpg",
+          "message": "Near-duplicate of frame107.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153113.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame107.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153114.jpg",
+          "message": "Near-duplicate of frame108.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153114.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame108.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153115.jpg",
+          "message": "Near-duplicate of frame109.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153115.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame109.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153116.jpg",
+          "message": "Near-duplicate of frame110.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153116.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame110.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153117.jpg",
+          "message": "Near-duplicate of frame111.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153117.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame111.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153118.jpg",
+          "message": "Near-duplicate of frame112.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153118.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame112.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153122.jpg",
+          "message": "Near-duplicate of frame113.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153122.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame113.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153124.jpg",
+          "message": "Near-duplicate of frame114.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153124.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame114.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153126.jpg",
+          "message": "Near-duplicate of frame115.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153126.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame115.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153127.jpg",
+          "message": "Near-duplicate of frame116.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153127.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame116.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153130.jpg",
+          "message": "Near-duplicate of frame117.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153130.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame117.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153131.jpg",
+          "message": "Near-duplicate of frame118.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153131.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame118.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153132.jpg",
+          "message": "Near-duplicate of frame119.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153132.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame119.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153133.jpg",
+          "message": "Near-duplicate of frame120.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153133.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame120.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153136.jpg",
+          "message": "Near-duplicate of frame121.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153136.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame121.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153139.jpg",
+          "message": "Near-duplicate of frame122.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153139.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame122.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153140.jpg",
+          "message": "Near-duplicate of frame123.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153140.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame123.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153141.jpg",
+          "message": "Near-duplicate of frame124.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153141.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame124.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153145.jpg",
+          "message": "Near-duplicate of frame125.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153145.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame125.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153147.jpg",
+          "message": "Near-duplicate of frame126.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153147.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame126.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153151.jpg",
+          "message": "Near-duplicate of frame127.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153151.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame127.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153152.jpg",
+          "message": "Near-duplicate of frame128.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153152.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame128.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153154.jpg",
+          "message": "Near-duplicate of frame129.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153154.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame129.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153159.jpg",
+          "message": "Near-duplicate of frame130.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153159.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame130.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153203.jpg",
+          "message": "Near-duplicate of frame131.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153203.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame131.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153209.jpg",
+          "message": "Near-duplicate of frame132.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153209.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame132.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153214.jpg",
+          "message": "Near-duplicate of frame133.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153214.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame133.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153218.jpg",
+          "message": "Near-duplicate of frame134.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153218.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame134.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153221.jpg",
+          "message": "Near-duplicate of frame135.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153221.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame135.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153222.jpg",
+          "message": "Near-duplicate of frame136.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153222.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame136.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153226.jpg",
+          "message": "Near-duplicate of frame137.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153226.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame137.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153227.jpg",
+          "message": "Near-duplicate of frame138.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153227.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame138.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153230.jpg",
+          "message": "Near-duplicate of frame139.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153230.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame139.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153232.jpg",
+          "message": "Near-duplicate of frame140.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153232.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame140.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153235.jpg",
+          "message": "Near-duplicate of frame141.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153235.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame141.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153237.jpg",
+          "message": "Near-duplicate of frame142.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153237.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame142.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153239.jpg",
+          "message": "Near-duplicate of frame143.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153239.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame143.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153241.jpg",
+          "message": "Near-duplicate of frame144.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153241.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame144.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153243.jpg",
+          "message": "Near-duplicate of frame145.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153243.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame145.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153245.jpg",
+          "message": "Near-duplicate of frame146.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153245.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame146.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153245_01.jpg",
+          "message": "Near-duplicate of frame147.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153245_01.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame147.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153248.jpg",
+          "message": "Near-duplicate of frame148.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153248.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame148.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153249.jpg",
+          "message": "Near-duplicate of frame149.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153249.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame149.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153250.jpg",
+          "message": "Near-duplicate of frame150.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153250.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame150.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153252.jpg",
+          "message": "Near-duplicate of frame151.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153252.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame151.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153253.jpg",
+          "message": "Near-duplicate of frame152.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153253.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame152.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153256.jpg",
+          "message": "Near-duplicate of frame153.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153256.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame153.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153257.jpg",
+          "message": "Near-duplicate of frame154.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153257.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame154.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153258.jpg",
+          "message": "Near-duplicate of frame155.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153258.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame155.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153317.jpg",
+          "message": "Near-duplicate of frame156.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153317.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame156.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153319.jpg",
+          "message": "Near-duplicate of frame157.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153319.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame157.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153321.jpg",
+          "message": "Near-duplicate of frame158.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153321.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame158.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153338.jpg",
+          "message": "Near-duplicate of frame159.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153338.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame159.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153717.jpg",
+          "message": "Near-duplicate of frame160.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153717.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame160.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153719.jpg",
+          "message": "Near-duplicate of frame161.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153719.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame161.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153730.jpg",
+          "message": "Near-duplicate of frame162.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153730.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame162.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153732.jpg",
+          "message": "Near-duplicate of frame163.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153732.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame163.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153733.jpg",
+          "message": "Near-duplicate of frame164.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153733.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame164.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153734.jpg",
+          "message": "Near-duplicate of frame165.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153734.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame165.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153738.jpg",
+          "message": "Near-duplicate of frame166.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153738.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame166.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153739.jpg",
+          "message": "Near-duplicate of frame167.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153739.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame167.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153740.jpg",
+          "message": "Near-duplicate of frame168.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153740.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame168.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153741.jpg",
+          "message": "Near-duplicate of frame169.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153741.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame169.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153745.jpg",
+          "message": "Near-duplicate of frame170.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153745.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame170.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153747.jpg",
+          "message": "Near-duplicate of frame171.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153747.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame171.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153748.jpg",
+          "message": "Near-duplicate of frame172.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153748.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame172.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153751.jpg",
+          "message": "Near-duplicate of frame173.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153751.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame173.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153752.jpg",
+          "message": "Near-duplicate of frame174.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153752.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame174.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153754.jpg",
+          "message": "Near-duplicate of frame175.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153754.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame175.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153755.jpg",
+          "message": "Near-duplicate of frame176.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153755.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame176.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153757.jpg",
+          "message": "Near-duplicate of frame177.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153757.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame177.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153759.jpg",
+          "message": "Near-duplicate of frame178.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153759.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame178.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153801.jpg",
+          "message": "Near-duplicate of frame179.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153801.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame179.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153803.jpg",
+          "message": "Near-duplicate of frame180.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153803.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame180.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153805.jpg",
+          "message": "Near-duplicate of frame181.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153805.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame181.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153820.jpg",
+          "message": "Near-duplicate of frame182.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153820.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame182.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153830.jpg",
+          "message": "Near-duplicate of frame183.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153830.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame183.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153831.jpg",
+          "message": "Near-duplicate of frame184.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153831.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame184.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153836.jpg",
+          "message": "Near-duplicate of frame185.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153836.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame185.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153837.jpg",
+          "message": "Near-duplicate of frame186.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153837.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame186.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153846.jpg",
+          "message": "Near-duplicate of frame187.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153846.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame187.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153849.jpg",
+          "message": "Near-duplicate of frame188.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153849.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame188.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153854.jpg",
+          "message": "Near-duplicate of frame189.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153854.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame189.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153910.jpg",
+          "message": "Near-duplicate of frame190.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153910.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame190.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153932.jpg",
+          "message": "Near-duplicate of frame191.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153932.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame191.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221109153933.jpg",
+          "message": "Near-duplicate of frame192.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221109153933.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame192.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110102417.jpg",
+          "message": "Near-duplicate of frame193.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110102417.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame193.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110102420.jpg",
+          "message": "Near-duplicate of frame194.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110102420.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame194.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110102421.jpg",
+          "message": "Near-duplicate of IMG20221110102422.jpg (Hamming distance: 6)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110102421.jpg",
+            "file2": "data\\raw\\dataset_A\\Pics\\IMG20221110102422.jpg",
+            "hamming_distance": 6
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110102421.jpg",
+          "message": "Near-duplicate of frame195.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110102421.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame195.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110102421.jpg",
+          "message": "Near-duplicate of frame196.jpg (Hamming distance: 6)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110102421.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame196.jpg",
+            "hamming_distance": 6
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110102422.jpg",
+          "message": "Near-duplicate of frame195.jpg (Hamming distance: 8)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110102422.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame195.jpg",
+            "hamming_distance": 8
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110102422.jpg",
+          "message": "Near-duplicate of frame196.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110102422.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame196.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110102427.jpg",
+          "message": "Near-duplicate of frame197.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110102427.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame197.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110102428.jpg",
+          "message": "Near-duplicate of frame198.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110102428.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame198.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110102441.jpg",
+          "message": "Near-duplicate of frame199.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110102441.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame199.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110102442.jpg",
+          "message": "Near-duplicate of frame200.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110102442.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame200.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110105350.jpg",
+          "message": "Near-duplicate of frame201.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110105350.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame201.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110105351.jpg",
+          "message": "Near-duplicate of frame202.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110105351.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame202.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110105352.jpg",
+          "message": "Near-duplicate of frame203.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110105352.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame203.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110105433.jpg",
+          "message": "Near-duplicate of frame204.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110105433.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame204.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110105434.jpg",
+          "message": "Near-duplicate of frame205.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110105434.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame205.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110105435.jpg",
+          "message": "Near-duplicate of frame206.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110105435.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame206.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110105450.jpg",
+          "message": "Near-duplicate of frame207.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110105450.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame207.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110105452.jpg",
+          "message": "Near-duplicate of frame208.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110105452.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame208.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110105455.jpg",
+          "message": "Near-duplicate of frame209.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110105455.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame209.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110105504.jpg",
+          "message": "Near-duplicate of frame210.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110105504.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame210.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110105508.jpg",
+          "message": "Near-duplicate of frame211.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110105508.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame211.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110105511.jpg",
+          "message": "Near-duplicate of frame212.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110105511.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame212.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110105514.jpg",
+          "message": "Near-duplicate of frame213.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110105514.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame213.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110105515.jpg",
+          "message": "Near-duplicate of frame214.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110105515.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame214.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110123444.jpg",
+          "message": "Near-duplicate of frame215.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110123444.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame215.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110123448.jpg",
+          "message": "Near-duplicate of frame216.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110123448.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame216.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110123507.jpg",
+          "message": "Near-duplicate of frame217.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110123507.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame217.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110123508.jpg",
+          "message": "Near-duplicate of frame218.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110123508.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame218.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110123510.jpg",
+          "message": "Near-duplicate of frame219.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110123510.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame219.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110123514.jpg",
+          "message": "Near-duplicate of frame220.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110123514.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame220.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110123521.jpg",
+          "message": "Near-duplicate of frame221.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110123521.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame221.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110123523.jpg",
+          "message": "Near-duplicate of frame222.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110123523.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame222.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110123526.jpg",
+          "message": "Near-duplicate of frame223.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110123526.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame223.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110123532.jpg",
+          "message": "Near-duplicate of frame224.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110123532.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame224.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110123535.jpg",
+          "message": "Near-duplicate of frame225.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110123535.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame225.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110123536.jpg",
+          "message": "Near-duplicate of frame226.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110123536.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame226.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110123538.jpg",
+          "message": "Near-duplicate of frame227.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110123538.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame227.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110123538_01.jpg",
+          "message": "Near-duplicate of frame228.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110123538_01.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame228.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110123540.jpg",
+          "message": "Near-duplicate of frame229.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110123540.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame229.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\Pics\\IMG20221110123542.jpg",
+          "message": "Near-duplicate of frame230.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\Pics\\IMG20221110123542.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame230.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame195.jpg",
+          "message": "Near-duplicate of frame196.jpg (Hamming distance: 8)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame195.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame196.jpg",
+            "hamming_distance": 8
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame88.jpg",
+          "message": "Near-duplicate of frame89.jpg (Hamming distance: 8)",
+          "details": {
+            "file1": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame88.jpg",
+            "file2": "data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame89.jpg",
+            "hamming_distance": 8
+          }
+        }
+      ]
+    },
+    "dataset_B": {
+      "total_images": 2087,
+      "total_annotations": 2088,
+      "total_issues": 182,
+      "corrupted_images": [],
+      "unreadable_images": [],
+      "zero_byte_files": [],
+      "unsupported_extensions": [],
+      "missing_labels": [],
+      "orphan_labels": [
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles Labeling\\classes.txt",
+          "message": "Annotation file has no matching image",
+          "details": null
+        }
+      ],
+      "empty_annotations": [],
+      "invalid_bboxes": [
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles Labeling\\classes.txt",
+          "message": "Line 1: expected 5 values, got 2",
+          "details": {
+            "line": 1,
+            "values": [
+              "License",
+              "Plate"
+            ]
+          }
+        }
+      ],
+      "duplicate_filenames": [],
+      "duplicate_images": [
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0610.jpg",
+          "message": "Exact duplicate (MD5: f4060e41bf992a39e85da27f8b10e6f8) found 2 times",
+          "details": {
+            "md5": "f4060e41bf992a39e85da27f8b10e6f8",
+            "count": 2,
+            "paths": [
+              "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0610.jpg",
+              "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0619.jpg"
+            ]
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1168.jpg",
+          "message": "Exact duplicate (MD5: 73e77a386e770e80ca2b469b84dcbfa6) found 2 times",
+          "details": {
+            "md5": "73e77a386e770e80ca2b469b84dcbfa6",
+            "count": 2,
+            "paths": [
+              "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1168.jpg",
+              "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1682.jpg"
+            ]
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1816.jpg",
+          "message": "Exact duplicate (MD5: 52b4695a1521131c3de2b22860451db4) found 2 times",
+          "details": {
+            "md5": "52b4695a1521131c3de2b22860451db4",
+            "count": 2,
+            "paths": [
+              "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1816.jpg",
+              "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1817.jpg"
+            ]
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1851.jpg",
+          "message": "Exact duplicate (MD5: 3ad53cf7c8a33263d66a0923eefc2973) found 2 times",
+          "details": {
+            "md5": "3ad53cf7c8a33263d66a0923eefc2973",
+            "count": 2,
+            "paths": [
+              "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1851.jpg",
+              "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1852.jpg"
+            ]
+          }
+        }
+      ],
+      "near_duplicates": [
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0022.jpg",
+          "message": "Near-duplicate of 0030.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0022.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0030.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0023.jpg",
+          "message": "Near-duplicate of 0031.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0023.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0031.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0024.jpg",
+          "message": "Near-duplicate of 0029.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0024.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0029.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0026.jpg",
+          "message": "Near-duplicate of 0028.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0026.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0028.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0105.jpg",
+          "message": "Near-duplicate of 0986.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0105.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0986.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0107.jpg",
+          "message": "Near-duplicate of 1149.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0107.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1149.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0109.jpg",
+          "message": "Near-duplicate of 0980.jpg (Hamming distance: 4)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0109.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0980.jpg",
+            "hamming_distance": 4
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0116.jpg",
+          "message": "Near-duplicate of 1010.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0116.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1010.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0126.jpg",
+          "message": "Near-duplicate of 2075.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0126.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2075.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0130.jpg",
+          "message": "Near-duplicate of 0189.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0130.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0189.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0130.jpg",
+          "message": "Near-duplicate of 0275.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0130.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0275.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0131.jpg",
+          "message": "Near-duplicate of 0885.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0131.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0885.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0135.jpg",
+          "message": "Near-duplicate of 0919.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0135.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0919.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0140.jpg",
+          "message": "Near-duplicate of 0699.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0140.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0699.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0141.jpg",
+          "message": "Near-duplicate of 0237.jpg (Hamming distance: 4)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0141.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0237.jpg",
+            "hamming_distance": 4
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0144.jpg",
+          "message": "Near-duplicate of 0779.jpg (Hamming distance: 8)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0144.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0779.jpg",
+            "hamming_distance": 8
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0151.jpg",
+          "message": "Near-duplicate of 0697.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0151.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0697.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0151.jpg",
+          "message": "Near-duplicate of 0917.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0151.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0917.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0154.jpg",
+          "message": "Near-duplicate of 1156.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0154.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1156.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0155.jpg",
+          "message": "Near-duplicate of 0976.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0155.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0976.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0156.jpg",
+          "message": "Near-duplicate of 0164.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0156.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0164.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0159.jpg",
+          "message": "Near-duplicate of 0701.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0159.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0701.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0159.jpg",
+          "message": "Near-duplicate of 0827.jpg (Hamming distance: 6)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0159.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0827.jpg",
+            "hamming_distance": 6
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0165.jpg",
+          "message": "Near-duplicate of 0704.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0165.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0704.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0165.jpg",
+          "message": "Near-duplicate of 0823.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0165.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0823.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0170.jpg",
+          "message": "Near-duplicate of 0713.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0170.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0713.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0171.jpg",
+          "message": "Near-duplicate of 0702.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0171.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0702.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0171.jpg",
+          "message": "Near-duplicate of 0824.jpg (Hamming distance: 8)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0171.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0824.jpg",
+            "hamming_distance": 8
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0175.jpg",
+          "message": "Near-duplicate of 0705.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0175.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0705.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0180.jpg",
+          "message": "Near-duplicate of 0715.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0180.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0715.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0180.jpg",
+          "message": "Near-duplicate of 0773.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0180.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0773.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0181.jpg",
+          "message": "Near-duplicate of 0860.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0181.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0860.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0182.jpg",
+          "message": "Near-duplicate of 0820.jpg (Hamming distance: 6)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0182.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0820.jpg",
+            "hamming_distance": 6
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0185.jpg",
+          "message": "Near-duplicate of 0719.jpg (Hamming distance: 4)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0185.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0719.jpg",
+            "hamming_distance": 4
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0189.jpg",
+          "message": "Near-duplicate of 0275.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0189.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0275.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0190.jpg",
+          "message": "Near-duplicate of 0806.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0190.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0806.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0192.jpg",
+          "message": "Near-duplicate of 0725.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0192.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0725.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0192.jpg",
+          "message": "Near-duplicate of 0784.jpg (Hamming distance: 4)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0192.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0784.jpg",
+            "hamming_distance": 4
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0198.jpg",
+          "message": "Near-duplicate of 0864.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0198.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0864.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0199.jpg",
+          "message": "Near-duplicate of 0732.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0199.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0732.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0200.jpg",
+          "message": "Near-duplicate of 0731.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0200.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0731.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0202.jpg",
+          "message": "Near-duplicate of 0727.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0202.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0727.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0202.jpg",
+          "message": "Near-duplicate of 0781.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0202.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0781.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0203.jpg",
+          "message": "Near-duplicate of 1175.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0203.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1175.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0206.jpg",
+          "message": "Near-duplicate of 0735.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0206.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0735.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0207.jpg",
+          "message": "Near-duplicate of 0733.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0207.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0733.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0207.jpg",
+          "message": "Near-duplicate of 0771.jpg (Hamming distance: 6)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0207.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0771.jpg",
+            "hamming_distance": 6
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0209.jpg",
+          "message": "Near-duplicate of 0853.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0209.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0853.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0212.jpg",
+          "message": "Near-duplicate of 0927.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0212.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0927.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0213.jpg",
+          "message": "Near-duplicate of 0908.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0213.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0908.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0214.jpg",
+          "message": "Near-duplicate of 0928.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0214.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0928.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0216.jpg",
+          "message": "Near-duplicate of 0923.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0216.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0923.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0217.jpg",
+          "message": "Near-duplicate of 0926.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0217.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0926.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0219.jpg",
+          "message": "Near-duplicate of 0925.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0219.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0925.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0220.jpg",
+          "message": "Near-duplicate of 0938.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0220.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0938.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0222.jpg",
+          "message": "Near-duplicate of 0912.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0222.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0912.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0224.jpg",
+          "message": "Near-duplicate of 0940.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0224.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0940.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0227.jpg",
+          "message": "Near-duplicate of 0936.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0227.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0936.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0229.jpg",
+          "message": "Near-duplicate of 0941.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0229.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0941.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0230.jpg",
+          "message": "Near-duplicate of 0942.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0230.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0942.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0232.jpg",
+          "message": "Near-duplicate of 1015.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0232.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1015.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0232.jpg",
+          "message": "Near-duplicate of 1020.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0232.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1020.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0235.jpg",
+          "message": "Near-duplicate of 1206.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0235.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1206.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0241.jpg",
+          "message": "Near-duplicate of 1003.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0241.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1003.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0241.jpg",
+          "message": "Near-duplicate of 1052.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0241.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1052.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0242.jpg",
+          "message": "Near-duplicate of 1013.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0242.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1013.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0242.jpg",
+          "message": "Near-duplicate of 1142.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0242.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1142.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0243.jpg",
+          "message": "Near-duplicate of 1016.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0243.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1016.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0245.jpg",
+          "message": "Near-duplicate of 1022.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0245.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1022.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0247.jpg",
+          "message": "Near-duplicate of 1019.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0247.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1019.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0250.jpg",
+          "message": "Near-duplicate of 1035.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0250.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1035.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0252.jpg",
+          "message": "Near-duplicate of 1043.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0252.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1043.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0256.jpg",
+          "message": "Near-duplicate of 1055.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0256.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1055.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0258.jpg",
+          "message": "Near-duplicate of 1058.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0258.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1058.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0259.jpg",
+          "message": "Near-duplicate of 1060.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0259.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1060.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0260.jpg",
+          "message": "Near-duplicate of 1063.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0260.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1063.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0261.jpg",
+          "message": "Near-duplicate of 1085.jpg (Hamming distance: 6)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0261.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1085.jpg",
+            "hamming_distance": 6
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0262.jpg",
+          "message": "Near-duplicate of 1136.jpg (Hamming distance: 6)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0262.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1136.jpg",
+            "hamming_distance": 6
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0266.jpg",
+          "message": "Near-duplicate of 1164.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0266.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1164.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0269.jpg",
+          "message": "Near-duplicate of 1204.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0269.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1204.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0271.jpg",
+          "message": "Near-duplicate of 1226.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0271.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1226.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0272.jpg",
+          "message": "Near-duplicate of 1321.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0272.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1321.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0277.jpg",
+          "message": "Near-duplicate of 0427.jpg (Hamming distance: 8)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0277.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0427.jpg",
+            "hamming_distance": 8
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0387.jpg",
+          "message": "Near-duplicate of 0549.jpg (Hamming distance: 4)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0387.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0549.jpg",
+            "hamming_distance": 4
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0387.jpg",
+          "message": "Near-duplicate of 2009.jpg (Hamming distance: 4)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0387.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2009.jpg",
+            "hamming_distance": 4
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0492.jpg",
+          "message": "Near-duplicate of 0502.jpg (Hamming distance: 4)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0492.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0502.jpg",
+            "hamming_distance": 4
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0496.jpg",
+          "message": "Near-duplicate of 1978.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0496.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1978.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0497.jpg",
+          "message": "Near-duplicate of 1971.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0497.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1971.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0498.jpg",
+          "message": "Near-duplicate of 1976.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0498.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1976.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0501.jpg",
+          "message": "Near-duplicate of 1970.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0501.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1970.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0504.jpg",
+          "message": "Near-duplicate of 1980.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0504.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1980.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0505.jpg",
+          "message": "Near-duplicate of 1979.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0505.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1979.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0506.jpg",
+          "message": "Near-duplicate of 1968.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0506.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1968.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0507.jpg",
+          "message": "Near-duplicate of 1985.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0507.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1985.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0510.jpg",
+          "message": "Near-duplicate of 1986.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0510.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1986.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0512.jpg",
+          "message": "Near-duplicate of 1984.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0512.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1984.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0513.jpg",
+          "message": "Near-duplicate of 2001.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0513.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2001.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0514.jpg",
+          "message": "Near-duplicate of 1972.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0514.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1972.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0516.jpg",
+          "message": "Near-duplicate of 1993.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0516.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1993.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0517.jpg",
+          "message": "Near-duplicate of 1973.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0517.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1973.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0518.jpg",
+          "message": "Near-duplicate of 1989.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0518.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1989.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0521.jpg",
+          "message": "Near-duplicate of 1982.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0521.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1982.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0522.jpg",
+          "message": "Near-duplicate of 1990.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0522.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1990.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0523.jpg",
+          "message": "Near-duplicate of 1988.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0523.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1988.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0524.jpg",
+          "message": "Near-duplicate of 1999.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0524.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1999.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0525.jpg",
+          "message": "Near-duplicate of 1996.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0525.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1996.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0526.jpg",
+          "message": "Near-duplicate of 2005.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0526.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2005.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0529.jpg",
+          "message": "Near-duplicate of 1995.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0529.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1995.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0531.jpg",
+          "message": "Near-duplicate of 1987.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0531.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1987.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0532.jpg",
+          "message": "Near-duplicate of 2002.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0532.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2002.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0533.jpg",
+          "message": "Near-duplicate of 1983.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0533.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1983.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0534.jpg",
+          "message": "Near-duplicate of 2003.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0534.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2003.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0535.jpg",
+          "message": "Near-duplicate of 1977.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0535.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1977.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0536.jpg",
+          "message": "Near-duplicate of 1994.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0536.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1994.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0537.jpg",
+          "message": "Near-duplicate of 2006.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0537.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2006.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0538.jpg",
+          "message": "Near-duplicate of 1997.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0538.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1997.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0542.jpg",
+          "message": "Near-duplicate of 1992.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0542.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1992.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0543.jpg",
+          "message": "Near-duplicate of 1998.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0543.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1998.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0545.jpg",
+          "message": "Near-duplicate of 2007.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0545.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2007.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0546.jpg",
+          "message": "Near-duplicate of 2008.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0546.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2008.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0549.jpg",
+          "message": "Near-duplicate of 2009.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0549.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2009.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0551.jpg",
+          "message": "Near-duplicate of 2010.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0551.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2010.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0553.jpg",
+          "message": "Near-duplicate of 2012.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0553.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2012.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0554.jpg",
+          "message": "Near-duplicate of 2013.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0554.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2013.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0555.jpg",
+          "message": "Near-duplicate of 2014.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0555.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2014.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0556.jpg",
+          "message": "Near-duplicate of 2011.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0556.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2011.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0557.jpg",
+          "message": "Near-duplicate of 2017.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0557.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2017.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0559.jpg",
+          "message": "Near-duplicate of 2016.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0559.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2016.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0562.jpg",
+          "message": "Near-duplicate of 2019.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0562.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2019.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0610.jpg",
+          "message": "Near-duplicate of 0619.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0610.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0619.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0637.jpg",
+          "message": "Near-duplicate of 2021.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0637.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2021.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0697.jpg",
+          "message": "Near-duplicate of 0917.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0697.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0917.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0701.jpg",
+          "message": "Near-duplicate of 0827.jpg (Hamming distance: 6)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0701.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0827.jpg",
+            "hamming_distance": 6
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0702.jpg",
+          "message": "Near-duplicate of 0824.jpg (Hamming distance: 8)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0702.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0824.jpg",
+            "hamming_distance": 8
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0703.jpg",
+          "message": "Near-duplicate of 0826.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0703.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0826.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0704.jpg",
+          "message": "Near-duplicate of 0823.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0704.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0823.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0708.jpg",
+          "message": "Near-duplicate of 0831.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0708.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0831.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0715.jpg",
+          "message": "Near-duplicate of 0773.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0715.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0773.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0722.jpg",
+          "message": "Near-duplicate of 0869.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0722.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0869.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0725.jpg",
+          "message": "Near-duplicate of 0784.jpg (Hamming distance: 6)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0725.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0784.jpg",
+            "hamming_distance": 6
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0727.jpg",
+          "message": "Near-duplicate of 0781.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0727.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0781.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0733.jpg",
+          "message": "Near-duplicate of 0771.jpg (Hamming distance: 6)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0733.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0771.jpg",
+            "hamming_distance": 6
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0748.jpg",
+          "message": "Near-duplicate of 2062.jpg (Hamming distance: 8)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0748.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2062.jpg",
+            "hamming_distance": 8
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0772.jpg",
+          "message": "Near-duplicate of 2067.jpg (Hamming distance: 6)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0772.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2067.jpg",
+            "hamming_distance": 6
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0813.jpg",
+          "message": "Near-duplicate of 2058.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0813.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2058.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0841.jpg",
+          "message": "Near-duplicate of 1159.jpg (Hamming distance: 8)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0841.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1159.jpg",
+            "hamming_distance": 8
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0852.jpg",
+          "message": "Near-duplicate of 2047.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0852.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2047.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0867.jpg",
+          "message": "Near-duplicate of 2037.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0867.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2037.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0884.jpg",
+          "message": "Near-duplicate of 2028.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0884.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2028.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0886.jpg",
+          "message": "Near-duplicate of 2036.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0886.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2036.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0905.jpg",
+          "message": "Near-duplicate of 0972.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0905.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0972.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0918.jpg",
+          "message": "Near-duplicate of 2055.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0918.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2055.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0929.jpg",
+          "message": "Near-duplicate of 2078.jpg (Hamming distance: 8)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0929.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2078.jpg",
+            "hamming_distance": 8
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0929.jpg",
+          "message": "Near-duplicate of 2084.jpg (Hamming distance: 8)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0929.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2084.jpg",
+            "hamming_distance": 8
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0943.jpg",
+          "message": "Near-duplicate of 2066.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0943.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2066.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0963.jpg",
+          "message": "Near-duplicate of 2052.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0963.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2052.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1003.jpg",
+          "message": "Near-duplicate of 1052.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1003.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1052.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1013.jpg",
+          "message": "Near-duplicate of 1142.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1013.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1142.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1015.jpg",
+          "message": "Near-duplicate of 1020.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1015.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1020.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1033.jpg",
+          "message": "Near-duplicate of 2022.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1033.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2022.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1153.jpg",
+          "message": "Near-duplicate of 2087.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1153.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2087.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1168.jpg",
+          "message": "Near-duplicate of 1682.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1168.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1682.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1336.jpg",
+          "message": "Near-duplicate of 1360.jpg (Hamming distance: 2)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1336.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1360.jpg",
+            "hamming_distance": 2
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1513.jpg",
+          "message": "Near-duplicate of 2044.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1513.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2044.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1513.jpg",
+          "message": "Near-duplicate of 2056.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1513.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2056.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1577.jpg",
+          "message": "Near-duplicate of 1578.jpg (Hamming distance: 8)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1577.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1578.jpg",
+            "hamming_distance": 8
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1660.jpg",
+          "message": "Near-duplicate of 1677.jpg (Hamming distance: 6)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1660.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1677.jpg",
+            "hamming_distance": 6
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1816.jpg",
+          "message": "Near-duplicate of 1817.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1816.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1817.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1834.jpg",
+          "message": "Near-duplicate of 1869.jpg (Hamming distance: 6)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1834.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1869.jpg",
+            "hamming_distance": 6
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1851.jpg",
+          "message": "Near-duplicate of 1852.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1851.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1852.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1934.jpg",
+          "message": "Near-duplicate of 1955.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1934.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1955.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1939.jpg",
+          "message": "Near-duplicate of 1962.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1939.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1962.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2044.jpg",
+          "message": "Near-duplicate of 2056.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2044.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2056.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2059.jpg",
+          "message": "Near-duplicate of 2074.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2059.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2074.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2065.jpg",
+          "message": "Near-duplicate of 2073.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2065.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2073.jpg",
+            "hamming_distance": 0
+          }
+        },
+        {
+          "file": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2078.jpg",
+          "message": "Near-duplicate of 2084.jpg (Hamming distance: 0)",
+          "details": {
+            "file1": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2078.jpg",
+            "file2": "data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2084.jpg",
+            "hamming_distance": 0
+          }
+        }
+      ]
+    }
+  }
+}
