@@ -1,0 +1,66 @@
+# Preprocessing pipeline configuration (Part 5) + split configuration (Part 7).
+#
+# Steps run in the order listed below. Each step can be disabled without
+# removing it (enabled: false) so you can A/B test configurations quickly.
+# Rationale for defaults is documented in docs/preprocessing_decisions.md.
+
+target_size: [640, 640]
+save_before_after: true
+before_after_sample_count: 20
+
+steps:
+  - name: "denoise"
+    enabled: true
+    params:
+      strength: 7.0
+
+  - name: "clahe"
+    enabled: true
+    params:
+      clip_limit: 2.0
+      tile_grid_size: 8
+
+  - name: "gamma_correction"
+    enabled: true
+    params:
+      gamma: 1.15
+
+  - name: "bilateral_filter"
+    enabled: true
+    params:
+      diameter: 7
+      sigma_color: 60
+      sigma_space: 60
+
+  - name: "sharpen"
+    enabled: true
+    params:
+      amount: 0.6
+
+  - name: "rotation_correction"
+    enabled: false  # enable once a corner/angle source is wired in
+    params: {}
+
+  - name: "perspective_correction"
+    enabled: false  # enable once a keypoint source is wired in
+    params: {}
+
+  - name: "letterbox"
+    enabled: true
+    params: {}  # target_size auto-filled from top-level `target_size`
+
+# Steps intentionally NOT enabled by default (kept in the registry for
+# experimentation — see docs/preprocessing_decisions.md for why):
+#   - histogram_equalization (global EQ tends to over-amplify glare; CLAHE preferred)
+#   - brightness_normalization / contrast_normalization (redundant with CLAHE + gamma)
+#   - gaussian_blur / median_filter (denoise + bilateral already cover noise; extra
+#     blurring risks destroying thin plate character strokes)
+#   - resize (letterbox is used instead to avoid aspect-ratio distortion)
+
+split:
+  train_ratio: 0.7
+  val_ratio: 0.15
+  test_ratio: 0.15
+  seed: 42
+  stratify_by_class: true
+  copy_files: false

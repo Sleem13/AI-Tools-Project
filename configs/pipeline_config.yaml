@@ -1,0 +1,20 @@
+# Global pipeline configuration.
+# All paths below are relative to the project root and are resolved via
+# pathlib in alpr_dataset.config.PipelineConfig — nothing is hardcoded.
+
+paths:
+  data_raw: "data/raw"
+  data_processed: "data/processed"
+  reports: "reports"
+  logs: "reports/logs"
+
+random_seed: 42
+
+# Perceptual-hash Hamming distance below which two images are flagged as
+# near-duplicates (Part 1 / Part 3).
+duplicate_hash_threshold: 5
+
+# Variance-of-Laplacian value below which an image is flagged as blurry
+# (Part 2 / Part 3). Tune after inspecting the blur_estimation.png figure
+# for your actual data distribution.
+blur_threshold: 100.0

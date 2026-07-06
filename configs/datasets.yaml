@@ -1,0 +1,48 @@
+# Per-dataset configuration.
+#
+# IMPORTANT: `annotation_format`, `image_subdir`, `annotation_subdir` and
+# `class_map` below are placeholders based on the most common layouts for
+# Kaggle license-plate datasets (YOLO txt or a single CSV/COCO-JSON file).
+# Kaggle dataset internals change over time and this repo does not have
+# network access to Kaggle to introspect them directly — after you run
+# `kaggle datasets download`, run:
+#
+#     python scripts/run_inspection.py
+#
+# first, read reports/eda/dataset_summary.md, and adjust the fields below
+# to match what was actually scanned (image_format_counts /
+# annotation_formats will tell you immediately whether it's yolo / voc_xml
+# / coco_json / csv). The pipeline is designed so this is the ONLY file you
+# need to edit to onboard a new/changed dataset layout.
+
+datasets:
+  - name: "dataset_A"
+    root: "data/raw/dataset_A"
+    # One of: yolo | voc_xml | coco_json | csv | unknown
+    annotation_format: "csv"
+    image_subdir: null        # e.g. "images" if images live in a subfolder
+    annotation_subdir: null   # e.g. "annotations" if separate from images
+    class_map:
+      0: "license_plate"
+    notes: >
+      Kaggle: mahmoudkhater99/car-plate. Verify actual annotation format
+      with scripts/run_inspection.py before running downstream stages.
+
+  - name: "dataset_B"
+    root: "data/raw/dataset_B"
+    annotation_format: "yolo"
+    image_subdir: null
+    annotation_subdir: null
+    class_map:
+      0: "license_plate"
+    notes: >
+      Kaggle: mahmoudeldebase/egyptian-cars-plates. Verify actual
+      annotation format with scripts/run_inspection.py before running
+      downstream stages.
+
+# The pipeline-wide unified schema that harmonization (Part 4) remaps every
+# dataset's local class_map into. Extend this if either dataset actually
+# distinguishes plate types (e.g. private / commercial / taxi / motorcycle
+# Egyptian plate categories) once you've inspected the real label files.
+unified_class_map:
+  0: "license_plate"
