@@ -19,14 +19,15 @@ datasets:
   - name: "dataset_A"
     root: "data/raw/dataset_A"
     # One of: yolo | voc_xml | coco_json | csv | unknown
-    annotation_format: "csv"
-    image_subdir: null        # e.g. "images" if images live in a subfolder
-    annotation_subdir: null   # e.g. "annotations" if separate from images
+    annotation_format: "voc_xml"
+    image_subdir: "Pics"        # images live in Pics/ subdirectory
+    annotation_subdir: "annotations"   # annotations live in annotations/ subdirectory
     class_map:
       0: "license_plate"
     notes: >
-      Kaggle: mahmoudkhater99/car-plate. Verify actual annotation format
-      with scripts/run_inspection.py before running downstream stages.
+      Kaggle: mahmoudkhater99/car-plate. Pascal VOC XML format with
+      images in Pics/ and annotations in annotations/. No class labels
+      in the XML files — defaults to class_id 0.
 
   - name: "dataset_B"
     root: "data/raw/dataset_B"

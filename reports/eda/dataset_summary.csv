@@ -1,0 +1,3 @@
+dataset_name,root,n_images,n_annotations,n_images_missing_annotations,n_orphan_annotations,n_unsupported_files,n_corrupted_images,n_duplicate_filenames_groups,n_exact_duplicate_images_groups,n_near_duplicate_pairs,image_formats,annotation_formats,color_space_counts,avg_width,avg_height,min_resolution_wh,max_resolution_wh,avg_aspect_ratio,avg_file_size_kb,min_file_size_kb,max_file_size_kb
+dataset_A,C:\Users\Admin\Documents\GitHub\AI-Tools-Project\data\raw\dataset_A,0,0,0,0,0,0,0,0,0,{},{},{},0,0,n/a,n/a,0,0,0,0
+dataset_B,C:\Users\Admin\Documents\GitHub\AI-Tools-Project\data\raw\dataset_B,0,0,0,0,0,0,0,0,0,{},{},{},0,0,n/a,n/a,0,0,0,0
