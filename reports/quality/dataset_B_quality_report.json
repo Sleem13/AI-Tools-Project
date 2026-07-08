@@ -3,795 +3,795 @@
   "n_images_scanned": 2087,
   "n_corrupted_images": 1,
   "corrupted_images": [
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2018.jpg"
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2018.jpg"
   ],
   "n_empty_images": 0,
   "empty_images": [],
   "n_exact_duplicate_groups": 4,
   "exact_duplicate_groups": {
     "f4060e41bf992a39e85da27f8b10e6f8": [
-      "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0610.jpg",
-      "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0619.jpg"
+      "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0610.jpg",
+      "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0619.jpg"
     ],
     "73e77a386e770e80ca2b469b84dcbfa6": [
-      "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1168.jpg",
-      "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1682.jpg"
+      "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1168.jpg",
+      "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1682.jpg"
     ],
     "52b4695a1521131c3de2b22860451db4": [
-      "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1816.jpg",
-      "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1817.jpg"
+      "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1816.jpg",
+      "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1817.jpg"
     ],
     "3ad53cf7c8a33263d66a0923eefc2973": [
-      "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1851.jpg",
-      "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1852.jpg"
+      "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1851.jpg",
+      "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1852.jpg"
     ]
   },
   "n_near_duplicate_pairs": 152,
   "near_duplicate_pairs": [
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0022.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0030.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0022.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0030.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0023.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0031.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0023.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0031.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0024.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0029.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0024.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0029.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0026.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0028.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0026.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0028.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0105.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0986.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0105.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0986.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0107.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1149.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0107.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1149.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0109.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0980.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0109.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0980.jpg",
       "hamming_distance": 4
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0116.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1010.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0116.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1010.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0126.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2075.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0126.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2075.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0130.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0189.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0130.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0189.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0130.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0275.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0130.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0275.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0131.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0885.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0131.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0885.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0135.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0919.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0135.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0919.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0140.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0699.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0140.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0699.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0141.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0237.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0141.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0237.jpg",
       "hamming_distance": 4
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0151.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0697.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0151.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0697.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0151.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0917.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0151.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0917.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0154.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1156.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0154.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1156.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0155.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0976.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0155.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0976.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0156.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0164.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0156.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0164.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0159.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0701.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0159.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0701.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0165.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0704.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0165.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0704.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0165.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0823.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0165.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0823.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0170.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0713.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0170.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0713.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0171.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0702.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0171.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0702.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0175.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0705.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0175.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0705.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0180.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0715.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0180.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0715.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0180.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0773.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0180.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0773.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0181.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0860.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0181.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0860.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0185.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0719.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0185.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0719.jpg",
       "hamming_distance": 4
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0189.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0275.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0189.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0275.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0190.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0806.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0190.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0806.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0192.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0725.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0192.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0725.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0192.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0784.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0192.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0784.jpg",
       "hamming_distance": 4
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0198.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0864.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0198.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0864.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0199.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0732.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0199.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0732.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0200.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0731.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0200.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0731.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0202.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0727.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0202.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0727.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0202.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0781.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0202.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0781.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0203.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1175.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0203.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1175.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0206.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0735.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0206.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0735.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0207.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0733.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0207.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0733.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0209.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0853.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0209.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0853.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0212.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0927.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0212.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0927.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0213.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0908.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0213.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0908.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0214.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0928.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0214.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0928.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0216.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0923.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0216.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0923.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0217.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0926.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0217.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0926.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0219.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0925.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0219.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0925.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0220.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0938.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0220.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0938.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0222.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0912.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0222.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0912.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0224.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0940.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0224.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0940.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0227.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0936.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0227.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0936.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0229.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0941.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0229.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0941.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0230.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0942.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0230.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0942.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0232.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1015.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0232.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1015.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0232.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1020.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0232.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1020.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0235.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1206.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0235.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1206.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0241.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1003.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0241.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1003.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0241.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1052.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0241.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1052.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0242.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1013.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0242.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1013.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0242.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1142.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0242.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1142.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0243.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1016.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0243.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1016.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0245.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1022.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0245.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1022.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0247.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1019.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0247.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1019.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0250.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1035.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0250.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1035.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0252.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1043.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0252.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1043.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0256.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1055.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0256.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1055.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0258.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1058.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0258.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1058.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0259.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1060.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0259.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1060.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0260.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1063.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0260.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1063.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0266.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1164.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0266.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1164.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0269.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1204.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0269.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1204.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0271.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1226.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0271.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1226.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0272.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1321.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0272.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1321.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0387.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0549.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0387.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0549.jpg",
       "hamming_distance": 4
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0387.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2009.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0387.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2009.jpg",
       "hamming_distance": 4
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0492.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0502.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0492.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0502.jpg",
       "hamming_distance": 4
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0496.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1978.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0496.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1978.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0497.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1971.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0497.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1971.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0498.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1976.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0498.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1976.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0501.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1970.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0501.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1970.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0504.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1980.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0504.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1980.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0505.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1979.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0505.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1979.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0506.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1968.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0506.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1968.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0507.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1985.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0507.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1985.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0510.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1986.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0510.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1986.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0512.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1984.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0512.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1984.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0513.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2001.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0513.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2001.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0514.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1972.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0514.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1972.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0516.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1993.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0516.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1993.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0517.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1973.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0517.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1973.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0518.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1989.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0518.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1989.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0521.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1982.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0521.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1982.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0522.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1990.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0522.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1990.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0523.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1988.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0523.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1988.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0524.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1999.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0524.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1999.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0525.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1996.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0525.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1996.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0526.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2005.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0526.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2005.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0529.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1995.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0529.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1995.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0531.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1987.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0531.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1987.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0532.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2002.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0532.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2002.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0533.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1983.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0533.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1983.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0534.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2003.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0534.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2003.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0535.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1977.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0535.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1977.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0536.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1994.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0536.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1994.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0537.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2006.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0537.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2006.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0538.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1997.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0538.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1997.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0542.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1992.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0542.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1992.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0543.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1998.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0543.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1998.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0545.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2007.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0545.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2007.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0546.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2008.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0546.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2008.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0549.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2009.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0549.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2009.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0551.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2010.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0551.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2010.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0553.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2012.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0553.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2012.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0554.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2013.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0554.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2013.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0555.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2014.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0555.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2014.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0556.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2011.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0556.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2011.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0557.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2017.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0557.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2017.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0559.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2016.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0559.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2016.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0562.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2019.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0562.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2019.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0637.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2021.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0637.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2021.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0697.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0917.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0697.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0917.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0703.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0826.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0703.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0826.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0704.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0823.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0704.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0823.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0708.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0831.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0708.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0831.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0715.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0773.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0715.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0773.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0722.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0869.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0722.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0869.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0727.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0781.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0727.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0781.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0813.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2058.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0813.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2058.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0852.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2047.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0852.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2047.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0867.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2037.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0867.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2037.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0884.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2028.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0884.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2028.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0886.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2036.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0886.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2036.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0905.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0972.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0905.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0972.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0918.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2055.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0918.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2055.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0943.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2066.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0943.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2066.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\0963.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2052.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0963.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2052.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1003.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1052.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1003.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1052.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1013.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1142.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1013.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1142.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1015.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1020.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1015.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1020.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1033.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2022.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1033.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2022.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1153.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2087.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1153.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2087.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1336.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1360.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1336.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1360.jpg",
       "hamming_distance": 2
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1513.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2044.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1513.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2044.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1513.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2056.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1513.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2056.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1934.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1955.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1934.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1955.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1939.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\1962.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1939.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1962.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2044.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2056.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2044.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2056.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2059.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2074.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2059.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2074.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2065.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2073.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2065.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2073.jpg",
       "hamming_distance": 0
     },
     {
-      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2078.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2084.jpg",
+      "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2078.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2084.jpg",
       "hamming_distance": 0
     }
   ],
   "n_missing_labels": 1,
   "missing_labels": [
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\EALPR Vechicles dataset\\Vehicles\\2018.jpg"
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\2018.jpg"
   ],
   "n_orphan_labels": 0,
   "orphan_labels": [],
@@ -801,5 +801,208 @@
   "n_zero_area_boxes": 0,
   "n_overlapping_box_pairs": 0,
   "n_incorrect_label_ids": 0,
-  "incorrect_label_ids_sample": []
+  "incorrect_label_ids_sample": [],
+  "n_blurry_images": 270,
+  "blurry_images": [
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0034.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0048.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0049.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0050.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0061.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0062.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0063.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0072.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0074.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0076.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0077.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0084.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0085.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0087.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0091.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0098.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0110.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0117.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0120.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0121.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0122.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0127.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0142.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0146.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0154.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0160.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0167.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0176.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0179.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0197.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0218.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0274.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0329.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0344.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0348.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0352.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0355.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0357.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0378.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0380.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0396.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0401.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0406.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0418.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0422.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0435.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0443.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0446.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0456.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0470.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0476.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0484.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0485.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0504.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0508.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0511.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0526.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0556.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0566.JPG",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0573.JPG",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0580.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0584.JPG",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0589.JPG",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0604.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0612.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0621.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0630.JPG",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0642.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0688.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0717.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0720.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0760.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0782.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0796.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0797.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0833.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0837.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0838.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0841.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0842.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0844.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0848.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0852.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0857.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0862.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0876.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0879.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0893.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0894.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0898.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0899.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0900.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0902.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0906.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0909.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0911.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0914.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0918.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0920.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0921.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0930.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0932.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0933.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0934.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0935.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0937.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0943.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0945.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0954.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0955.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0957.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0960.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0963.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0965.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0966.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0973.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0975.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0978.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0982.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0983.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0984.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0987.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0990.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0993.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0994.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0997.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0998.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\0999.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1000.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1001.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1007.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1010.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1011.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1017.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1027.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1031.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1048.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1049.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1053.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1057.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1075.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1081.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1082.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1084.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1090.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1091.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1092.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1097.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1100.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1101.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1107.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1110.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1121.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1122.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1130.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1131.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1137.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1143.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1146.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1150.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1151.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1152.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1153.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1154.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1155.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1156.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1157.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1163.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1165.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1166.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1171.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1173.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1179.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1185.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1194.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1195.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1202.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1203.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1215.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1217.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1220.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1223.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1227.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1229.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1251.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1260.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1262.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1263.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1282.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1295.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1306.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1310.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1312.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1324.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1332.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1341.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1354.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1355.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1362.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_B\\Vehicles\\1363.jpg"
+  ]
 }

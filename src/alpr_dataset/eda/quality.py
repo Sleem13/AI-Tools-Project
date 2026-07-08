@@ -33,6 +33,7 @@ def build_quality_report(
     valid_class_ids: set[int] | None = None,
     hamming_threshold: int = 5,
     overlap_iou_threshold: float = 0.7,
+    blur_threshold: float = 100.0,
 ) -> dict:
     """Run all Part-3 checks for one dataset and persist a JSON + MD report.
 
@@ -46,18 +47,22 @@ def build_quality_report(
                           flagged as an "incorrect label id".
         hamming_threshold: Perceptual hash distance threshold for near-dupes.
         overlap_iou_threshold: IoU above which two boxes count as "overlapping".
+        blur_threshold: Variance-of-Laplacian value below which an image is flagged as blurry.
     """
     output_dir = ensure_dir(output_dir)
 
-    # Corrupted / empty images
+    # Corrupted / empty / blurry images
     corrupted_images: list[str] = []
     empty_images: list[str] = []
+    blurry_images: list[str] = []
     for p in tqdm(image_paths, desc=f"[{dataset_name}] quality: images", leave=False):
         s = compute_image_stats(p)
         if s.is_corrupted:
             corrupted_images.append(str(p))
         elif s.brightness_mean == 0 and s.contrast_std == 0:
             empty_images.append(str(p))
+        if not s.is_corrupted and s.blur_score < blur_threshold:
+            blurry_images.append(str(p))
 
     # Duplicates
     dupe_groups = find_duplicates(image_paths, hamming_threshold=hamming_threshold)
@@ -119,6 +124,8 @@ def build_quality_report(
         "n_overlapping_box_pairs": overlapping_total,
         "n_incorrect_label_ids": len(incorrect_label_ids),
         "incorrect_label_ids_sample": sorted(set(incorrect_label_ids))[:50],
+        "n_blurry_images": len(blurry_images),
+        "blurry_images": blurry_images[:200],
     }
 
     json_path = output_dir / f"{dataset_name}_quality_report.json"

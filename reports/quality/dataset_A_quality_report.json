@@ -11,1002 +11,1002 @@
   "near_duplicate_pairs": [
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107210304.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame0.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame0.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107210333.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame1.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame1.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107210338.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame2.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame2.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107210347.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame3.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame3.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107210349.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame4.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame4.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107210403.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame5.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame5.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107210405.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame6.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame6.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107210407.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame7.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame7.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107210411.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame8.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame8.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107210417.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame9.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame9.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107210433.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame10.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame10.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107210442.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame11.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame11.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107210444.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame12.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame12.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107210529.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame13.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame13.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107210548.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame14.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame14.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107210552.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame15.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame15.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107210559.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame16.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame16.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107210600.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame17.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame17.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107210603.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame18.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame18.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107210614.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame19.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame19.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107210627.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame20.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame20.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107210628.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame21.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame21.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107210643.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame22.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame22.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107210649.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame23.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame23.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107210651.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame24.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame24.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221107211402.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame25.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame25.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109100804.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame26.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame26.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109100805.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame27.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame27.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109100809.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame28.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame28.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109100815.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame29.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame29.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109100819.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame30.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame30.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109100905.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame31.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame31.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109100908.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame32.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame32.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109100924.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame33.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame33.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109100940.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame34.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame34.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109100941.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame35.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame35.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109100942.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame36.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame36.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101000.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame37.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame37.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101014.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame38.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame38.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101015.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame39.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame39.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101024.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame40.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame40.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101039.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame41.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame41.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101041.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame42.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame42.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101042.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame43.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame43.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101044.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame44.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame44.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101046.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame45.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame45.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101049.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame46.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame46.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101050.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame47.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame47.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101139.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame48.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame48.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101152.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame49.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame49.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101210.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame50.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame50.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101219.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame51.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame51.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101220.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame52.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame52.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101225.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame53.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame53.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101229.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame54.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame54.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101617.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame55.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame55.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101621.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame56.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame56.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101623.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame57.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame57.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101624.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame58.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame58.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101625.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame59.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame59.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101626.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame60.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame60.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101628.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame61.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame61.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101629.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame62.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame62.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101632.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame63.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame63.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101633.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame64.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame64.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101634.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame65.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame65.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101635.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame66.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame66.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101637.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame67.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame67.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101638.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame68.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame68.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101640.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame69.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame69.jpg",
       "hamming_distance": 4
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101643.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame70.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame70.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101643_01.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame71.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame71.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101645.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame72.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame72.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101647.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame73.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame73.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101649.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame74.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame74.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101650.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame75.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame75.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101650_01.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame76.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame76.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101652.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame77.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame77.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101653.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame78.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame78.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101654.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame79.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame79.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101655.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame80.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame80.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101656.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame81.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame81.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101657.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame82.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame82.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101659.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame83.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame83.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101700.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame84.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame84.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101715.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame85.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame85.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109120204.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame86.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame86.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109120207.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame87.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame87.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109120213.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame88.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame88.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109120214.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame89.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame89.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109120219.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame90.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame90.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109120220.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame91.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame91.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109120222.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame92.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame92.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109120227.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame93.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame93.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109120243.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame94.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame94.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109120246.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame95.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame95.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109120248.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame96.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame96.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109120250.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame97.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame97.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109120255.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame98.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame98.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109120257.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame99.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame99.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109152520.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame100.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame100.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109152524.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame101.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame101.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109152528.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame102.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame102.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109152920.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame103.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame103.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109152921.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame104.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame104.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153018.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame105.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame105.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153019.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame106.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame106.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153113.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame107.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame107.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153114.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame108.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame108.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153115.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame109.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame109.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153116.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame110.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame110.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153117.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame111.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame111.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153118.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame112.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame112.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153122.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame113.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame113.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153124.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame114.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame114.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153126.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame115.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame115.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153127.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame116.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame116.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153130.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame117.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame117.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153131.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame118.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame118.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153132.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame119.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame119.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153133.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame120.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame120.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153136.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame121.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame121.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153139.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame122.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame122.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153140.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame123.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame123.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153141.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame124.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame124.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153145.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame125.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame125.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153147.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame126.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame126.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153151.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame127.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame127.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153152.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame128.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame128.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153154.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame129.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame129.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153159.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame130.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame130.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153203.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame131.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame131.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153209.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame132.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame132.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153214.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame133.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame133.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153218.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame134.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame134.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153221.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame135.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame135.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153222.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame136.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame136.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153226.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame137.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame137.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153227.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame138.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame138.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153230.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame139.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame139.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153232.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame140.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame140.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153235.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame141.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame141.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153237.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame142.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame142.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153239.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame143.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame143.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153241.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame144.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame144.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153243.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame145.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame145.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153245.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame146.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame146.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153245_01.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame147.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame147.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153248.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame148.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame148.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153249.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame149.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame149.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153250.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame150.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame150.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153252.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame151.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame151.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153253.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame152.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame152.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153256.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame153.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame153.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153257.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame154.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame154.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153258.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame155.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame155.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153317.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame156.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame156.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153319.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame157.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame157.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153321.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame158.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame158.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153338.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame159.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame159.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153717.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame160.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame160.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153719.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame161.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame161.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153730.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame162.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame162.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153732.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame163.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame163.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153733.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame164.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame164.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153734.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame165.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame165.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153738.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame166.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame166.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153739.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame167.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame167.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153740.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame168.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame168.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153741.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame169.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame169.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153745.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame170.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame170.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153747.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame171.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame171.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153748.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame172.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame172.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153751.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame173.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame173.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153752.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame174.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame174.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153754.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame175.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame175.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153755.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame176.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame176.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153757.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame177.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame177.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153759.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame178.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame178.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153801.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame179.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame179.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153803.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame180.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame180.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153805.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame181.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame181.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153820.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame182.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame182.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153830.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame183.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame183.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153831.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame184.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame184.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153836.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame185.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame185.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153837.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame186.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame186.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153846.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame187.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame187.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153849.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame188.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame188.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153854.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame189.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame189.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153910.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame190.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame190.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153932.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame191.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame191.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153933.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame192.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame192.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221110102417.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame193.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame193.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221110102420.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame194.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame194.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221110102421.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame195.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame195.jpg",
       "hamming_distance": 2
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221110102422.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame196.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame196.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221110102427.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame197.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame197.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221110102428.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame198.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame198.jpg",
       "hamming_distance": 0
     },
     {
       "a": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221110102441.jpg",
-      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame199.jpg",
+      "b": "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame199.jpg",
       "hamming_distance": 0
     }
   ],
@@ -1014,204 +1014,204 @@
   "missing_labels": [
     "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\a8b8f6be161a4bdcabcc947b3e72f8b2.jpg",
     "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Capture.JPG",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame0.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame1.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame10.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame100.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame101.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame102.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame103.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame104.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame105.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame106.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame107.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame108.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame109.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame11.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame110.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame111.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame112.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame113.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame114.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame115.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame116.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame117.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame118.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame119.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame12.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame120.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame121.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame122.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame123.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame124.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame125.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame126.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame127.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame128.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame129.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame13.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame130.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame131.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame132.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame133.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame134.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame135.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame136.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame137.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame138.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame139.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame14.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame140.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame141.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame142.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame143.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame144.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame145.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame146.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame147.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame148.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame149.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame15.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame150.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame151.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame152.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame153.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame154.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame155.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame156.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame157.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame158.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame159.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame16.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame160.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame161.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame162.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame163.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame164.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame165.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame166.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame167.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame168.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame169.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame17.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame170.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame171.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame172.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame173.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame174.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame175.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame176.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame177.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame178.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame179.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame18.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame180.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame181.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame182.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame183.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame184.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame185.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame186.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame187.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame188.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame189.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame19.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame190.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame191.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame192.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame193.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame194.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame195.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame196.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame197.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame198.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame199.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame2.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame20.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame200.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame201.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame202.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame203.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame204.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame205.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame206.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame207.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame208.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame209.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame21.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame210.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame211.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame212.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame213.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame214.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame215.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame216.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame217.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame218.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame219.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame22.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame220.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame221.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame222.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame223.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame224.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame225.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame226.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame227.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame228.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame229.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame23.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame230.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame24.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame25.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame26.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame27.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame28.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame29.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame3.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame30.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame31.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame32.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame33.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame34.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame35.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame36.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame37.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame38.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame39.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame4.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame40.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame41.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame42.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame43.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame44.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame45.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame46.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame47.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame48.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame49.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame5.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame50.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame51.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame52.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame53.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame54.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame55.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame56.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame57.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame58.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame59.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame6.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame60.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame61.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame62.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame63.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame64.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame65.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame66.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame67.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame68.jpg",
-    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\pics_re1\\frame69.jpg"
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame0.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame1.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame10.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame100.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame101.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame102.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame103.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame104.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame105.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame106.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame107.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame108.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame109.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame11.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame110.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame111.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame112.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame113.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame114.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame115.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame116.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame117.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame118.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame119.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame12.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame120.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame121.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame122.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame123.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame124.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame125.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame126.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame127.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame128.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame129.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame13.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame130.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame131.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame132.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame133.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame134.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame135.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame136.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame137.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame138.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame139.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame14.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame140.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame141.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame142.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame143.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame144.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame145.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame146.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame147.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame148.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame149.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame15.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame150.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame151.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame152.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame153.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame154.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame155.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame156.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame157.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame158.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame159.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame16.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame160.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame161.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame162.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame163.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame164.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame165.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame166.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame167.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame168.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame169.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame17.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame170.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame171.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame172.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame173.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame174.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame175.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame176.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame177.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame178.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame179.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame18.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame180.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame181.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame182.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame183.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame184.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame185.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame186.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame187.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame188.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame189.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame19.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame190.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame191.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame192.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame193.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame194.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame195.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame196.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame197.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame198.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame199.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame2.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame20.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame200.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame201.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame202.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame203.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame204.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame205.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame206.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame207.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame208.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame209.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame21.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame210.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame211.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame212.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame213.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame214.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame215.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame216.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame217.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame218.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame219.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame22.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame220.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame221.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame222.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame223.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame224.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame225.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame226.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame227.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame228.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame229.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame23.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame230.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame24.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame25.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame26.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame27.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame28.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame29.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame3.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame30.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame31.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame32.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame33.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame34.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame35.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame36.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame37.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame38.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame39.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame4.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame40.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame41.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame42.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame43.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame44.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame45.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame46.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame47.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame48.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame49.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame5.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame50.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame51.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame52.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame53.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame54.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame55.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame56.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame57.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame58.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame59.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame6.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame60.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame61.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame62.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame63.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame64.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame65.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame66.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame67.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame68.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\pics_re1\\frame69.jpg"
   ],
   "n_orphan_labels": 0,
   "orphan_labels": [],
@@ -1221,5 +1221,44 @@
   "n_zero_area_boxes": 0,
   "n_overlapping_box_pairs": 0,
   "n_incorrect_label_ids": 0,
-  "incorrect_label_ids_sample": []
+  "incorrect_label_ids_sample": [],
+  "n_blurry_images": 36,
+  "blurry_images": [
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109100804.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109100805.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109100809.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109100815.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109100819.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109100905.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109100908.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109100924.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109100940.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109100941.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109100942.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109101000.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109120204.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109120207.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109120213.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109120214.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109120219.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109120220.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109120222.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109120227.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109120248.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109120250.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109120255.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109152520.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109152524.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109152528.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109152920.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109152921.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153018.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153019.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153752.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153754.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153755.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153757.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153759.jpg",
+    "C:\\Users\\Admin\\Documents\\GitHub\\AI-Tools-Project\\data\\raw\\dataset_A\\Pics\\IMG20221109153820.jpg"
+  ]
 }

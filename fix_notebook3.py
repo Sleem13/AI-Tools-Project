@@ -27,7 +27,7 @@ new25 = (
     "    summary = result.summary()\n"
     '    print(f"  Train: {summary[\\"n_train\\"]}, Val: {summary[\\"n_val\\"]}, Test: {summary[\\"n_test\\"]}")\n'
     "\n"
-    "    out_dir = config.processed_dir / \"split\" / spec.name\n"
+    "    out_dir = config.data_processed_dir / \"split\" / spec.name\n"
     "    write_split_manifests(result, out_dir)\n"
     '    print(f"  Manifests -> {out_dir}")\n'
 )
@@ -75,7 +75,7 @@ new28 = (
     'print(f"\\nOutput directories:")\n'
     'print(f"  Unified YOLO:   {unified_dir}")\n'
     'print(f"  Preprocessed:   {processed_root}")\n'
-    'print(f"  Split:          {config.processed_dir / \\"split\\"}")\n'
+    'print(f"  Split:          {config.data_processed_dir / \"split\"}")\n'
     'print(f"  Reports:        {config.reports_dir}")\n'
     'print(f"  Logs:           {config.logs_dir}")\n'
 )

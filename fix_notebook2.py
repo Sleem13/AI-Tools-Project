@@ -154,7 +154,7 @@ nb["cells"][18]["source"] = new18.splitlines(keepends=True)
 old20_start = (
     'from tqdm import tqdm\n'
     '\n'
-    'processed_root = config.processed_dir / "preprocessed"\n'
+    'processed_root = config.data_processed_dir / "preprocessed"\n'
     '\n'
     'for spec in config.datasets:\n'
     '    images = list_images(spec.root)\n'
@@ -192,7 +192,7 @@ new20 = (
     'from alpr_dataset.annotations.loader import load_dataset_annotations\n'
     'from alpr_dataset.annotations.writer import convert_to_yolo\n'
     '\n'
-    'processed_root = config.processed_dir / "preprocessed"\n'
+    'processed_root = config.data_processed_dir / "preprocessed"\n'
     '\n'
     'for spec in config.datasets:\n'
     '    images = list_images(spec.root)\n'

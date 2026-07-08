@@ -1,9 +1,34 @@
-opencv-python>=4.9.0
-numpy>=1.26.0
+# =============================================================================
+# AI-Tools-Project — ALPR Dataset Engineering Pipeline
+# Requirements file for Python >= 3.12
+#
+# Install all runtime deps:
+#   pip install -r requirements.txt
+#
+# Install with dev/test extras:
+#   pip install -r requirements.txt -r requirements-dev.txt
+# =============================================================================
+
+# ── Core image processing ─────────────────────────────────────────────────────
+opencv-python>=5.0.0
+Pillow>=12.0.0
+
+# ── Perceptual hashing (near-duplicate detection) ─────────────────────────────
+ImageHash>=4.3.0
+
+# ── Numerical / data ──────────────────────────────────────────────────────────
+numpy>=2.0.0
 pandas>=2.2.0
-matplotlib>=3.8.0
-PyYAML>=6.0.1
+
+# ── Visualisation (EDA figures) ───────────────────────────────────────────────
+matplotlib>=3.9.0
+
+# ── CLI / logging ─────────────────────────────────────────────────────────────
+rich>=13.0.0
 tqdm>=4.66.0
-rich>=13.7.0
-ImageHash>=4.3.1
-Pillow>=10.2.0
+
+# ── Configuration parsing ─────────────────────────────────────────────────────
+PyYAML>=6.0.0
+
+# ── Streamlit dashboard (app/streamlit_app.py — currently empty stub) ─────────
+streamlit>=1.32.0
