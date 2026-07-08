@@ -32,3 +32,11 @@ PyYAML>=6.0.0
 
 # ── Streamlit dashboard (app/streamlit_app.py — currently empty stub) ─────────
 streamlit>=1.32.0
+
+# ── Model training / inference ────────────────────────────────────────────────
+torch>=2.1.0
+torchvision>=0.16.0
+ultralytics>=8.0.0
+
+# ── Experiment tracking (optional) ────────────────────────────────────────────
+wandb>=0.16.0

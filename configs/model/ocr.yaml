@@ -1,0 +1,46 @@
+# OCR model configuration for license plate text recognition.
+#
+# This config is consumed by scripts/train_ocr.py.
+# All paths are relative to the project root unless absolute.
+
+model:
+  name: crnn                            # crnn | trocr
+  input_height: 32
+  input_width: 128
+  vocab_size: 80                        # auto-populated from vocab.json
+
+data:
+  crops_root: data/ocr/crops
+  annotations_file: data/ocr/labels.json
+  train_ratio: 0.7
+  val_ratio: 0.15
+  test_ratio: 0.15
+  seed: 42
+
+hyperparameters:
+  epochs: 50
+  batch: 64
+  optimizer: Adam
+  lr: 0.0003
+  weight_decay: 0.0001
+  scheduler_step: 10
+  scheduler_gamma: 0.5
+
+model_config:
+  # CRNN-specific
+  cnn_channels: [1, 64, 128, 256, 512, 512]
+  bilstm_hidden: 256
+  bilstm_layers: 2
+  dropout: 0.3
+
+training:
+  device: 0
+  workers: 4
+  project: models/ocr
+  name: exp
+  save_period: 5
+  val_period: 1
+  seed: 42
+
+evaluation:
+  beam_width: 5
