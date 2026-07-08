@@ -14,7 +14,7 @@ import numpy as np
 import streamlit as st
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(PROJECT_ROOT / "src"))
+sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.detection.inference import LicensePlateDetector
 from src.evaluation.pipeline import ALPRPipeline

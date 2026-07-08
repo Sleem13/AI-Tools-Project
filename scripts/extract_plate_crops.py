@@ -15,13 +15,13 @@ from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent
-sys.path.insert(0, str(PROJECT_ROOT / "src"))
+sys.path.insert(0, str(PROJECT_ROOT))
 
 import cv2
 from tqdm import tqdm
 
 from src.detection.inference import LicensePlateDetector
-from src.io_utils import list_images
+from src.alpr_dataset.io_utils import list_images
 
 
 def main() -> None:
