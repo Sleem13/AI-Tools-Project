@@ -2,9 +2,9 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from src.dataset.inspector.metadata import ImageMetadata
-from src.dataset.inspector.scanner import ScanResult
-from src.dataset.inspector.validator import ValidationSummary
+from ..inspector.metadata import ImageMetadata
+from ..inspector.scanner import ScanResult
+from ..inspector.validator import ValidationSummary
 
 
 class MarkdownReportGenerator:

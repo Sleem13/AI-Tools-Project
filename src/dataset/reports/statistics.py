@@ -7,8 +7,8 @@ from pathlib import Path
 
 import numpy as np
 
-from src.dataset.inspector.metadata import ImageMetadata
-from src.dataset.inspector.scanner import ScanResult
+from ..inspector.metadata import ImageMetadata
+from ..inspector.scanner import ScanResult
 
 
 @dataclass

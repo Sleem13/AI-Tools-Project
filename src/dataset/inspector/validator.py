@@ -6,10 +6,10 @@ from pathlib import Path
 
 from tqdm import tqdm
 
-from src.dataset.inspector.scanner import ScanResult
-from src.dataset.utils.filesystem import AnnotationFormat
-from src.dataset.utils.hashing import find_exact_duplicates, find_near_duplicates
-from src.dataset.utils.image import has_supported_extension, is_corrupted, is_readable, is_zero_byte
+from .scanner import ScanResult
+from ..utils.filesystem import AnnotationFormat
+from ..utils.hashing import find_exact_duplicates, find_near_duplicates
+from ..utils.image import has_supported_extension, is_corrupted, is_readable, is_zero_byte
 
 
 @dataclass

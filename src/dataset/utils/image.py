@@ -5,7 +5,7 @@ from pathlib import Path
 import cv2
 from PIL import Image
 
-from src.dataset.utils.filesystem import SUPPORTED_IMAGE_EXTENSIONS
+from .filesystem import SUPPORTED_IMAGE_EXTENSIONS
 
 
 def is_zero_byte(file_path: Path) -> bool:

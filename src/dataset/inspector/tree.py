@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from src.dataset.utils.filesystem import should_ignore
+from ..utils.filesystem import should_ignore
 
 
 @dataclass

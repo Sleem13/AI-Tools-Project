@@ -5,8 +5,71 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "alpr-dataset"
 version = "1.0.0"
-description = "Dataset engineering pipeline for Egyptian ALPR (license plate) datasets."
+description = "Production-grade dataset engineering and ALPR pipeline for Egyptian license plates."
+readme = "README.md"
+license = {text = "MIT"}
 requires-python = ">=3.12"
+dependencies = [
+    "opencv-python>=5.0.0",
+    "Pillow>=12.0.0",
+    "ImageHash>=4.3.0",
+    "numpy>=2.0.0",
+    "pandas>=2.2.0",
+    "matplotlib>=3.9.0",
+    "rich>=13.0.0",
+    "tqdm>=4.66.0",
+    "PyYAML>=6.0.0",
+    "streamlit>=1.32.0",
+    "torch>=2.1.0",
+    "torchvision>=0.16.0",
+    "ultralytics>=8.0.0",
+    "wandb>=0.16.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.0.0",
+    "ruff>=0.4.0",
+    "mypy>=1.10.0",
+    "types-Pillow>=10.2.0",
+    "types-PyYAML>=6.0.0",
+    "types-tqdm>=4.66.0",
+]
+
+[project.scripts]
+alpr-inspect = "scripts.run_inspection:main"
+alpr-eda = "scripts.run_eda:main"
+alpr-quality = "scripts.run_quality_check:main"
+alpr-harmonize = "scripts.run_harmonization:main"
+alpr-preprocess = "scripts.run_preprocessing:main"
+alpr-stats = "scripts.run_statistics:main"
+alpr-split = "scripts.run_split:main"
+alpr-pipeline = "scripts.run_full_pipeline:main"
+alpr-train-det = "scripts.train_detection:main"
+alpr-train-ocr = "scripts.train_ocr:main"
+alpr-infer-det = "scripts.run_detection_inference:main"
+alpr-infer-ocr = "scripts.run_ocr_inference:main"
+alpr-benchmark = "scripts.benchmark:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 120
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "SIM", "RUF"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true

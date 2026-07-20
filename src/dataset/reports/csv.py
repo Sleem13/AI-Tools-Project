@@ -3,8 +3,8 @@ from __future__ import annotations
 import csv
 from pathlib import Path
 
-from src.dataset.inspector.metadata import ImageMetadata
-from src.dataset.inspector.scanner import ScanResult
+from ..inspector.metadata import ImageMetadata
+from ..inspector.scanner import ScanResult
 
 
 class CSVReportGenerator:

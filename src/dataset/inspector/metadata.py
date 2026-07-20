@@ -5,14 +5,14 @@ from pathlib import Path
 
 from tqdm import tqdm
 
-from src.dataset.utils.hashing import compute_md5, compute_phash
-from src.dataset.utils.image import (
+from ..utils.hashing import compute_md5, compute_phash
+from ..utils.image import (
     get_image_mode,
     get_image_size_pil,
     is_corrupted,
     is_readable,
 )
-from src.dataset.utils.metrics import (
+from ..utils.metrics import (
     compute_aspect_ratio,
     compute_blur_score,
     compute_brightness,

@@ -3,7 +3,7 @@ from __future__ import annotations
 import csv
 from pathlib import Path
 
-from src.dataset.inspector.metadata import ImageMetadata
+from ..inspector.metadata import ImageMetadata
 
 
 class MetadataReportGenerator:

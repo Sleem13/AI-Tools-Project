@@ -5,10 +5,10 @@ from pathlib import Path
 from rich.console import Console
 from rich.table import Table
 
-from src.dataset.inspector.metadata import MetadataExtractor
-from src.dataset.inspector.scanner import DatasetScanner, ScanResult
-from src.dataset.inspector.tree import DirectoryTreeBuilder
-from src.dataset.inspector.validator import DatasetValidator, ValidationSummary
+from .metadata import MetadataExtractor
+from .scanner import DatasetScanner, ScanResult
+from .tree import DirectoryTreeBuilder
+from .validator import DatasetValidator, ValidationSummary
 
 
 class DatasetInspector:

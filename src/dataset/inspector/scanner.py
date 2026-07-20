@@ -5,7 +5,7 @@ from pathlib import Path
 
 from tqdm import tqdm
 
-from src.dataset.utils.filesystem import (
+from ..utils.filesystem import (
     AnnotationFormat,
     detect_annotation_files,
     detect_image_files,

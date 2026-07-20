@@ -78,5 +78,45 @@ class PlateReader:
         return decode_text(collapsed, self.vocab)
 
     def _beam_search(self, probs: torch.Tensor) -> str:
-        """Simple beam search decoder (placeholder)."""
-        return self._greedy_decode(probs)
+        """Beam search decoder for CTC output.
+
+        Maintains top-k partial sequences at each timestep, expanding with
+        the highest-probability next characters.  Collapses consecutive
+        duplicate characters and strips blanks per CTC convention.
+        """
+        T, C = probs.shape
+        blank = 0
+
+        # Each beam entry: (cumulative_log_prob, previous_index, current_sequence)
+        # Start with a single beam containing only the blank token.
+        beams: list[tuple[float, int, list[int]]] = [(0.0, blank, [])]
+
+        for t in range(T):
+            candidates: dict[tuple[int, ...], tuple[float, int]] = {}
+            for score, prev_idx, seq in beams:
+                for c in range(C):
+                    log_p = float(probs[t, c].log().item())
+                    new_score = score + log_p
+
+                    if c == blank:
+                        key = tuple(seq)
+                    elif seq and seq[-1] == c:
+                        # CTC: extending the same character collapses, so we
+                        # keep the same sequence but the probability accumulates.
+                        key = tuple(seq)
+                    else:
+                        key = tuple(seq + [c])
+
+                    if key not in candidates or new_score > candidates[key][0]:
+                        candidates[key] = (new_score, c)
+
+            # Keep only the top beam_width candidates
+            sorted_cands = sorted(candidates.items(), key=lambda x: x[1][0], reverse=True)
+            beams = [
+                (score, prev_idx, list(seq))
+                for seq, (score, prev_idx) in sorted_cands[: self.beam_width]
+            ]
+
+        # Pick the best beam
+        best_seq = max(beams, key=lambda x: x[0])[2]
+        return decode_text(best_seq, self.vocab)
