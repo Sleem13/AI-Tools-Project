@@ -30,8 +30,13 @@ tqdm>=4.66.0
 # ── Configuration parsing ─────────────────────────────────────────────────────
 PyYAML>=6.0.0
 
-# ── Streamlit dashboard (app/streamlit_app.py — currently empty stub) ─────────
+# ── Streamlit dashboard (app/streamlit_app.py) ────────────────────────────────
 streamlit>=1.32.0
+
+# ── FastAPI backend (api/) ───────────────────────────────────────────────────
+fastapi>=0.111.0
+uvicorn>=0.30.0
+python-multipart>=0.0.9
 
 # ── Model training / inference ────────────────────────────────────────────────
 torch>=2.1.0
