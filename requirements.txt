@@ -1,12 +1,14 @@
 # =============================================================================
 # AI-Tools-Project — ALPR Dataset Engineering Pipeline
-# Requirements file for Python >= 3.12
+# Requirements file for Python >= 3.12 (Python 3.12 is recommended for Windows GPU training)
 #
 # Install all runtime deps:
 #   pip install -r requirements.txt
 #
 # Install with dev/test extras:
 #   pip install -r requirements.txt -r requirements-dev.txt
+# Install for NVIDIA CUDA training instead:
+#   pip install -r requirements-gpu.txt
 # =============================================================================
 
 # ── Core image processing ─────────────────────────────────────────────────────
@@ -41,7 +43,7 @@ python-multipart>=0.0.9
 # ── Model training / inference ────────────────────────────────────────────────
 torch>=2.1.0
 torchvision>=0.16.0
-ultralytics>=8.0.0
+ultralytics>=8.3.0
 
 # ── Experiment tracking (optional) ────────────────────────────────────────────
 wandb>=0.16.0

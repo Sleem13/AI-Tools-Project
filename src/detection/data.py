@@ -13,6 +13,7 @@ def create_dataset_yaml(
     test_path: str | Path | None = None,
     names: dict[int, str] | None = None,
     output_path: str | Path | None = None,
+    dataset_root: str | Path | None = None,
 ) -> dict:
     """Generate a YOLO data.yaml dict and optionally persist it.
 
@@ -22,6 +23,7 @@ def create_dataset_yaml(
         test_path: Optional path for test images.
         names: Class mapping {0: "license_plate"}.
         output_path: If provided, write the YAML here.
+        dataset_root: Root used to resolve relative split paths.
 
     Returns:
         Dictionary suitable for ultralytics YOLO training.
@@ -30,7 +32,7 @@ def create_dataset_yaml(
         names = {0: "license_plate"}
 
     cfg = {
-        "path": str(Path.cwd().resolve()),
+        "path": str(Path(dataset_root or Path.cwd()).resolve()),
         "train": str(train_path),
         "val": str(val_path),
         "nc": len(names),

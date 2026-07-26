@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
-from unittest.mock import patch
 
 import pytest
 
@@ -15,7 +15,7 @@ from alpr_dataset.annotations.parsers import (
     parse_voc_xml,
     parse_yolo,
 )
-from alpr_dataset.annotations.schema import BoundingBox, ImageAnnotation
+from alpr_dataset.annotations.schema import ImageAnnotation
 
 
 class TestDetectAnnotationFormat:
@@ -71,7 +71,7 @@ class TestParseYolo:
 
     def test_skips_malformed_lines(self, tmp_path: Path, tmp_image: Path) -> None:
         ann = tmp_path / "bad.txt"
-        ann.write_text("0 0.5 0.5\n0 0.2 0.2 0.1 0.1\n", encoding="utf-8")
+        ann.write_text("0 0.5 0.5\n0 invalid 0.5 0.1 0.1\n0 0.2 0.2 0.1 0.1\n", encoding="utf-8")
         result = parse_yolo(ann, tmp_image, "test")
         assert result is not None
         assert len(result.boxes) == 1
@@ -108,13 +108,26 @@ class TestParseVocXml:
         assert result is not None
         assert len(result.boxes) == 0
 
+    def test_skips_object_with_invalid_coordinates(self, tmp_path: Path, tmp_image: Path) -> None:
+        xml = """<annotation>
+        <object><name>bad</name><bndbox><xmin>invalid</xmin><ymin>1</ymin><xmax>2</xmax><ymax>3</ymax></bndbox></object>
+        <object><name>good</name><bndbox><xmin>10</xmin><ymin>11</ymin><xmax>20</xmax><ymax>21</ymax></bndbox></object>
+        </annotation>"""
+        path = tmp_path / "partially_invalid.xml"
+        path.write_text(xml, encoding="utf-8")
+
+        result = parse_voc_xml(path, tmp_image, "test")
+
+        assert result is not None
+        assert [box.class_name for box in result.boxes] == ["good"]
+
 
 class TestParseCocoJson:
     def test_parses_multiple_images(self, tmp_coco_json: Path, tmp_path: Path) -> None:
         results = parse_coco_json(tmp_coco_json, tmp_path, "test")
         assert len(results) == 2
         # First image has 2 annotations
-        img1 = [r for r in results if r.image_path.name == "img1.jpg"][0]
+        img1 = next(r for r in results if r.image_path.name == "img1.jpg")
         assert len(img1.boxes) == 2
         assert img1.boxes[0].x_min == 100.0
         assert img1.boxes[0].y_min == 100.0
@@ -128,6 +141,45 @@ class TestParseCocoJson:
     def test_class_names_from_categories(self, tmp_coco_json: Path, tmp_path: Path) -> None:
         results = parse_coco_json(tmp_coco_json, tmp_path, "test")
         assert results[0].boxes[0].class_name == "license_plate"
+
+    def test_skips_malformed_annotation(self, tmp_path: Path) -> None:
+        path = tmp_path / "partially_invalid.json"
+        path.write_text(
+            json.dumps(
+                {
+                    "images": [{"id": 1, "file_name": "image.jpg", "width": 10, "height": 10}],
+                    "categories": [{"id": 1, "name": "license_plate"}],
+                    "annotations": [
+                        {"image_id": 1, "category_id": 1, "bbox": ["invalid", 0, 1, 1]},
+                        {"image_id": 1, "category_id": 1, "bbox": [1, 2, 3, 4]},
+                    ],
+                }
+            ),
+            encoding="utf-8",
+        )
+
+        results = parse_coco_json(path, tmp_path, "test")
+
+        assert len(results) == 1
+        assert len(results[0].boxes) == 1
+        assert results[0].boxes[0].x_min == 1.0
+
+
+class TestParseCsvAnnotations:
+    def test_skips_malformed_rows(self, tmp_path: Path) -> None:
+        path = tmp_path / "annotations.csv"
+        path.write_text(
+            "filename,xmin,ymin,xmax,ymax,width,height,class\n"
+            "bad.jpg,invalid,2,3,4,10,10,plate\n"
+            "good.jpg,1,2,3,4,10,20,plate\n",
+            encoding="utf-8",
+        )
+
+        results = parse_csv_annotations(path, tmp_path, "test")
+
+        assert len(results) == 1
+        assert results[0].image_path.name == "good.jpg"
+        assert (results[0].image_width, results[0].image_height) == (10, 20)
 
 
 class TestParseAnnotationFile:

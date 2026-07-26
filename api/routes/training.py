@@ -21,7 +21,7 @@ def training_status():
     det_weights = weights_dir / "detection_best.pt"
     det_status = "completed" if det_weights.exists() else "idle"
     models.append({
-        "model": "YOLOv8 Detection",
+        "model": "YOLO11 Plate Detection (Stage 2)",
         "status": det_status,
         "epoch": 100 if det_status == "completed" else 0,
         "total_epochs": 100,

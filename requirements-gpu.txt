@@ -1,0 +1,11 @@
+# NVIDIA training environment for Windows/Linux and RTX Ada GPUs.
+# Use a fresh Python 3.12 virtual environment. This file deliberately pins the
+# matching PyTorch and torchvision CUDA builds while reusing runtime packages.
+
+--index-url https://download.pytorch.org/whl/cu126
+--extra-index-url https://pypi.org/simple
+
+-r requirements.txt
+
+torch==2.13.0+cu126
+torchvision==0.28.0+cu126

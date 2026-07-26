@@ -1,5 +1,6 @@
-# YOLO11 stage-two license-plate detector training configuration.
-# This remains the default config for scripts/train_detection.py.
+# Optional YOLO11 stage-one vehicle fine-tuning configuration.
+# The cascade works immediately with COCO-pretrained yolo11n.pt; train this
+# stage only when you have a domain-specific vehicle dataset.
 
 model:
   name: yolo11n
@@ -8,17 +9,21 @@ model:
   pretrained: true
 
 data:
-  dataset_yaml: configs/model/plate_dataset.yaml
-  train_split: reports/splits/train.txt
-  val_split: reports/splits/val.txt
-  test_split: reports/splits/test.txt
+  dataset_yaml: configs/model/vehicle_dataset.yaml
+  # Set these to your custom YOLO vehicle split manifests before training.
+  train_split: data/vehicle/images/train
+  val_split: data/vehicle/images/val
+  test_split: data/vehicle/images/test
   names:
-    0: license_plate
+    0: car
+    1: motorcycle
+    2: bus
+    3: truck
 
 hyperparameters:
-  epochs: 100
+  epochs: 80
   batch: 16
-  imgsz: 960                     # plates are small; preserve more pixels than 640
+  imgsz: 640
   optimizer: AdamW
   lr0: 0.001
   lrf: 0.01
@@ -33,7 +38,7 @@ hyperparameters:
   hsv_v: 0.4
   degrees: 2.0
   translate: 0.1
-  scale: 0.4
+  scale: 0.5
   shear: 1.0
   perspective: 0.0005
   flipud: 0.0
@@ -41,13 +46,13 @@ hyperparameters:
   mosaic: 1.0
   mixup: 0.0
   copy_paste: 0.0
-  patience: 25
+  patience: 20
 
 training:
   device: 0
   workers: 4
   project: models/detection
-  name: plate_yolo11
+  name: vehicle_yolo11
   exist_ok: false
   save_period: 10
   deterministic: true
@@ -55,8 +60,3 @@ training:
   plots: true
   cache: false
   amp: true
-
-evaluation:
-  conf_threshold: 0.25
-  iou_threshold: 0.45
-  max_det: 100

@@ -22,7 +22,7 @@ dependencies = [
     "streamlit>=1.32.0",
     "torch>=2.1.0",
     "torchvision>=0.16.0",
-    "ultralytics>=8.0.0",
+    "ultralytics>=8.3.0",
     "wandb>=0.16.0",
 ]
 
@@ -35,7 +35,6 @@ dev = [
     "types-PyYAML>=6.0.0",
     "types-tqdm>=4.66.0",
 ]
-
 [project.scripts]
 alpr-inspect = "scripts.run_inspection:main"
 alpr-eda = "scripts.run_eda:main"

@@ -1,115 +1,348 @@
-"""Inference wrapper for the trained license plate detection model."""
+"""YOLO inference primitives for vehicle, plate, and cascaded detection."""
 
 from __future__ import annotations
 
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Any
 
 import cv2
 import numpy as np
 
+COCO_VEHICLE_CLASS_IDS = frozenset({2, 3, 5, 7})
 
-@dataclass
+
+@dataclass(frozen=True)
 class DetectionResult:
-    """A single detected license plate."""
+    """One object detection in absolute ``xyxy`` pixel coordinates."""
 
-    bbox: tuple[float, float, float, float]  # xyxy (normalized or pixel)
+    bbox: tuple[float, float, float, float]
     confidence: float
     class_id: int
     class_name: str
 
 
-class LicensePlateDetector:
-    """Load a trained YOLO model and run inference on images.
+@dataclass(frozen=True)
+class TwoStageDetection:
+    """A plate detection associated with the vehicle that produced it."""
 
-    Handles image pre-processing, inference, and post-processing
-    (NMS, confidence filtering).  The actual model is loaded lazily.
-    """
+    vehicle: DetectionResult
+    plate: DetectionResult
+    plate_bbox_in_vehicle: tuple[float, float, float, float]
+
+    @property
+    def combined_confidence(self) -> float:
+        """Conservative cascade score used for ranking duplicate plates."""
+        return self.vehicle.confidence * self.plate.confidence
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "bbox": list(self.plate.bbox),
+            "confidence": self.plate.confidence,
+            "combined_confidence": self.combined_confidence,
+            "class_id": self.plate.class_id,
+            "class_name": self.plate.class_name,
+            "vehicle": {
+                "bbox": list(self.vehicle.bbox),
+                "confidence": self.vehicle.confidence,
+                "class_id": self.vehicle.class_id,
+                "class_name": self.vehicle.class_name,
+            },
+        }
+
+
+class YOLODetector:
+    """Lazy Ultralytics detector with consistent filtering and result parsing."""
 
     def __init__(
         self,
         weights_path: str | Path,
         conf_threshold: float = 0.25,
         iou_threshold: float = 0.45,
-        device: str = "cpu",
+        device: str | int = "cpu",
+        class_ids: set[int] | frozenset[int] | None = None,
+        max_detections: int = 300,
     ) -> None:
         self.weights_path = Path(weights_path)
         self.conf_threshold = conf_threshold
         self.iou_threshold = iou_threshold
         self.device = device
+        self.class_ids = frozenset(class_ids) if class_ids is not None else None
+        self.max_detections = max_detections
         self._model = None
 
     def _load_model(self):
         if self._model is None:
             from ultralytics import YOLO
+
             self._model = YOLO(str(self.weights_path))
+        return self._model
 
     def predict(self, image: np.ndarray) -> list[DetectionResult]:
-        """Run detection on a single BGR image.
+        """Run detection on one BGR image."""
+        if not isinstance(image, np.ndarray) or image.ndim not in {2, 3} or image.size == 0:
+            raise ValueError("image must be a non-empty grayscale or BGR numpy array")
 
-        Args:
-            image: BGR numpy array (H, W, 3).
-
-        Returns:
-            List of DetectionResult, one per detected plate.
-        """
-        self._load_model()
-        results = self._model(
-            image,
-            conf=self.conf_threshold,
-            iou=self.iou_threshold,
-            device=self.device,
-            verbose=False,
-        )
+        model = self._load_model()
+        predict_args: dict[str, Any] = {
+            "source": image,
+            "conf": self.conf_threshold,
+            "iou": self.iou_threshold,
+            "device": self.device,
+            "max_det": self.max_detections,
+            "verbose": False,
+        }
+        if self.class_ids is not None:
+            predict_args["classes"] = sorted(self.class_ids)
+        results = model.predict(**predict_args)
         return self._parse_results(results)
 
     def predict_path(self, image_path: str | Path) -> list[DetectionResult]:
-        """Convenience: read image from disk and detect."""
         image = cv2.imread(str(image_path))
         if image is None:
             raise FileNotFoundError(f"Cannot read image: {image_path}")
         return self.predict(image)
 
-    def _parse_results(self, results) -> list[DetectionResult]:
+    def _parse_results(self, results: Any) -> list[DetectionResult]:
         detections: list[DetectionResult] = []
-        for r in results:
-            if r.boxes is None:
+        for result in results:
+            if result.boxes is None:
                 continue
-            for box in r.boxes:
-                xyxy = box.xyxy[0].tolist()
-                conf = float(box.conf[0])
-                cls_id = int(box.cls[0])
-                cls_name = r.names.get(cls_id, str(cls_id))
+            for box in result.boxes:
+                class_id = int(box.cls[0])
+                if self.class_ids is not None and class_id not in self.class_ids:
+                    continue
                 detections.append(
                     DetectionResult(
-                        bbox=tuple(xyxy),
-                        confidence=conf,
-                        class_id=cls_id,
-                        class_name=cls_name,
+                        bbox=tuple(float(value) for value in box.xyxy[0].tolist()),
+                        confidence=float(box.conf[0]),
+                        class_id=class_id,
+                        class_name=_class_name(result.names, class_id),
                     )
                 )
         return detections
 
+
+class VehicleDetector(YOLODetector):
+    """YOLO11 detector restricted to road-vehicle classes from COCO."""
+
+    def __init__(
+        self,
+        weights_path: str | Path = "yolo11n.pt",
+        conf_threshold: float = 0.25,
+        iou_threshold: float = 0.45,
+        device: str | int = "cpu",
+        class_ids: set[int] | frozenset[int] = COCO_VEHICLE_CLASS_IDS,
+        max_detections: int = 100,
+    ) -> None:
+        super().__init__(
+            weights_path=weights_path,
+            conf_threshold=conf_threshold,
+            iou_threshold=iou_threshold,
+            device=device,
+            class_ids=class_ids,
+            max_detections=max_detections,
+        )
+
+
+class LicensePlateDetector(YOLODetector):
+    """Custom YOLO11 plate detector, usable alone or as cascade stage two."""
+
     def crop_plates(self, image: np.ndarray, min_confidence: float = 0.25) -> list[tuple[np.ndarray, float]]:
-        """Detect plates and return cropped images.
-
-        Args:
-            image: BGR image.
-            min_confidence: Minimum confidence to keep a detection.
-
-        Returns:
-            List of (plate_crop, confidence) tuples.
-        """
         detections = self.predict(image)
         crops: list[tuple[np.ndarray, float]] = []
-        h, w = image.shape[:2]
-        for det in detections:
-            if det.confidence < min_confidence:
+        for detection in detections:
+            if detection.confidence < min_confidence:
                 continue
-            x1, y1, x2, y2 = [int(v) for v in det.bbox]
-            x1, y1 = max(0, x1), max(0, y1)
-            x2, y2 = min(w, x2), min(h, y2)
-            if x2 > x1 and y2 > y1:
-                crop = image[y1:y2, x1:x2]
-                crops.append((crop, det.confidence))
+            clipped = _clip_bbox(detection.bbox, image.shape[1], image.shape[0])
+            if clipped is None:
+                continue
+            x1, y1, x2, y2 = clipped
+            crops.append((image[y1:y2, x1:x2].copy(), detection.confidence))
         return crops
+
+
+class TwoStageDetector:
+    """Detect vehicles, then detect plates only inside each vehicle crop."""
+
+    def __init__(
+        self,
+        vehicle_detector: YOLODetector,
+        plate_detector: YOLODetector,
+        vehicle_padding: float = 0.05,
+        plate_nms_iou: float = 0.5,
+        fallback_to_full_image: bool = False,
+    ) -> None:
+        if vehicle_padding < 0:
+            raise ValueError("vehicle_padding must be non-negative")
+        if not 0 <= plate_nms_iou <= 1:
+            raise ValueError("plate_nms_iou must be between 0 and 1")
+        self.vehicle_detector = vehicle_detector
+        self.plate_detector = plate_detector
+        self.vehicle_padding = vehicle_padding
+        self.plate_nms_iou = plate_nms_iou
+        self.fallback_to_full_image = fallback_to_full_image
+
+    def predict(self, image: np.ndarray) -> list[TwoStageDetection]:
+        if not isinstance(image, np.ndarray) or image.ndim not in {2, 3} or image.size == 0:
+            raise ValueError("image must be a non-empty grayscale or BGR numpy array")
+
+        height, width = image.shape[:2]
+        vehicles = self.vehicle_detector.predict(image)
+        if not vehicles and self.fallback_to_full_image:
+            vehicles = [
+                DetectionResult(
+                    bbox=(0.0, 0.0, float(width), float(height)),
+                    confidence=1.0,
+                    class_id=-1,
+                    class_name="full_image",
+                )
+            ]
+
+        candidates: list[TwoStageDetection] = []
+        for vehicle in vehicles:
+            crop_bbox = _expanded_bbox(vehicle.bbox, width, height, self.vehicle_padding)
+            if crop_bbox is None:
+                continue
+            crop_x1, crop_y1, crop_x2, crop_y2 = crop_bbox
+            vehicle_crop = image[crop_y1:crop_y2, crop_x1:crop_x2]
+            for local_plate in self.plate_detector.predict(vehicle_crop):
+                local_clipped = _clip_bbox(local_plate.bbox, crop_x2 - crop_x1, crop_y2 - crop_y1)
+                if local_clipped is None:
+                    continue
+                local_x1, local_y1, local_x2, local_y2 = local_clipped
+                global_bbox = (
+                    float(crop_x1 + local_x1),
+                    float(crop_y1 + local_y1),
+                    float(crop_x1 + local_x2),
+                    float(crop_y1 + local_y2),
+                )
+                candidates.append(
+                    TwoStageDetection(
+                        vehicle=vehicle,
+                        plate=DetectionResult(
+                            bbox=global_bbox,
+                            confidence=local_plate.confidence,
+                            class_id=local_plate.class_id,
+                            class_name=local_plate.class_name,
+                        ),
+                        plate_bbox_in_vehicle=tuple(float(value) for value in local_clipped),
+                    )
+                )
+        return _deduplicate_plates(candidates, self.plate_nms_iou)
+
+    def predict_path(self, image_path: str | Path) -> list[TwoStageDetection]:
+        image = cv2.imread(str(image_path))
+        if image is None:
+            raise FileNotFoundError(f"Cannot read image: {image_path}")
+        return self.predict(image)
+
+    def crop_plates(self, image: np.ndarray) -> list[tuple[np.ndarray, TwoStageDetection]]:
+        crops: list[tuple[np.ndarray, TwoStageDetection]] = []
+        for detection in self.predict(image):
+            clipped = _clip_bbox(detection.plate.bbox, image.shape[1], image.shape[0])
+            if clipped is None:
+                continue
+            x1, y1, x2, y2 = clipped
+            crops.append((image[y1:y2, x1:x2].copy(), detection))
+        return crops
+
+
+def build_two_stage_detector(
+    config: dict[str, Any],
+    project_root: str | Path | None = None,
+) -> TwoStageDetector:
+    """Construct the cascade from ``configs/model/two_stage.yaml`` data."""
+    root = Path(project_root).resolve() if project_root is not None else Path.cwd().resolve()
+    vehicle_config = config.get("vehicle", {})
+    plate_config = config.get("plate", {})
+    cascade_config = config.get("cascade", {})
+    vehicle_detector = VehicleDetector(
+        weights_path=_configured_weights(vehicle_config.get("weights", "yolo11n.pt"), root),
+        conf_threshold=vehicle_config.get("conf_threshold", 0.3),
+        iou_threshold=vehicle_config.get("iou_threshold", 0.45),
+        device=vehicle_config.get("device", "cpu"),
+        class_ids=set(vehicle_config.get("class_ids", COCO_VEHICLE_CLASS_IDS)),
+        max_detections=vehicle_config.get("max_detections", 100),
+    )
+    plate_detector = LicensePlateDetector(
+        weights_path=_configured_weights(plate_config["weights"], root),
+        conf_threshold=plate_config.get("conf_threshold", 0.25),
+        iou_threshold=plate_config.get("iou_threshold", 0.45),
+        device=plate_config.get("device", vehicle_config.get("device", "cpu")),
+        max_detections=plate_config.get("max_detections", 20),
+    )
+    return TwoStageDetector(
+        vehicle_detector=vehicle_detector,
+        plate_detector=plate_detector,
+        vehicle_padding=cascade_config.get("vehicle_padding", 0.05),
+        plate_nms_iou=cascade_config.get("plate_nms_iou", 0.5),
+        fallback_to_full_image=cascade_config.get("fallback_to_full_image", False),
+    )
+
+
+def _class_name(names: dict[int, str] | list[str], class_id: int) -> str:
+    if isinstance(names, dict):
+        return names.get(class_id, str(class_id))
+    if 0 <= class_id < len(names):
+        return names[class_id]
+    return str(class_id)
+
+
+def _configured_weights(value: str | Path, project_root: Path) -> str | Path:
+    path = Path(value)
+    if path.is_absolute():
+        return path
+    if path.parent == Path("."):
+        return str(value)
+    return project_root / path
+
+
+def _clip_bbox(
+    bbox: tuple[float, float, float, float],
+    image_width: int,
+    image_height: int,
+) -> tuple[int, int, int, int] | None:
+    x1, y1, x2, y2 = bbox
+    clipped = (
+        max(0, min(image_width, int(np.floor(x1)))),
+        max(0, min(image_height, int(np.floor(y1)))),
+        max(0, min(image_width, int(np.ceil(x2)))),
+        max(0, min(image_height, int(np.ceil(y2)))),
+    )
+    return clipped if clipped[2] > clipped[0] and clipped[3] > clipped[1] else None
+
+
+def _expanded_bbox(
+    bbox: tuple[float, float, float, float],
+    image_width: int,
+    image_height: int,
+    padding: float,
+) -> tuple[int, int, int, int] | None:
+    x1, y1, x2, y2 = bbox
+    pad_x = max(0.0, x2 - x1) * padding
+    pad_y = max(0.0, y2 - y1) * padding
+    return _clip_bbox((x1 - pad_x, y1 - pad_y, x2 + pad_x, y2 + pad_y), image_width, image_height)
+
+
+def _bbox_iou(first: tuple[float, float, float, float], second: tuple[float, float, float, float]) -> float:
+    x1 = max(first[0], second[0])
+    y1 = max(first[1], second[1])
+    x2 = min(first[2], second[2])
+    y2 = min(first[3], second[3])
+    intersection = max(0.0, x2 - x1) * max(0.0, y2 - y1)
+    first_area = max(0.0, first[2] - first[0]) * max(0.0, first[3] - first[1])
+    second_area = max(0.0, second[2] - second[0]) * max(0.0, second[3] - second[1])
+    union = first_area + second_area - intersection
+    return intersection / union if union > 0 else 0.0
+
+
+def _deduplicate_plates(
+    detections: list[TwoStageDetection],
+    iou_threshold: float,
+) -> list[TwoStageDetection]:
+    kept: list[TwoStageDetection] = []
+    for candidate in sorted(detections, key=lambda item: item.combined_confidence, reverse=True):
+        if all(_bbox_iou(candidate.plate.bbox, existing.plate.bbox) <= iou_threshold for existing in kept):
+            kept.append(candidate)
+    return kept
