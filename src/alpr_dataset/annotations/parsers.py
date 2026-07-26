@@ -15,7 +15,6 @@ files are skipped with a warning rather than crashing the pipeline.
 
 from __future__ import annotations
 
-import csv
 import json
 import logging
 import xml.etree.ElementTree as ET
@@ -30,6 +29,28 @@ logger = logging.getLogger("alpr_dataset")
 
 DEFAULT_CLASS_NAME = "license_plate"
 DEFAULT_CLASS_ID = 0
+
+
+def _make_image_annotation(
+    *,
+    image_path: Path,
+    annotation_path: Path,
+    image_width: int,
+    image_height: int,
+    dataset_name: str,
+    boxes: list[BoundingBox],
+    source_format: str,
+) -> ImageAnnotation:
+    """Build the common annotation representation used by every parser."""
+    return ImageAnnotation(
+        image_path=image_path,
+        annotation_path=annotation_path,
+        image_width=image_width,
+        image_height=image_height,
+        dataset_name=dataset_name,
+        boxes=boxes,
+        source_format=source_format,
+    )
 
 
 def detect_annotation_format(path: Path) -> str:
@@ -68,8 +89,12 @@ def parse_yolo(
             if len(parts) < 5:
                 logger.warning("Malformed YOLO line in %s: '%s'", annotation_path, line)
                 continue
-            class_id = int(float(parts[0]))
-            cx, cy, w, h = (float(x) for x in parts[1:5])
+            try:
+                class_id = int(float(parts[0]))
+                cx, cy, w, h = (float(x) for x in parts[1:5])
+            except ValueError:
+                logger.warning("Malformed YOLO line in %s: '%s'", annotation_path, line)
+                continue
             x_min = (cx - w / 2) * meta.width
             y_min = (cy - h / 2) * meta.height
             x_max = (cx + w / 2) * meta.width
@@ -88,7 +113,7 @@ def parse_yolo(
         logger.warning("Could not read YOLO annotation %s: %s", annotation_path, exc)
         return None
 
-    return ImageAnnotation(
+    return _make_image_annotation(
         image_path=image_path,
         annotation_path=annotation_path,
         image_width=meta.width,
@@ -125,10 +150,14 @@ def parse_voc_xml(
             bnd = obj.find("bndbox")
             if bnd is None:
                 continue
-            x_min = float(bnd.findtext("xmin", default="0"))
-            y_min = float(bnd.findtext("ymin", default="0"))
-            x_max = float(bnd.findtext("xmax", default="0"))
-            y_max = float(bnd.findtext("ymax", default="0"))
+            try:
+                x_min = float(bnd.findtext("xmin", default="0"))
+                y_min = float(bnd.findtext("ymin", default="0"))
+                x_max = float(bnd.findtext("xmax", default="0"))
+                y_max = float(bnd.findtext("ymax", default="0"))
+            except (TypeError, ValueError):
+                logger.warning("Malformed VOC bounding box in %s", annotation_path)
+                continue
             boxes.append(
                 BoundingBox(
                     x_min=x_min,
@@ -143,7 +172,7 @@ def parse_voc_xml(
         logger.warning("Could not parse VOC XML %s: %s", annotation_path, exc)
         return None
 
-    return ImageAnnotation(
+    return _make_image_annotation(
         image_path=image_path,
         annotation_path=annotation_path,
         image_width=meta.width,
@@ -171,9 +200,13 @@ def parse_coco_json(
 
     boxes_by_image: dict[int, list[BoundingBox]] = {}
     for ann in data.get("annotations", []):
-        img_id = ann["image_id"]
-        x, y, w, h = ann["bbox"]  # COCO bbox: [x_min, y_min, width, height]
-        class_id = ann["category_id"]
+        try:
+            img_id = ann["image_id"]
+            x, y, w, h = (float(value) for value in ann["bbox"])
+            class_id = int(ann["category_id"])
+        except (KeyError, TypeError, ValueError):
+            logger.warning("Skipping malformed COCO annotation in %s: %r", json_path, ann)
+            continue
         box = BoundingBox(
             x_min=x,
             y_min=y,
@@ -188,7 +221,7 @@ def parse_coco_json(
     for img_id, img_info in images_by_id.items():
         image_path = images_dir / img_info["file_name"]
         results.append(
-            ImageAnnotation(
+            _make_image_annotation(
                 image_path=image_path,
                 annotation_path=json_path,
                 image_width=img_info.get("width", 0),
@@ -232,20 +265,27 @@ def parse_csv_annotations(
 
     grouped: dict[str, list[BoundingBox]] = {}
     widths_heights: dict[str, tuple[int, int]] = {}
-    for _, row in df.iterrows():
+    for row_index, row in df.iterrows():
         fname = str(row[filename_col])
         class_name = str(row[class_col]) if class_col and class_col in df.columns else DEFAULT_CLASS_NAME
-        box = BoundingBox(
-            x_min=float(row[box_cols[0]]),
-            y_min=float(row[box_cols[1]]),
-            x_max=float(row[box_cols[2]]),
-            y_max=float(row[box_cols[3]]),
-            class_id=DEFAULT_CLASS_ID,
-            class_name=class_name,
-        )
+        try:
+            box = BoundingBox(
+                x_min=float(row[box_cols[0]]),
+                y_min=float(row[box_cols[1]]),
+                x_max=float(row[box_cols[2]]),
+                y_max=float(row[box_cols[3]]),
+                class_id=DEFAULT_CLASS_ID,
+                class_name=class_name,
+            )
+        except (TypeError, ValueError):
+            logger.warning("Skipping malformed CSV row %s in %s", row_index, csv_path)
+            continue
         grouped.setdefault(fname, []).append(box)
         if "width" in df.columns and "height" in df.columns:
-            widths_heights[fname] = (int(row["width"]), int(row["height"]))
+            try:
+                widths_heights[fname] = (int(row["width"]), int(row["height"]))
+            except (TypeError, ValueError):
+                logger.warning("Ignoring invalid image dimensions in CSV row %s in %s", row_index, csv_path)
 
     results: list[ImageAnnotation] = []
     for fname, boxes in grouped.items():
@@ -256,7 +296,7 @@ def parse_csv_annotations(
             meta = build_image_meta(image_path, dataset_name)
             w, h = (meta.width, meta.height) if meta else (0, 0)
         results.append(
-            ImageAnnotation(
+            _make_image_annotation(
                 image_path=image_path,
                 annotation_path=csv_path,
                 image_width=w,

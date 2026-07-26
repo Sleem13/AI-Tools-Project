@@ -1,78 +1,83 @@
 #!/usr/bin/env python3
-"""CLI: Train YOLOv8 license plate detection model.
-
-Usage:
-    python scripts/train_detection.py
-    python scripts/train_detection.py --config configs/model/detection.yaml --epochs 150 --batch 32
-"""
+"""Train a YOLO11 vehicle or license-plate detection stage."""
 
 from __future__ import annotations
 
 import argparse
 import sys
 from pathlib import Path
+from typing import Any
+
+import yaml
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
-import yaml
+from src.detection.data import create_dataset_yaml  # noqa: E402
+from src.detection.trainer import train_detector  # noqa: E402
 
-from src.detection.trainer import train_yolo
+DEFAULT_CONFIGS = {
+    "plate": PROJECT_ROOT / "configs" / "model" / "detection.yaml",
+    "vehicle": PROJECT_ROOT / "configs" / "model" / "vehicle_detection.yaml",
+}
 
 
-def load_config(path: Path) -> dict:
-    with open(path, encoding="utf-8") as f:
-        return yaml.safe_load(f)
+def load_config(path: Path) -> dict[str, Any]:
+    with path.open(encoding="utf-8") as config_file:
+        return yaml.safe_load(config_file) or {}
+
+
+def _project_path(value: str | Path) -> Path:
+    path = Path(value)
+    return path if path.is_absolute() else PROJECT_ROOT / path
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Train YOLOv8 license plate detector.")
-    parser.add_argument("--config", type=Path,
-                        default=PROJECT_ROOT / "configs" / "model" / "detection.yaml",
-                        help="Detection config YAML")
-    parser.add_argument("--epochs", type=int, default=None, help="Override epochs")
-    parser.add_argument("--batch", type=int, default=None, help="Override batch size")
-    parser.add_argument("--imgsz", type=int, default=None, help="Override image size")
-    parser.add_argument("--device", type=str, default=None, help="Override device (e.g. '0' or 'cpu')")
-    parser.add_argument("--output", type=Path, default=PROJECT_ROOT / "models" / "detection")
+    parser = argparse.ArgumentParser(description="Train a YOLO11 stage for the vehicle-to-plate cascade.")
+    parser.add_argument("--stage", choices=("vehicle", "plate"), default="plate")
+    parser.add_argument("--config", type=Path, default=None, help="Override the stage configuration")
+    parser.add_argument("--data", type=Path, default=None, help="Use an existing Ultralytics dataset YAML")
+    parser.add_argument("--epochs", type=int, default=None)
+    parser.add_argument("--batch", type=int, default=None)
+    parser.add_argument("--imgsz", type=int, default=None)
+    parser.add_argument("--device", type=str, default=None, help="GPU id such as 0, or cpu")
+    parser.add_argument("--output", type=Path, default=None)
+    parser.add_argument("--name", type=str, default=None, help="Override the Ultralytics run name")
     args = parser.parse_args()
 
-    config = load_config(args.config)
-
-    if args.epochs is not None:
-        config["hyperparameters"]["epochs"] = args.epochs
-    if args.batch is not None:
-        config["hyperparameters"]["batch"] = args.batch
-    if args.imgsz is not None:
-        config["hyperparameters"]["imgsz"] = args.imgsz
+    config_path = args.config or DEFAULT_CONFIGS[args.stage]
+    config = load_config(config_path)
+    hyperparameters = config.setdefault("hyperparameters", {})
+    training = config.setdefault("training", {})
+    for key in ("epochs", "batch", "imgsz"):
+        value = getattr(args, key)
+        if value is not None:
+            hyperparameters[key] = value
     if args.device is not None:
-        config["training"]["device"] = args.device
+        training["device"] = args.device
+    if args.name is not None:
+        training["name"] = args.name
 
-    data_cfg = config.get("data", {})
+    data_config = config.get("data", {})
+    dataset_yaml = _project_path(args.data) if args.data else _project_path(data_config["dataset_yaml"])
+    if args.data is None:
+        names = {int(class_id): name for class_id, name in data_config["names"].items()}
+        create_dataset_yaml(
+            train_path=_project_path(data_config["train_split"]),
+            val_path=_project_path(data_config["val_split"]),
+            test_path=_project_path(data_config["test_split"]) if data_config.get("test_split") else None,
+            names=names,
+            output_path=dataset_yaml,
+            dataset_root=PROJECT_ROOT,
+        )
 
-    if data_cfg.get("use_preprocessed", True):
-        train_dir = PROJECT_ROOT / data_cfg.get("preprocessed_root", "data/processed/preprocessed") / "images"
-    else:
-        train_dir = PROJECT_ROOT / data_cfg.get("unified_root", "data/processed/unified") / "images"
-
-    dataset_yaml = PROJECT_ROOT / "configs" / "model" / "dataset.yaml"
-
-    print(f"Training config: {args.config}")
-    print(f"Train images: {train_dir}")
-    print(f"Output: {args.output}")
-
-    results = train_yolo(
-        config=config,
-        train_image_dir=train_dir,
-        val_image_dir=train_dir,
-        output_dir=args.output,
-        dataset_yaml_path=dataset_yaml,
-    )
-
-    print(f"Training complete. Best model saved in {args.output}")
-    if results:
-        print(f"Results: {results}")
+    output_dir = _project_path(args.output or training.get("project", "models/detection"))
+    print(f"Stage: {args.stage}")
+    print(f"Model: {config.get('model', {}).get('weights', config.get('model', {}).get('name'))}")
+    print(f"Dataset: {dataset_yaml}")
+    print(f"Output: {output_dir}")
+    train_detector(config, dataset_yaml, output_dir)
 
 
 if __name__ == "__main__":

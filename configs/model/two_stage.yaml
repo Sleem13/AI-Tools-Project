@@ -1,0 +1,27 @@
+# Vehicle -> license plate cascade. Paths are relative to the project root.
+
+vehicle:
+  weights: yolo11n.pt             # COCO-pretrained YOLO11; auto-downloads
+  conf_threshold: 0.30
+  iou_threshold: 0.45
+  class_ids: [2, 3, 5, 7]         # COCO: car, motorcycle, bus, truck
+  max_detections: 100
+
+plate:
+  weights: models/detection/plate_yolo11/weights/best.pt
+  conf_threshold: 0.25
+  iou_threshold: 0.45
+  max_detections: 20
+
+cascade:
+  vehicle_padding: 0.05
+  plate_nms_iou: 0.50
+  fallback_to_full_image: false
+
+# Reserved stage-three contract. Enable after training a character detector.
+character:
+  enabled: false
+  model_family: yolo26
+  weights: models/character/yolo26/weights/best.pt
+  conf_threshold: 0.25
+  iou_threshold: 0.45

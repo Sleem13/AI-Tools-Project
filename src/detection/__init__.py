@@ -1,19 +1,29 @@
-"""Detection module for ALPR license plate detection.
-
-Provides:
-  - LicensePlateDataset: YOLO-format dataset loader with augmentations
-  - train_yolo: programmatic YOLOv8 training entry point
-  - LicensePlateDetector: inference wrapper loading a trained YOLO model
-"""
+"""YOLO11 vehicle-to-plate detection and training."""
 
 from src.detection.data import LicensePlateDataset, create_dataset_yaml
-from src.detection.inference import LicensePlateDetector, DetectionResult
-from src.detection.trainer import train_yolo
+from src.detection.inference import (
+    COCO_VEHICLE_CLASS_IDS,
+    DetectionResult,
+    LicensePlateDetector,
+    TwoStageDetection,
+    TwoStageDetector,
+    VehicleDetector,
+    YOLODetector,
+    build_two_stage_detector,
+)
+from src.detection.trainer import train_detector, train_yolo
 
 __all__ = [
-    "LicensePlateDataset",
-    "create_dataset_yaml",
-    "LicensePlateDetector",
+    "COCO_VEHICLE_CLASS_IDS",
     "DetectionResult",
+    "LicensePlateDataset",
+    "LicensePlateDetector",
+    "TwoStageDetection",
+    "TwoStageDetector",
+    "VehicleDetector",
+    "YOLODetector",
+    "build_two_stage_detector",
+    "create_dataset_yaml",
+    "train_detector",
     "train_yolo",
 ]

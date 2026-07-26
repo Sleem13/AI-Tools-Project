@@ -130,6 +130,7 @@ celerybeat.pid
 # Environments
 .env
 .venv
+.venv-gpu/
 env/
 venv/
 ENV/
@@ -186,12 +187,15 @@ cython_debug/
 # Ignore all raw, processed, and split datasets
 data/
 
-# Ignore custom models/weights
-models/weights/*.pt
-models/weights/*.pth
-models/weights/*.h5
-models/weights/*.weights
+# Ignore custom models, checkpoints, and training runs
+models/**/*.pt
+models/**/*.pth
+models/**/*.h5
+models/**/*.weights
+runs/
+wandb/
 
 # Ignore generated reports
 reports/*.pdf
 reports/*.html
+reports/video_jobs/

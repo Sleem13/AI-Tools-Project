@@ -2,7 +2,7 @@
 
 Production-grade dataset engineering and ALPR (Automatic License Plate Recognition) pipeline for Egyptian license plates.
 
-Covers the full lifecycle: raw dataset ingestion, inspection, EDA, quality assessment, harmonization, preprocessing, statistics, train/val/test splitting, YOLOv8 plate detection, CRNN text recognition, and end-to-end evaluation.
+Covers the full lifecycle: raw dataset ingestion, inspection, EDA, quality assessment, harmonization, preprocessing, statistics, train/val/test splitting, two-stage YOLO11 vehicle-to-plate detection, text recognition, and end-to-end evaluation.
 
 ## Architecture
 
@@ -17,7 +17,7 @@ src/
     statistics/         # Part 6: stats generation
     splitting/          # Part 7: stratified train/val/test split
   dataset/              # Inspector/reporter (used by main.py CLI)
-  detection/            # YOLOv8 plate detection
+  detection/            # YOLO11 vehicle -> plate cascade
   ocr/                  # CRNN + CTC text recognition
   evaluation/           # End-to-end ALPR evaluation
   postprocessing/       # Egyptian plate text formatting
@@ -44,14 +44,14 @@ kaggle datasets download -d mahmoudeldebase/egyptian-cars-plates -p data/raw/dat
 # Run the full 7-stage pipeline
 python scripts/run_full_pipeline.py
 
-# Train detection model
-python scripts/train_detection.py
+# Train the custom stage-two plate detector (stage one uses COCO YOLO11)
+python scripts/train_detection.py --stage plate
 
 # Train OCR model
 python scripts/train_ocr.py
 
 # Run inference
-python scripts/run_detection_inference.py --weights models/weights/det_best.pt --input test_images/
+python scripts/run_detection_inference.py --input test_images/ --output reports/two_stage/
 python scripts/run_ocr_inference.py --weights models/weights/ocr_best.pt --input plate_crops/
 
 # Launch dashboard
@@ -77,7 +77,9 @@ All settings are YAML-driven in `configs/`:
 - `pipeline_config.yaml` — Global paths, thresholds, seeds
 - `datasets.yaml` — Per-dataset format, class maps, subdirectories
 - `preprocessing_config.yaml` — Transform chain and split ratios
-- `model/detection.yaml` — YOLOv8 hyperparameters
+- `model/detection.yaml` — YOLO11 plate training
+- `model/vehicle_detection.yaml` — optional YOLO11 vehicle fine-tuning
+- `model/two_stage.yaml` — cascade inference and future YOLO26 character-stage settings
 - `model/ocr.yaml` — CRNN architecture and training config
 
 ## Testing
@@ -85,6 +87,14 @@ All settings are YAML-driven in `configs/`:
 ```bash
 pytest tests/ -v
 ```
+
+See [Two-stage YOLO11 vehicle and plate detection](docs/two_stage_yolo.md) for dataset layout, training, inference, and the future YOLO26 character-stage contract.
+
+For NVIDIA training, follow the [RTX 2000 Ada GPU environment setup](docs/gpu_setup.md). It uses a dedicated Python 3.12 environment and pinned CUDA-enabled PyTorch wheels.
+
+The [Master Plate workbench](docs/master_plate_workbench.md) moves the complete `Master_Plate_Dataset.ipynb` workflow into the React/FastAPI Training page, including runtime readiness, dataset samples, YOLO11 launch and monitoring, training artifacts, random validation inference, and enhanced plate crops.
+
+The [interactive workflow and media lab](docs/interactive_workflow.md) visualize the complete learning and inference lifecycle and support human-reviewed detection on real images and asynchronously processed videos.
 
 ## License
 
