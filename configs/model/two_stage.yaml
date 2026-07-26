@@ -18,10 +18,13 @@ cascade:
   plate_nms_iou: 0.50
   fallback_to_full_image: false
 
-# Reserved stage-three contract. Enable after training a character detector.
+# Stage three is activated automatically by the API when trained weights exist.
 character:
-  enabled: false
+  enabled: true
   model_family: yolo26
-  weights: models/character/yolo26/weights/best.pt
+  weights: models/character/yolo26_characters/weights/best.pt
   conf_threshold: 0.25
   iou_threshold: 0.45
+  max_detections: 12
+  reading_direction: rtl
+  row_threshold: 0.60

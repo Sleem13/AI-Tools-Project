@@ -20,7 +20,7 @@ export default function Settings() {
       .catch(() =>
         setHealth({
           status: "offline",
-          models_loaded: { detection: false, ocr: false },
+          models_loaded: { detection: false, character: false, ocr: false },
         })
       )
       .finally(() => setLoading(false));
@@ -77,6 +77,21 @@ export default function Settings() {
             </span>
           </div>
           <div className="flex items-center justify-between py-2 border-t border-border">
+            <span className="text-sm text-text-secondary">Character Model</span>
+            <span
+              className={`flex items-center gap-2 text-sm ${
+                health?.models_loaded?.character ? "text-success" : "text-text-muted"
+              }`}
+            >
+              {health?.models_loaded?.character ? (
+                <CheckCircle2 className="w-4 h-4" />
+              ) : (
+                <XCircle className="w-4 h-4" />
+              )}
+              {health?.models_loaded?.character ? "Loaded" : "Not loaded"}
+            </span>
+          </div>
+          <div className="flex items-center justify-between py-2 border-t border-border">
             <span className="text-sm text-text-secondary">OCR Model</span>
             <span
               className={`flex items-center gap-2 text-sm ${
@@ -105,8 +120,10 @@ export default function Settings() {
           {[
             { label: "Detection Confidence", value: "0.25" },
             { label: "IOU Threshold", value: "0.45" },
-            { label: "Beam Width (OCR)", value: "1" },
-            { label: "Input Height (OCR)", value: "32" },
+            { label: "Character Confidence", value: "0.25" },
+            { label: "Character Reading Order", value: "Right to left" },
+            { label: "CRNN Fallback", value: "Automatic" },
+            { label: "Input Height (CRNN)", value: "32" },
             { label: "Duplicate Hash Threshold", value: "5" },
             { label: "Blur Threshold", value: "100.0" },
             { label: "Random Seed", value: "42" },
@@ -137,8 +154,8 @@ export default function Settings() {
             License: MIT &middot; Python 3.12+ &middot; React + Vite
           </p>
           <p className="text-text-muted text-xs mt-3">
-            Built with a two-stage YOLO11 detector, CRNN+CTC for OCR, and a
-            7-stage dataset engineering pipeline.
+            Built as a three-stage cascade: YOLO11 vehicles, YOLO11 plates,
+            and YOLO26 character detection with automatic CRNN+CTC fallback.
           </p>
         </div>
       </div>

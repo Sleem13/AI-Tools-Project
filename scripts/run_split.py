@@ -16,6 +16,8 @@ import argparse
 import sys
 from pathlib import Path
 
+import yaml
+
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
@@ -89,7 +91,21 @@ def main() -> None:
             for a in annotations
             if a.annotation_path is not None
         }
-        materialize_split(result, label_lookup, config.data_processed_dir / "split")
+        training_root = config.data_processed_dir / "Master_Plate_Dataset"
+        materialize_split(result, label_lookup, training_root)
+        dataset_yaml = {
+            "path": str(training_root.resolve()),
+            "train": "images/train",
+            "val": "images/val",
+            "test": "images/test",
+            "nc": len(config.unified_class_map),
+            "names": config.unified_class_map,
+        }
+        (training_root / "data.yaml").write_text(
+            yaml.safe_dump(dataset_yaml, sort_keys=False),
+            encoding="utf-8",
+        )
+        logger.info("Materialized YOLO training dataset -> %s", training_root)
 
     logger.info("Part 7 complete -> %s", manifest_dir)
 

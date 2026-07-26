@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the YOLO11 vehicle -> plate cascade on images."""
+"""Run the vehicle -> plate -> optional character cascade on images."""
 
 from __future__ import annotations
 

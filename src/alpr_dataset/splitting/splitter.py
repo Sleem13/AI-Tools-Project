@@ -130,8 +130,8 @@ def materialize_split(
     manifests (image path lists) are sufficient for most training loaders.
     """
     for split_name, items in (("train", result.train), ("val", result.val), ("test", result.test)):
-        img_dir = ensure_dir(output_root / split_name / "images")
-        lbl_dir = ensure_dir(output_root / split_name / "labels")
+        img_dir = ensure_dir(output_root / "images" / split_name)
+        lbl_dir = ensure_dir(output_root / "labels" / split_name)
         for ann in items:
             src_img = Path(ann.image_path)
             if not src_img.exists():

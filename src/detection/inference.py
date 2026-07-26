@@ -1,4 +1,5 @@
 """YOLO inference primitives for vehicle, plate, and cascaded detection."""
+# ruff: noqa: RUF001
 
 from __future__ import annotations
 
@@ -10,6 +11,37 @@ import cv2
 import numpy as np
 
 COCO_VEHICLE_CLASS_IDS = frozenset({2, 3, 5, 7})
+
+CHARACTER_GLYPHS = {
+    "7aa": "ح",
+    "Taa": "ط",
+    "Thaa": "ظ",
+    "ain": "ع",
+    "alif": "ا",
+    "baa": "ب",
+    "daad": "ض",
+    "daal": "د",
+    "faa": "ف",
+    "ghayn": "غ",
+    "haa": "ه",
+    "jeem": "ج",
+    "kaaf": "ك",
+    "khaa": "خ",
+    "laam": "ل",
+    "meem": "م",
+    "noon": "ن",
+    "qaaf": "ق",
+    "raa": "ر",
+    "saad": "ص",
+    "seen": "س",
+    "sheen": "ش",
+    "taa": "ت",
+    "thaa": "ث",
+    "waw": "و",
+    "yaa": "ي",
+    "zaal": "ذ",
+    "zay": "ز",
+}
 
 
 @dataclass(frozen=True)
@@ -23,12 +55,35 @@ class DetectionResult:
 
 
 @dataclass(frozen=True)
+class CharacterResult:
+    """One ordered character detected inside a stage-two plate crop."""
+
+    detection: DetectionResult
+    glyph: str
+    row: int
+    order: int
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "bbox": list(self.detection.bbox),
+            "confidence": self.detection.confidence,
+            "class_id": self.detection.class_id,
+            "class_name": self.detection.class_name,
+            "glyph": self.glyph,
+            "row": self.row,
+            "order": self.order,
+        }
+
+
+@dataclass(frozen=True)
 class TwoStageDetection:
     """A plate detection associated with the vehicle that produced it."""
 
     vehicle: DetectionResult
     plate: DetectionResult
     plate_bbox_in_vehicle: tuple[float, float, float, float]
+    characters: tuple[CharacterResult, ...] = ()
+    character_text: str = ""
 
     @property
     def combined_confidence(self) -> float:
@@ -36,7 +91,7 @@ class TwoStageDetection:
         return self.vehicle.confidence * self.plate.confidence
 
     def to_dict(self) -> dict[str, Any]:
-        return {
+        payload: dict[str, Any] = {
             "bbox": list(self.plate.bbox),
             "confidence": self.plate.confidence,
             "combined_confidence": self.combined_confidence,
@@ -49,6 +104,10 @@ class TwoStageDetection:
                 "class_name": self.vehicle.class_name,
             },
         }
+        if self.characters:
+            payload["characters"] = [character.to_dict() for character in self.characters]
+            payload["character_text"] = self.character_text
+        return payload
 
 
 class YOLODetector:
@@ -62,6 +121,7 @@ class YOLODetector:
         device: str | int = "cpu",
         class_ids: set[int] | frozenset[int] | None = None,
         max_detections: int = 300,
+        agnostic_nms: bool = False,
     ) -> None:
         self.weights_path = Path(weights_path)
         self.conf_threshold = conf_threshold
@@ -69,6 +129,7 @@ class YOLODetector:
         self.device = device
         self.class_ids = frozenset(class_ids) if class_ids is not None else None
         self.max_detections = max_detections
+        self.agnostic_nms = agnostic_nms
         self._model = None
 
     def _load_model(self):
@@ -90,6 +151,7 @@ class YOLODetector:
             "iou": self.iou_threshold,
             "device": self.device,
             "max_det": self.max_detections,
+            "agnostic_nms": self.agnostic_nms,
             "verbose": False,
         }
         if self.class_ids is not None:
@@ -162,6 +224,34 @@ class LicensePlateDetector(YOLODetector):
         return crops
 
 
+class CharacterDetector(YOLODetector):
+    """YOLO26 character detector plus deterministic Egyptian plate decoding."""
+
+    def __init__(
+        self,
+        *args,
+        reading_direction: str = "rtl",
+        row_threshold: float = 0.6,
+        **kwargs,
+    ) -> None:
+        kwargs.setdefault("agnostic_nms", True)
+        super().__init__(*args, **kwargs)
+        if reading_direction not in {"ltr", "rtl"}:
+            raise ValueError("reading_direction must be 'ltr' or 'rtl'")
+        if row_threshold <= 0:
+            raise ValueError("row_threshold must be positive")
+        self.reading_direction = reading_direction
+        self.row_threshold = row_threshold
+
+    def recognize(self, plate_crop: np.ndarray) -> tuple[tuple[CharacterResult, ...], str]:
+        detections = self.predict(plate_crop)
+        return order_and_decode_characters(
+            detections,
+            reading_direction=self.reading_direction,
+            row_threshold=self.row_threshold,
+        )
+
+
 class TwoStageDetector:
     """Detect vehicles, then detect plates only inside each vehicle crop."""
 
@@ -172,6 +262,7 @@ class TwoStageDetector:
         vehicle_padding: float = 0.05,
         plate_nms_iou: float = 0.5,
         fallback_to_full_image: bool = False,
+        character_detector: CharacterDetector | None = None,
     ) -> None:
         if vehicle_padding < 0:
             raise ValueError("vehicle_padding must be non-negative")
@@ -182,6 +273,7 @@ class TwoStageDetector:
         self.vehicle_padding = vehicle_padding
         self.plate_nms_iou = plate_nms_iou
         self.fallback_to_full_image = fallback_to_full_image
+        self.character_detector = character_detector
 
     def predict(self, image: np.ndarray) -> list[TwoStageDetection]:
         if not isinstance(image, np.ndarray) or image.ndim not in {2, 3} or image.size == 0:
@@ -217,6 +309,11 @@ class TwoStageDetector:
                     float(crop_x1 + local_x2),
                     float(crop_y1 + local_y2),
                 )
+                characters: tuple[CharacterResult, ...] = ()
+                character_text = ""
+                if self.character_detector is not None:
+                    plate_crop = vehicle_crop[local_y1:local_y2, local_x1:local_x2]
+                    characters, character_text = self.character_detector.recognize(plate_crop)
                 candidates.append(
                     TwoStageDetection(
                         vehicle=vehicle,
@@ -227,6 +324,8 @@ class TwoStageDetector:
                             class_name=local_plate.class_name,
                         ),
                         plate_bbox_in_vehicle=tuple(float(value) for value in local_clipped),
+                        characters=characters,
+                        character_text=character_text,
                     )
                 )
         return _deduplicate_plates(candidates, self.plate_nms_iou)
@@ -256,6 +355,7 @@ def build_two_stage_detector(
     root = Path(project_root).resolve() if project_root is not None else Path.cwd().resolve()
     vehicle_config = config.get("vehicle", {})
     plate_config = config.get("plate", {})
+    character_config = config.get("character", {})
     cascade_config = config.get("cascade", {})
     vehicle_detector = VehicleDetector(
         weights_path=_configured_weights(vehicle_config.get("weights", "yolo11n.pt"), root),
@@ -272,13 +372,82 @@ def build_two_stage_detector(
         device=plate_config.get("device", vehicle_config.get("device", "cpu")),
         max_detections=plate_config.get("max_detections", 20),
     )
+    character_detector = None
+    if character_config.get("enabled", False):
+        character_weights = _configured_weights(character_config["weights"], root)
+        if _weights_exist(character_weights):
+            character_detector = CharacterDetector(
+                weights_path=character_weights,
+                conf_threshold=character_config.get("conf_threshold", 0.25),
+                iou_threshold=character_config.get("iou_threshold", 0.45),
+                device=character_config.get("device", plate_config.get("device", vehicle_config.get("device", "cpu"))),
+                max_detections=character_config.get("max_detections", 12),
+                reading_direction=character_config.get("reading_direction", "rtl"),
+                row_threshold=character_config.get("row_threshold", 0.6),
+            )
     return TwoStageDetector(
         vehicle_detector=vehicle_detector,
         plate_detector=plate_detector,
         vehicle_padding=cascade_config.get("vehicle_padding", 0.05),
         plate_nms_iou=cascade_config.get("plate_nms_iou", 0.5),
         fallback_to_full_image=cascade_config.get("fallback_to_full_image", False),
+        character_detector=character_detector,
     )
+
+
+def order_and_decode_characters(
+    detections: list[DetectionResult],
+    reading_direction: str = "rtl",
+    row_threshold: float = 0.6,
+) -> tuple[tuple[CharacterResult, ...], str]:
+    """Cluster characters into rows and decode each row in reading order."""
+    if not detections:
+        return (), ""
+    if reading_direction not in {"ltr", "rtl"}:
+        raise ValueError("reading_direction must be 'ltr' or 'rtl'")
+
+    median_height = float(np.median([item.bbox[3] - item.bbox[1] for item in detections]))
+    tolerance = max(1.0, median_height * row_threshold)
+    rows: list[list[DetectionResult]] = []
+    row_centers: list[float] = []
+    for detection in sorted(detections, key=lambda item: _bbox_center(item.bbox)[1]):
+        center_y = _bbox_center(detection.bbox)[1]
+        if not rows:
+            rows.append([detection])
+            row_centers.append(center_y)
+            continue
+        closest = min(range(len(rows)), key=lambda index: abs(center_y - row_centers[index]))
+        if abs(center_y - row_centers[closest]) <= tolerance:
+            rows[closest].append(detection)
+            row_centers[closest] = sum(_bbox_center(item.bbox)[1] for item in rows[closest]) / len(rows[closest])
+        else:
+            rows.append([detection])
+            row_centers.append(center_y)
+
+    ordered_rows = sorted(zip(row_centers, rows, strict=True), key=lambda item: item[0])
+    results: list[CharacterResult] = []
+    row_texts: list[str] = []
+    for row_index, (_, row) in enumerate(ordered_rows):
+        ordered = sorted(row, key=lambda item: _bbox_center(item.bbox)[0], reverse=reading_direction == "rtl")
+        glyphs = []
+        previous_kind = None
+        for order, detection in enumerate(ordered):
+            glyph = CHARACTER_GLYPHS.get(detection.class_name, detection.class_name)
+            kind = "digit" if glyph.isdigit() else "letter"
+            if glyphs and kind != previous_kind:
+                glyphs.append(" ")
+            glyphs.append(glyph)
+            previous_kind = kind
+            results.append(
+                CharacterResult(
+                    detection=detection,
+                    glyph=glyph,
+                    row=row_index,
+                    order=order,
+                )
+            )
+        row_texts.append("".join(glyphs))
+    return tuple(results), " / ".join(row_texts)
 
 
 def _class_name(names: dict[int, str] | list[str], class_id: int) -> str:
@@ -296,6 +465,15 @@ def _configured_weights(value: str | Path, project_root: Path) -> str | Path:
     if path.parent == Path("."):
         return str(value)
     return project_root / path
+
+
+def _weights_exist(value: str | Path) -> bool:
+    path = Path(value)
+    return path.is_file()
+
+
+def _bbox_center(bbox: tuple[float, float, float, float]) -> tuple[float, float]:
+    return ((bbox[0] + bbox[2]) / 2.0, (bbox[1] + bbox[3]) / 2.0)
 
 
 def _clip_bbox(

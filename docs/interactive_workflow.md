@@ -2,7 +2,7 @@
 
 The application now has two complementary visual surfaces:
 
-- `/workflow` shows the complete live ALPR lifecycle from dataset engineering through model training, two-stage detection, planned character detection, and human feedback.
+- `/workflow` shows the complete live ALPR lifecycle from dataset engineering through model training, three-stage detection, and human feedback.
 - `/` accepts real images and videos for auditable inference and human review.
 
 ## Workflow visualization

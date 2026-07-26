@@ -25,7 +25,8 @@ def format_plate(raw_text: str) -> str:
     Returns:
         Formatted plate string, or empty string if unreadable.
     """
-    cleaned = re.sub(r"[^A-Za-z0-9]", "", raw_text).strip().upper()
+    cleaned = re.sub(r"[^A-Za-z0-9\u0600-\u06FF ]", "", raw_text).strip().upper()
+    cleaned = re.sub(r"\s+", " ", cleaned)
     return cleaned
 
 
@@ -44,8 +45,6 @@ def validate_plate(text: str, min_length: int = 3, max_length: int = 10) -> bool
         return False
     if not (min_length <= len(text) <= max_length):
         return False
-    if not re.search(r"[A-Z]", text):
+    if not re.search(r"[A-Z\u0600-\u06FF]", text):
         return False
-    if not re.search(r"[0-9]", text):
-        return False
-    return True
+    return bool(re.search(r"[0-9]", text))

@@ -4,6 +4,17 @@ export interface Detection {
   confidence: number;
   plate_text: string;
   formatted_text: string;
+  text_source?: "character_detector" | "crnn" | null;
+  character_text?: string;
+  characters?: Array<{
+    bbox: [number, number, number, number];
+    confidence: number;
+    class_id: number;
+    class_name: string;
+    glyph: string;
+    row: number;
+    order: number;
+  }>;
   plate_crop?: string;
   combined_confidence?: number;
   vehicle?: {
@@ -121,6 +132,7 @@ export interface TrainingJob {
   run_dir: string | null;
   log_path: string | null;
   epochs: number;
+  stage?: "plate" | "character";
   return_code: number | null;
   log_tail: string;
   metrics: { history: TrainingMetrics[]; latest: TrainingMetrics | null };
@@ -154,8 +166,18 @@ export interface TrainingWorkbench {
     history: TrainingMetrics[];
     artifacts: TrainingArtifact[];
   };
+  character_dataset: MasterDatasetSummary & { class_count: number };
+  character_run: {
+    directory: string | null;
+    best_model: string | null;
+    best_model_exists: boolean;
+    latest: TrainingMetrics | null;
+    history: TrainingMetrics[];
+    artifacts: TrainingArtifact[];
+  };
   reference_run: NotebookReferenceRun | null;
   defaults: { epochs: number; imgsz: number; batch: number; device: string };
+  character_defaults: { epochs: number; imgsz: number; batch: number; device: string };
 }
 
 export interface DatasetSample {
@@ -179,6 +201,7 @@ export interface HealthResponse {
   status: string;
   models_loaded: {
     detection: boolean;
+    character: boolean;
     ocr: boolean;
   };
 }

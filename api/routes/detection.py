@@ -52,7 +52,11 @@ async def detect(
             continue
         x1, y1, x2, y2 = plate_box
         crop = image[y1:y2, x1:x2]
-        text = reader.read_plate(crop) if reader is not None else ""
+        text = getattr(cascade_detection, "character_text", "")
+        text_source = "character_detector" if text else ""
+        if not text and reader is not None:
+            text = reader.read_plate(crop)
+            text_source = "crnn"
         formatted = ""
         if text:
             from src.postprocessing.plate_formatter import format_plate
@@ -64,6 +68,7 @@ async def detect(
                 "id": f"plate-{index + 1}",
                 "plate_text": text,
                 "formatted_text": formatted,
+                "text_source": text_source or None,
                 "plate_crop": _image_data_url(natural_high_resolution_plate(crop, 4)),
             }
         )
@@ -181,7 +186,10 @@ def _process_video(job_id: str, input_path: Path, output_path: Path, confidence:
                         continue
                     x1, y1, x2, y2 = plate_box
                     crop = frame[y1:y2, x1:x2]
-                    current_labels.append(reader.read_plate(crop) if reader is not None else "")
+                    label = getattr(cascade_detection, "character_text", "")
+                    if not label and reader is not None:
+                        label = reader.read_plate(crop)
+                    current_labels.append(label)
                 if current_detections:
                     frames_with_detections += 1
                     total_detections += len(current_detections)

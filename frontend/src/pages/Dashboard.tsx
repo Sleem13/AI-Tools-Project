@@ -1,11 +1,12 @@
 import { useCallback, useEffect, useState } from "react";
 import { AlertTriangle, CheckCircle2, Clock, Download, FileVideo, ScanBox, ShieldCheck, Zap } from "lucide-react";
-import { detectPlate, getVideoDetectionStatus, startVideoDetection } from "../api/client";
+import { detectPlate, getHealth, getVideoDetectionStatus, startVideoDetection } from "../api/client";
 import FileUploader from "../components/FileUploader";
 import LoadingSpinner from "../components/LoadingSpinner";
+import PipelineStrip from "../components/PipelineStrip";
 import PlateCard from "../components/PlateCard";
 import StatsGrid from "../components/StatsGrid";
-import type { Detection, ReviewDecision, VideoJob } from "../types";
+import type { Detection, HealthResponse, ReviewDecision, VideoJob } from "../types";
 
 export default function Dashboard() {
   const [detections, setDetections] = useState<Detection[]>([]);
@@ -18,8 +19,17 @@ export default function Dashboard() {
   const [mediaName, setMediaName] = useState<string | null>(null);
   const [confidence, setConfidence] = useState(0.25);
   const [frameStride, setFrameStride] = useState(3);
+  const [health, setHealth] = useState<HealthResponse | null>(null);
+  const [healthChecked, setHealthChecked] = useState(false);
   const videoJobId = videoJob?.id;
   const videoJobStatus = videoJob?.status;
+
+  useEffect(() => {
+    getHealth()
+      .then(setHealth)
+      .catch(() => setHealth(null))
+      .finally(() => setHealthChecked(true));
+  }, []);
 
   const handleFile = useCallback(async (file: File) => {
     setLoading(true);
@@ -79,8 +89,14 @@ export default function Dashboard() {
     <div className="max-w-7xl space-y-7">
       <div>
         <h1 className="text-3xl font-bold text-text-primary flex items-center gap-3"><ScanBox className="w-8 h-8 text-accent" /> Human review media lab</h1>
-        <p className="text-text-secondary mt-1">Run the complete vehicle-to-plate pipeline on real images or videos, then validate the model output.</p>
+        <p className="text-text-secondary mt-1">Run vehicle, plate, and character detection on real images or videos, then validate every decoded result.</p>
       </div>
+
+      <PipelineStrip
+        vehicle={!healthChecked ? "checking" : !health ? "offline" : "ready"}
+        plate={!healthChecked ? "checking" : !health ? "offline" : health.models_loaded.detection ? "ready" : "missing"}
+        character={!healthChecked ? "checking" : !health ? "offline" : health.models_loaded.character ? "ready" : "missing"}
+      />
 
       <div className="bg-bg-card border border-border rounded-xl p-5 grid grid-cols-1 md:grid-cols-2 gap-5">
         <label className="text-xs text-text-muted">Minimum plate confidence <span className="float-right font-mono text-text-primary">{Math.round(confidence * 100)}%</span><input type="range" min={0.05} max={0.95} step={0.05} value={confidence} onChange={(event) => setConfidence(Number(event.target.value))} className="w-full mt-3 accent-indigo-500" /></label>
@@ -97,7 +113,7 @@ export default function Dashboard() {
           <div className="w-full h-2.5 rounded-full bg-bg-primary overflow-hidden"><div className={`h-full rounded-full transition-all duration-500 ${videoJob.status === "error" ? "bg-danger" : videoJob.status === "completed" ? "bg-success" : "bg-info"}`} style={{ width: `${videoJob.progress * 100}%` }} /></div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3"><div className="bg-bg-primary rounded-lg p-3"><p className="text-xs text-text-muted">Processed frames</p><p className="text-lg font-mono text-text-primary mt-1">{videoJob.processed_frames}</p></div><div className="bg-bg-primary rounded-lg p-3"><p className="text-xs text-text-muted">Detection frames</p><p className="text-lg font-mono text-text-primary mt-1">{videoJob.frames_with_detections}</p></div><div className="bg-bg-primary rounded-lg p-3"><p className="text-xs text-text-muted">Plate observations</p><p className="text-lg font-mono text-text-primary mt-1">{videoJob.total_detections}</p></div><div className="bg-bg-primary rounded-lg p-3"><p className="text-xs text-text-muted">Review events</p><p className="text-lg font-mono text-text-primary mt-1">{videoJob.events.length}</p></div></div>
           {videoJob.status === "completed" && videoJob.result_url && <div className="space-y-3"><video src={videoJob.result_url} controls className="w-full max-h-[620px] rounded-xl bg-black" /><a href={videoJob.result_url} download className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-accent text-white text-sm"><Download className="w-4 h-4" /> Download annotated video</a></div>}
-          {videoJob.events.length > 0 && <div className="overflow-x-auto"><table className="w-full text-left text-sm"><thead><tr className="border-b border-border text-text-muted"><th className="py-2 pr-4">Time</th><th className="py-2 pr-4">Frame</th><th className="py-2 pr-4">Detections</th><th className="py-2 pr-4">OCR observations</th><th className="py-2">Human decision</th></tr></thead><tbody>{videoJob.events.map((event) => { const reviewKey = `video-frame-${event.frame}`; return <tr key={event.frame} className="border-b border-border/60"><td className="py-2 pr-4 font-mono text-text-primary">{event.time_seconds.toFixed(2)}s</td><td className="py-2 pr-4 text-text-secondary">{event.frame}</td><td className="py-2 pr-4 text-text-secondary">{event.detections}</td><td className="py-2 pr-4 font-mono text-text-secondary">{event.plates.join(", ") || "—"}</td><td className="py-2"><div className="flex gap-1"><button aria-label={`Accept event at ${event.time_seconds} seconds`} onClick={() => setReviews((current) => ({ ...current, [reviewKey]: "accepted" }))} className={`px-2 py-1 rounded text-xs ${reviews[reviewKey] === "accepted" ? "bg-success text-white" : "bg-bg-primary text-text-muted hover:text-success"}`}>Accept</button><button aria-label={`Flag event at ${event.time_seconds} seconds`} onClick={() => setReviews((current) => ({ ...current, [reviewKey]: "needs_review" }))} className={`px-2 py-1 rounded text-xs ${reviews[reviewKey] === "needs_review" ? "bg-warning text-white" : "bg-bg-primary text-text-muted hover:text-warning"}`}>Review</button><button aria-label={`Reject event at ${event.time_seconds} seconds`} onClick={() => setReviews((current) => ({ ...current, [reviewKey]: "rejected" }))} className={`px-2 py-1 rounded text-xs ${reviews[reviewKey] === "rejected" ? "bg-danger text-white" : "bg-bg-primary text-text-muted hover:text-danger"}`}>Reject</button></div></td></tr>; })}</tbody></table></div>}
+          {videoJob.events.length > 0 && <div className="overflow-x-auto"><table className="w-full text-left text-sm"><thead><tr className="border-b border-border text-text-muted"><th className="py-2 pr-4">Time</th><th className="py-2 pr-4">Frame</th><th className="py-2 pr-4">Detections</th><th className="py-2 pr-4">Character / OCR text</th><th className="py-2">Human decision</th></tr></thead><tbody>{videoJob.events.map((event) => { const reviewKey = `video-frame-${event.frame}`; return <tr key={event.frame} className="border-b border-border/60"><td className="py-2 pr-4 font-mono text-text-primary">{event.time_seconds.toFixed(2)}s</td><td className="py-2 pr-4 text-text-secondary">{event.frame}</td><td className="py-2 pr-4 text-text-secondary">{event.detections}</td><td className="py-2 pr-4 font-mono text-text-secondary" dir="auto">{event.plates.join(", ") || "—"}</td><td className="py-2"><div className="flex gap-1"><button aria-label={`Accept event at ${event.time_seconds} seconds`} onClick={() => setReviews((current) => ({ ...current, [reviewKey]: "accepted" }))} className={`px-2 py-1 rounded text-xs ${reviews[reviewKey] === "accepted" ? "bg-success text-white" : "bg-bg-primary text-text-muted hover:text-success"}`}>Accept</button><button aria-label={`Flag event at ${event.time_seconds} seconds`} onClick={() => setReviews((current) => ({ ...current, [reviewKey]: "needs_review" }))} className={`px-2 py-1 rounded text-xs ${reviews[reviewKey] === "needs_review" ? "bg-warning text-white" : "bg-bg-primary text-text-muted hover:text-warning"}`}>Review</button><button aria-label={`Reject event at ${event.time_seconds} seconds`} onClick={() => setReviews((current) => ({ ...current, [reviewKey]: "rejected" }))} className={`px-2 py-1 rounded text-xs ${reviews[reviewKey] === "rejected" ? "bg-danger text-white" : "bg-bg-primary text-text-muted hover:text-danger"}`}>Reject</button></div></td></tr>; })}</tbody></table></div>}
           {videoJob.events.length > 0 && <button onClick={exportReview} className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border bg-bg-primary text-sm text-text-secondary hover:text-text-primary"><Download className="w-4 h-4" /> Export video review JSON</button>}
         </section>
       )}
@@ -110,7 +126,13 @@ export default function Dashboard() {
         </>
       )}
 
-      {!loading && !videoJob && detections.length === 0 && !error && <div className="text-center py-12 text-text-muted"><CheckCircle2 className="w-11 h-11 mx-auto mb-3 opacity-25" /><p>Upload media to begin an auditable inference session.</p></div>}
+      {!loading && !videoJob && detections.length === 0 && !error && (
+        <div className="text-center py-12 text-text-muted">
+          <CheckCircle2 className="w-11 h-11 mx-auto mb-3 opacity-25" />
+          <p>{mediaName ? "No license plate was found above the selected confidence threshold." : "Upload media to begin an auditable three-stage inference session."}</p>
+          {mediaName && <p className="text-xs mt-2">Try lowering the plate confidence or verify that the plate checkpoint is loaded.</p>}
+        </div>
+      )}
     </div>
   );
 }

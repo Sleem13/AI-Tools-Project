@@ -3,11 +3,15 @@
 from __future__ import annotations
 
 import base64
+import json
+import os
+import subprocess
 import sys
 import threading
 from datetime import UTC, datetime
+from functools import lru_cache
 from pathlib import Path
-from typing import Annotated, Any
+from typing import Annotated, Any, Literal
 from urllib.parse import quote
 
 import cv2
@@ -35,6 +39,8 @@ router = APIRouter()
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 OUTPUT_ROOT = PROJECT_ROOT / "models" / "detection"
+CHARACTER_OUTPUT_ROOT = PROJECT_ROOT / "models" / "character"
+CHARACTER_DATASET_DEFAULT = PROJECT_ROOT / "data" / "raw" / "dataset_Charcters_ready_plates"
 REFERENCE_RUN_PATH = PROJECT_ROOT / "reports" / "training" / "master_plate_notebook_run.json"
 ARTIFACT_NAMES = {
     "results.png",
@@ -44,12 +50,76 @@ ARTIFACT_NAMES = {
     "val_batch0_pred.jpg",
 }
 
+
+def _training_python() -> Path:
+    configured = os.environ.get("ALPR_TRAINING_PYTHON")
+    executable = Path(configured).expanduser() if configured else Path(sys.executable)
+    executable = executable.resolve()
+    if not executable.is_file():
+        raise RuntimeError(f"Training Python executable does not exist: {executable}")
+    return executable
+
+
+@lru_cache(maxsize=4)
+def _probe_external_runtime(executable_value: str) -> dict[str, Any]:
+    executable = Path(executable_value)
+    probe = (
+        "import json, platform, torch, ultralytics; "
+        "cuda=torch.cuda.is_available(); "
+        "print(json.dumps({'python':platform.python_version(),"
+        "'python_supported':tuple(map(int,platform.python_version_tuple()[:2])) in ((3,11),(3,12)),"
+        "'torch':torch.__version__,'torch_cuda':torch.version.cuda,"
+        "'ultralytics':ultralytics.__version__,'cuda_available':cuda,"
+        "'device_count':torch.cuda.device_count(),"
+        "'gpu_name':torch.cuda.get_device_name(0) if cuda else None,"
+        "'gpu_memory_gib':round(torch.cuda.get_device_properties(0).total_memory/1024**3,1) if cuda else None,"
+        "'compute_capability':'.'.join(map(str,torch.cuda.get_device_capability(0))) if cuda else None,"
+        "'ready':cuda}))"
+    )
+    result = subprocess.run(
+        [str(executable), "-c", probe],
+        cwd=PROJECT_ROOT,
+        capture_output=True,
+        text=True,
+        timeout=30,
+        check=False,
+    )
+    if result.returncode != 0:
+        detail = (result.stderr or result.stdout).strip()
+        return {
+            "executable": str(executable),
+            "ready": False,
+            "cuda_available": False,
+            "error": detail or f"Runtime probe exited with code {result.returncode}",
+        }
+    runtime = json.loads(result.stdout.strip().splitlines()[-1])
+    runtime["executable"] = str(executable)
+    return runtime
+
+
+def _training_runtime() -> dict[str, Any]:
+    """Inspect the interpreter that will launch Ultralytics jobs."""
+    executable = _training_python()
+    if executable == Path(sys.executable).resolve():
+        runtime = inspect_runtime()
+        runtime["executable"] = str(executable)
+        return runtime
+    return dict(_probe_external_runtime(str(executable)))
+
+
+def _training_runtime_status() -> dict[str, Any]:
+    try:
+        return _training_runtime()
+    except (OSError, RuntimeError, subprocess.SubprocessError, ValueError) as exc:
+        return {"ready": False, "cuda_available": False, "error": str(exc)}
+
 _evaluation_model = None
 _evaluation_model_path: Path | None = None
 _evaluation_model_lock = threading.Lock()
 
 
 class StartTrainingRequest(BaseModel):
+    stage: Literal["plate", "character"] = "plate"
     epochs: int = Field(default=50, ge=1, le=1000)
     imgsz: int = Field(default=640, ge=320, le=2048, multiple_of=32)
     batch: int = Field(default=16, ge=1, le=256)
@@ -66,17 +136,27 @@ class EvaluationRequest(BaseModel):
 @router.get("/training/workbench")
 def training_workbench() -> dict[str, Any]:
     dataset_root = resolve_master_dataset_root(PROJECT_ROOT)
+    job = training_job_manager.snapshot()
     run_dir = _active_or_latest_run()
     metrics = read_training_history(run_dir / "results.csv") if run_dir else {"history": [], "latest": None}
-    job = training_job_manager.snapshot()
-    job["metrics"] = metrics
+    character_root = _character_dataset_root()
+    character_run_dir = _active_or_latest_character_run()
+    character_metrics = (
+        read_training_history(character_run_dir / "results.csv")
+        if character_run_dir
+        else {"history": [], "latest": None}
+    )
+    job["metrics"] = character_metrics if job.get("stage") == "character" else metrics
     return {
-        "runtime": inspect_runtime(),
+        "runtime": _training_runtime_status(),
         "dataset": inspect_dataset(dataset_root),
         "job": job,
         "run": _run_payload(run_dir, metrics),
+        "character_dataset": _character_dataset_summary(character_root),
+        "character_run": _run_payload(character_run_dir, character_metrics, artifact_stage="character"),
         "reference_run": load_reference_run(REFERENCE_RUN_PATH),
         "defaults": {"epochs": 50, "imgsz": 640, "batch": 16, "device": "0"},
+        "character_defaults": {"epochs": 100, "imgsz": 640, "batch": 32, "device": "0"},
     }
 
 
@@ -90,7 +170,11 @@ def training_status() -> dict[str, Any]:
     return {
         "training": [
             {
-                "model": "YOLO11 Plate Detection (Master Plate)",
+                "model": (
+                    "YOLO26 Character Detection"
+                    if job.get("stage") == "character"
+                    else "YOLO11 Plate Detection (Master Plate)"
+                ),
                 "status": job["status"] if job["status"] != "idle" else ("completed" if workbench["run"]["best_model_exists"] else "idle"),
                 "epoch": epoch,
                 "total_epochs": int(job.get("epochs") or reference_epochs),
@@ -104,24 +188,41 @@ def training_status() -> dict[str, Any]:
 
 @router.post("/training/start")
 def start_training(request: StartTrainingRequest) -> dict[str, Any]:
-    dataset_root = resolve_master_dataset_root(PROJECT_ROOT)
-    dataset = inspect_dataset(dataset_root)
+    try:
+        training_python = _training_python()
+        training_runtime = _training_runtime()
+    except (OSError, RuntimeError, subprocess.SubprocessError, ValueError) as exc:
+        raise HTTPException(status_code=409, detail=str(exc)) from exc
+    if request.stage == "character":
+        dataset_root = _character_dataset_root()
+        dataset = _character_dataset_summary(dataset_root)
+        config_path = PROJECT_ROOT / "configs" / "model" / "character_detection.yaml"
+        output_root = CHARACTER_OUTPUT_ROOT
+        run_prefix = "yolo26_characters"
+    else:
+        dataset_root = resolve_master_dataset_root(PROJECT_ROOT)
+        dataset = inspect_dataset(dataset_root)
+        config_path = PROJECT_ROOT / "configs" / "model" / "master_plate_detection.yaml"
+        output_root = OUTPUT_ROOT
+        run_prefix = "master_plate_yolo11"
     if not dataset["ready"]:
-        raise HTTPException(status_code=409, detail=f"Master Plate dataset is not ready at {dataset_root}")
-    if request.device != "cpu" and not torch.cuda.is_available():
-        raise HTTPException(status_code=409, detail="CUDA is unavailable to the API process; use the Python 3.12 GPU environment")
+        label = "Character" if request.stage == "character" else "Master Plate"
+        raise HTTPException(status_code=409, detail=f"{label} dataset is not ready at {dataset_root}")
+    if request.device != "cpu" and not training_runtime.get("cuda_available"):
+        detail = training_runtime.get("error") or "CUDA is unavailable to the configured training Python"
+        raise HTTPException(status_code=409, detail=detail)
 
     timestamp = datetime.now(UTC).strftime("%Y%m%d_%H%M%S")
-    run_name = f"master_plate_yolo11_{timestamp}"
-    run_dir = OUTPUT_ROOT / run_name
+    run_name = f"{run_prefix}_{timestamp}"
+    run_dir = output_root / run_name
     log_path = PROJECT_ROOT / "reports" / "training" / f"{run_name}.log"
     command = [
-        sys.executable,
+        str(training_python),
         str(PROJECT_ROOT / "scripts" / "train_detection.py"),
         "--stage",
-        "plate",
+        request.stage,
         "--config",
-        str(PROJECT_ROOT / "configs" / "model" / "master_plate_detection.yaml"),
+        str(config_path),
         "--data",
         str(dataset_root / "data.yaml"),
         "--epochs",
@@ -133,7 +234,7 @@ def start_training(request: StartTrainingRequest) -> dict[str, Any]:
         "--device",
         request.device,
         "--output",
-        str(OUTPUT_ROOT),
+        str(output_root),
         "--name",
         run_name,
     ]
@@ -145,6 +246,7 @@ def start_training(request: StartTrainingRequest) -> dict[str, Any]:
             run_dir=run_dir,
             log_path=log_path,
             epochs=request.epochs,
+            stage=request.stage,
         )
     except RuntimeError as exc:
         raise HTTPException(status_code=409, detail=str(exc)) from exc
@@ -188,10 +290,17 @@ def dataset_image(
 
 
 @router.get("/training/artifact")
-def training_artifact(name: str) -> FileResponse:
+def training_artifact(
+    name: str,
+    stage: Annotated[str, Query(pattern=r"^(plate|character)$")] = "plate",
+) -> FileResponse:
     if name not in ARTIFACT_NAMES:
         raise HTTPException(status_code=404, detail="Unknown training artifact")
-    run_dir = _active_or_latest_run()
+    run_dir = (
+        _active_or_latest_character_run()
+        if stage == "character"
+        else _active_or_latest_run()
+    )
     artifact = run_dir / name if run_dir else None
     if artifact is None or not artifact.is_file():
         raise HTTPException(status_code=404, detail="Training artifact not found")
@@ -250,15 +359,32 @@ def _active_or_latest_run() -> Path | None:
     job = training_job_manager.snapshot()
     if job.get("run_dir"):
         active = Path(job["run_dir"])
-        if active.is_dir():
+        if active.is_dir() and active.resolve().is_relative_to(OUTPUT_ROOT.resolve()):
             return active
     return discover_latest_run(OUTPUT_ROOT)
 
 
-def _run_payload(run_dir: Path | None, metrics: dict[str, Any]) -> dict[str, Any]:
+def _active_or_latest_character_run() -> Path | None:
+    job = training_job_manager.snapshot()
+    if job.get("run_dir"):
+        active = Path(job["run_dir"])
+        if active.is_dir() and active.resolve().is_relative_to(CHARACTER_OUTPUT_ROOT.resolve()):
+            return active
+    return discover_latest_run(CHARACTER_OUTPUT_ROOT)
+
+
+def _run_payload(
+    run_dir: Path | None,
+    metrics: dict[str, Any],
+    artifact_stage: str = "plate",
+) -> dict[str, Any]:
     artifacts = training_artifacts(run_dir)
     for artifact in artifacts:
-        artifact["url"] = f"/api/training/artifact?name={artifact['name']}" if artifact["exists"] else None
+        artifact["url"] = (
+            f"/api/training/artifact?name={artifact['name']}&stage={artifact_stage}"
+            if artifact["exists"]
+            else None
+        )
     best_model = run_dir / "weights" / "best.pt" if run_dir else None
     return {
         "directory": str(run_dir) if run_dir else None,
@@ -267,6 +393,37 @@ def _run_payload(run_dir: Path | None, metrics: dict[str, Any]) -> dict[str, Any
         "latest": metrics.get("latest"),
         "history": metrics.get("history", []),
         "artifacts": artifacts,
+    }
+
+
+def _character_dataset_root() -> Path:
+    configured = os.getenv("CHARACTER_DATASET_ROOT")
+    if not configured:
+        return CHARACTER_DATASET_DEFAULT
+    path = Path(configured).expanduser()
+    return path.resolve() if path.is_absolute() else (PROJECT_ROOT / path).resolve()
+
+
+def _character_dataset_summary(root: Path) -> dict[str, Any]:
+    splits = {}
+    for api_name, directory_name in (("train", "train"), ("val", "valid"), ("test", "test")):
+        image_dir = root / directory_name / "images"
+        label_dir = root / directory_name / "labels"
+        splits[api_name] = {
+            "images": sum(1 for path in image_dir.glob("*") if path.is_file()) if image_dir.is_dir() else 0,
+            "labels": sum(1 for path in label_dir.glob("*.txt") if path.is_file()) if label_dir.is_dir() else 0,
+        }
+    data_yaml = root / "data.yaml"
+    return {
+        "root": str(root),
+        "exists": root.is_dir(),
+        "data_yaml": str(data_yaml),
+        "data_yaml_exists": data_yaml.is_file(),
+        "splits": splits,
+        "total_images": sum(item["images"] for item in splits.values()),
+        "total_labels": sum(item["labels"] for item in splits.values()),
+        "class_count": 38,
+        "ready": data_yaml.is_file() and splits["train"]["images"] > 0 and splits["val"]["images"] > 0,
     }
 
 
