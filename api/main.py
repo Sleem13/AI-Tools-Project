@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import logging
-from pathlib import Path
+import os
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -18,9 +18,16 @@ app = FastAPI(
     description="Backend API for Egyptian License Plate Recognition pipeline",
 )
 
+default_origins = "http://localhost:5173,http://127.0.0.1:5173"
+cors_origins = [
+    origin.strip()
+    for origin in os.getenv("ALPR_CORS_ORIGINS", default_origins).split(",")
+    if origin.strip()
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origins=cors_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -42,6 +49,7 @@ def health():
         "status": "ok",
         "models_loaded": {
             "detection": det is not None,
+            "character": bool(det is not None and getattr(det, "character_detector", None) is not None),
             "ocr": ocr is not None,
         },
     }

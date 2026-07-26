@@ -1,4 +1,5 @@
 """Tests for annotated image responses and asynchronous video job setup."""
+# ruff: noqa: RUF001
 
 from __future__ import annotations
 
@@ -11,7 +12,7 @@ from api.main import app
 from api.routes import detection
 from api.video_jobs import VideoJobManager
 from fastapi.testclient import TestClient
-from src.detection.inference import DetectionResult, TwoStageDetection
+from src.detection.inference import CharacterResult, DetectionResult, TwoStageDetection
 
 
 class FakeCascadeDetector:
@@ -31,6 +32,25 @@ class FakeCascadeDetector:
 class FakeReader:
     def read_plate(self, _crop):
         return "ABC123"
+
+
+class FakeCharacterCascadeDetector(FakeCascadeDetector):
+    def predict(self, _image):
+        character = CharacterResult(
+            detection=DetectionResult((1, 1, 5, 8), 0.95, 14, "alif"),
+            glyph="ا",
+            row=0,
+            order=0,
+        )
+        return [
+            TwoStageDetection(
+                vehicle=DetectionResult((2, 2, 38, 28), 0.9, 2, "car"),
+                plate=DetectionResult((10, 12, 30, 22), 0.8, 0, "license_plate"),
+                plate_bbox_in_vehicle=(8, 10, 28, 20),
+                characters=(character,),
+                character_text="ا 1",
+            )
+        ]
 
 
 def _jpeg_bytes() -> bytes:
@@ -56,6 +76,24 @@ def test_image_detection_returns_annotated_image_and_crop(monkeypatch) -> None:
     assert payload["detections"][0]["plate_crop"].startswith("data:image/jpeg;base64,")
     assert payload["detections"][0]["vehicle"]["class_name"] == "car"
     assert payload["detections"][0]["plate_text"] == "ABC123"
+
+
+def test_character_stage_takes_priority_over_crnn(monkeypatch) -> None:
+    monkeypatch.setattr(detection, "get_detector", lambda: FakeCharacterCascadeDetector())
+    monkeypatch.setattr(detection, "get_reader", lambda: FakeReader())
+    client = TestClient(app)
+
+    response = client.post(
+        "/api/detect",
+        files={"file": ("car.jpg", _jpeg_bytes(), "image/jpeg")},
+        data={"conf": "0.25"},
+    )
+
+    assert response.status_code == 200
+    result = response.json()["detections"][0]
+    assert result["plate_text"] == "ا 1"
+    assert result["text_source"] == "character_detector"
+    assert result["characters"][0]["glyph"] == "ا"
 
 
 def test_video_upload_creates_pollable_job(tmp_path: Path, monkeypatch) -> None:

@@ -40,7 +40,36 @@ The command must report:
 
 Do not begin a long training run if this check fails.
 
-## 4. Train the plate detector
+The backend may run from a separate CPU environment. To make the React
+Training page launch jobs through an already-installed GPU environment, set:
+
+```powershell
+$env:ALPR_TRAINING_PYTHON = "D:\path\to\gpu-venv\Scripts\python.exe"
+python -m uvicorn api.main:app --reload --host 127.0.0.1 --port 8000
+```
+
+## 4. Validate the training inputs
+
+Run both preflights before allocating GPU time:
+
+```powershell
+.\.venv-gpu\Scripts\python.exe scripts\train_detection.py `
+  --stage plate `
+  --config configs/model/master_plate_detection.yaml `
+  --device 0 `
+  --check
+
+.\.venv-gpu\Scripts\python.exe scripts\train_detection.py `
+  --stage character `
+  --device 0 `
+  --check
+```
+
+The plate check requires `data/processed/Master_Plate_Dataset/data.yaml` (or a
+YAML supplied with `--data`). The character check uses the included segmented
+plate dataset.
+
+## 5. Train the plate detector
 
 First prepare the actual dataset so the configured split manifests point to existing images and YOLO label files. Then run:
 
@@ -60,7 +89,25 @@ If memory remains comfortably below 16 GB, try `--batch 24` or `--batch 32`. Mon
 nvidia-smi -l 2
 ```
 
-## 5. Run two-stage inference
+## 6. Train the character detector
+
+```powershell
+.\.venv-gpu\Scripts\python.exe scripts\train_detection.py `
+  --stage character `
+  --device 0 `
+  --epochs 100 `
+  --imgsz 640 `
+  --batch 32
+```
+
+If the GPU runs out of memory, reduce `--batch` to 16 or 8. The resulting
+`models/character/<run>/weights/best.pt` is discovered automatically by the
+backend.
+
+Stage one uses the COCO-pretrained YOLO11 vehicle detector and does not require
+training unless a separate domain-specific vehicle dataset is prepared.
+
+## 7. Run three-stage inference
 
 ```powershell
 .\.venv-gpu\Scripts\python.exe scripts\run_detection_inference.py `

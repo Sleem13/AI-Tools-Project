@@ -11,6 +11,7 @@ import {
 import StatsGrid from "../components/StatsGrid";
 import LoadingSpinner from "../components/LoadingSpinner";
 import { getDatasets, getPipelineStatus } from "../api/client";
+import type { DatasetInfo, PipelineStatus } from "../types";
 
 const STAGE_COLORS: Record<string, string> = {
   completed: "text-success",
@@ -20,24 +21,28 @@ const STAGE_COLORS: Record<string, string> = {
 };
 
 export default function Datasets() {
-  const [datasets, setDatasets] = useState<any[]>([]);
-  const [pipeline, setPipeline] = useState<any>(null);
+  const [datasets, setDatasets] = useState<DatasetInfo[]>([]);
+  const [pipeline, setPipeline] = useState<PipelineStatus | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    Promise.all([getDatasets().catch(() => ({ datasets: [] })), getPipelineStatus().catch(() => ({ stages: [], total_images: 0, datasets: [] }))])
+    Promise.all([getDatasets(), getPipelineStatus()])
       .then(([d, p]) => {
         setDatasets(d.datasets);
         setPipeline(p);
+      })
+      .catch((caught: unknown) => {
+        setError(caught instanceof Error ? caught.message : "Could not load datasets");
       })
       .finally(() => setLoading(false));
   }, []);
 
   if (loading) return <LoadingSpinner text="Loading datasets..." />;
 
-  const totalImages = datasets.reduce((s: number, d: any) => s + (d.image_count || 0), 0);
-  const totalAnnotations = datasets.reduce((s: number, d: any) => s + (d.annotation_count || 0), 0);
-  const totalIssues = datasets.reduce((s: number, d: any) => s + (d.issues || 0), 0);
+  const totalImages = datasets.reduce((sum, dataset) => sum + dataset.image_count, 0);
+  const totalAnnotations = datasets.reduce((sum, dataset) => sum + dataset.annotation_count, 0);
+  const totalIssues = datasets.reduce((sum, dataset) => sum + dataset.issues, 0);
 
   return (
     <div className="max-w-6xl space-y-8">
@@ -50,6 +55,13 @@ export default function Datasets() {
           Browse datasets and monitor the 7-stage pipeline.
         </p>
       </div>
+
+      {error && (
+        <div className="flex items-start gap-3 p-4 rounded-xl bg-danger/10 border border-danger/30 text-danger">
+          <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5" />
+          <p className="text-sm">{error}</p>
+        </div>
+      )}
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <StatsGrid
@@ -87,8 +99,8 @@ export default function Datasets() {
               </tr>
             </thead>
             <tbody>
-              {datasets.map((d: any, i: number) => (
-                <tr key={i} className="border-b border-border last:border-0 hover:bg-bg-hover/50 transition-colors">
+              {datasets.map((d) => (
+                <tr key={d.name} className="border-b border-border last:border-0 hover:bg-bg-hover/50 transition-colors">
                   <td className="px-5 py-3 text-sm font-medium text-text-primary">{d.name}</td>
                   <td className="px-5 py-3">
                     <span className="text-xs px-2 py-0.5 rounded-md bg-accent/10 text-accent font-mono">
@@ -109,11 +121,11 @@ export default function Datasets() {
         </div>
       )}
 
-      {pipeline?.stages?.length > 0 && (
+      {pipeline && pipeline.stages.length > 0 && (
         <div>
           <h2 className="text-lg font-semibold text-text-primary mb-4">Pipeline Stages</h2>
           <div className="space-y-2">
-            {pipeline.stages.map((s: any, i: number) => (
+            {pipeline.stages.map((s, i) => (
               <div
                 key={i}
                 className={`flex items-center gap-4 px-5 py-3 rounded-xl border border-border bg-bg-card`}
@@ -148,7 +160,7 @@ export default function Datasets() {
         </div>
       )}
 
-      {datasets.length === 0 && (
+      {datasets.length === 0 && !error && (
         <div className="text-center py-16 text-text-muted">
           <Database className="w-12 h-12 mx-auto mb-3 opacity-30" />
           <p>No datasets found. Run the inspection pipeline first.</p>

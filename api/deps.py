@@ -43,12 +43,35 @@ def get_detector():
                 configured_plate_weights = latest_weights
         if not configured_plate_weights.exists():
             return None
-        if _detector is not None and _detector_weights == configured_plate_weights:
+
+        character_config = config.get("character", {})
+        configured_character_weights = Path(character_config.get("weights", ""))
+        if configured_character_weights and not configured_character_weights.is_absolute():
+            configured_character_weights = PROJECT_ROOT / configured_character_weights
+        latest_character_run = discover_latest_run(PROJECT_ROOT / "models" / "character")
+        latest_character_weights = latest_character_run / "weights" / "best.pt" if latest_character_run else None
+        if latest_character_weights and latest_character_weights.is_file():
+            configured_mtime = (
+                configured_character_weights.stat().st_mtime if configured_character_weights.is_file() else 0
+            )
+            if latest_character_weights.stat().st_mtime >= configured_mtime:
+                configured_character_weights = latest_character_weights
+        character_ready = bool(character_config.get("enabled") and configured_character_weights.is_file())
+        character_config["enabled"] = character_ready
+        if character_ready:
+            character_config["weights"] = str(configured_character_weights)
+
+        model_weights = (configured_plate_weights, configured_character_weights if character_ready else None)
+        if _detector is not None and _detector_weights == model_weights:
             return _detector
         config["plate"]["weights"] = str(configured_plate_weights)
         _detector = build_two_stage_detector(config, PROJECT_ROOT)
-        _detector_weights = configured_plate_weights
-        logger.info("Loaded two-stage detector with plate model: %s", configured_plate_weights)
+        _detector_weights = model_weights
+        logger.info(
+            "Loaded detection cascade with plate model %s and character model %s",
+            configured_plate_weights,
+            configured_character_weights if character_ready else "disabled",
+        )
         return _detector
     except Exception as e:
         logger.warning("Failed to load detection model: %s", e)

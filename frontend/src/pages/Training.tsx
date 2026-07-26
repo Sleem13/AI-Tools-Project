@@ -15,6 +15,7 @@ import {
   ScanSearch,
   Sparkles,
   SquareTerminal,
+  Type,
   XCircle,
 } from "lucide-react";
 import {
@@ -24,6 +25,7 @@ import {
   startPlateTraining,
 } from "../api/client";
 import LoadingSpinner from "../components/LoadingSpinner";
+import PipelineStrip from "../components/PipelineStrip";
 import StatsGrid from "../components/StatsGrid";
 import type {
   DatasetSample,
@@ -32,13 +34,14 @@ import type {
   TrainingWorkbench,
 } from "../types";
 
-type View = "overview" | "dataset" | "train" | "evaluate";
+type View = "overview" | "dataset" | "train" | "characters" | "evaluate";
 type Split = "train" | "val" | "test";
 
 const VIEWS: Array<{ id: View; label: string; icon: typeof BrainCircuit }> = [
   { id: "overview", label: "Overview", icon: Gauge },
   { id: "dataset", label: "Dataset", icon: Database },
   { id: "train", label: "Train & results", icon: BrainCircuit },
+  { id: "characters", label: "Characters", icon: Type },
   { id: "evaluate", label: "Evaluate", icon: ScanSearch },
 ];
 
@@ -87,6 +90,7 @@ export default function Training() {
   const [sampleSeed, setSampleSeed] = useState(42);
   const [samplesLoading, setSamplesLoading] = useState(false);
   const [trainingConfig, setTrainingConfig] = useState({ epochs: 50, imgsz: 640, batch: 16, device: "0" });
+  const [characterConfig, setCharacterConfig] = useState({ epochs: 100, imgsz: 640, batch: 32, device: "0" });
   const [starting, setStarting] = useState(false);
   const [evaluation, setEvaluation] = useState<EvaluationSample[]>([]);
   const [evaluating, setEvaluating] = useState(false);
@@ -98,6 +102,7 @@ export default function Training() {
       const data = await getTrainingWorkbench();
       setWorkbench(data);
       setTrainingConfig((current) => (workbench ? current : data.defaults));
+      setCharacterConfig((current) => (workbench ? current : data.character_defaults));
       setError(null);
     } catch (caught: any) {
       setError(caught.message || "Could not load the training workbench");
@@ -143,10 +148,11 @@ export default function Training() {
     return metrics ? { precision: metrics.precision, recall: metrics.recall, map50: metrics.map50, map50_95: metrics.map50_95 } : null;
   }, [workbench?.reference_run]);
 
-  async function launchTraining() {
+  async function launchTraining(stage: "plate" | "character" = "plate") {
     setStarting(true);
     try {
-      await startPlateTraining(trainingConfig);
+      const config = stage === "character" ? characterConfig : trainingConfig;
+      await startPlateTraining({ ...config, stage });
       setError(null);
       await refresh(true);
     } catch (caught: any) {
@@ -178,9 +184,9 @@ export default function Training() {
         <div>
           <h1 className="text-3xl font-bold text-text-primary flex items-center gap-3">
             <BrainCircuit className="w-8 h-8 text-accent" />
-            Master Plate workbench
+            Three-stage ALPR training
           </h1>
-          <p className="text-text-secondary mt-1">Dataset inspection, YOLO11 training, artifacts, and plate-crop evaluation in one workflow.</p>
+          <p className="text-text-secondary mt-1">Prepare YOLO11 plate detection and YOLO26 character recognition for the production cascade.</p>
         </div>
         <button onClick={() => void refresh()} className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg border border-border bg-bg-card text-sm text-text-secondary hover:text-text-primary hover:bg-bg-hover transition-colors">
           <RefreshCw className="w-4 h-4" /> Refresh
@@ -194,11 +200,21 @@ export default function Training() {
         </div>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
         <StatsGrid icon={<Cpu className="w-4 h-4" />} label="GPU runtime" value={workbench?.runtime.cuda_available ? "CUDA ready" : "CPU only"} sub={workbench?.runtime.gpu_name || `PyTorch ${workbench?.runtime.torch || "unknown"}`} color={workbench?.runtime.ready ? "text-success" : "text-warning"} />
-        <StatsGrid icon={<Database className="w-4 h-4" />} label="Training images" value={workbench?.dataset.splits.train.images || 0} sub={`${workbench?.dataset.splits.val.images || 0} validation images`} color="text-accent" />
+        <StatsGrid icon={<Database className="w-4 h-4" />} label="Plate images" value={workbench?.dataset.splits.train.images || 0} sub={`${workbench?.dataset.splits.val.images || 0} validation images`} color="text-accent" />
         <StatsGrid icon={<BrainCircuit className="w-4 h-4" />} label="Plate model" value={workbench?.run.best_model_exists ? "Trained" : "Not trained"} sub={workbench?.job.status === "training" ? `Epoch ${epoch}/${totalEpochs}` : workbench?.job.status || "idle"} color={workbench?.run.best_model_exists ? "text-success" : "text-text-muted"} />
+        <StatsGrid icon={<Type className="w-4 h-4" />} label="Character model" value={workbench?.character_run.best_model_exists ? "Trained" : "Not trained"} sub={`${workbench?.character_dataset.total_images || 0} segmented plates · 38 classes`} color={workbench?.character_run.best_model_exists ? "text-success" : "text-warning"} />
       </div>
+
+      {workbench && (
+        <PipelineStrip
+          compact
+          vehicle="ready"
+          plate={workbench.run.best_model_exists ? "ready" : "missing"}
+          character={workbench.character_run.best_model_exists ? "ready" : "missing"}
+        />
+      )}
 
       <div className="flex flex-wrap gap-2 p-1.5 bg-bg-secondary border border-border rounded-xl w-fit">
         {VIEWS.map(({ id, label, icon: Icon }) => (
@@ -216,6 +232,7 @@ export default function Training() {
             <ReadinessRow ready={workbench.runtime.cuda_available} label="CUDA device" value={workbench.runtime.gpu_name || "Unavailable"} />
             <ReadinessRow ready={workbench.dataset.data_yaml_exists} label="Dataset configuration" value={workbench.dataset.data_yaml_exists ? "data.yaml found" : "Missing"} />
             <ReadinessRow ready={workbench.dataset.ready} label="Train and validation splits" value={`${workbench.dataset.splits.train.images} / ${workbench.dataset.splits.val.images}`} />
+            <ReadinessRow ready={workbench.character_dataset.ready} label="Segmented characters" value={`${workbench.character_dataset.total_images} plates / ${workbench.character_dataset.class_count} classes`} />
             <p className="text-xs text-text-muted mt-4 font-mono break-all">{workbench.dataset.root}</p>
           </section>
 
@@ -267,7 +284,7 @@ export default function Training() {
           <section className="bg-bg-card border border-border rounded-xl p-6">
             <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
               <div className="flex-1"><h2 className="text-lg font-semibold text-text-primary">YOLO11 training configuration</h2><p className="text-sm text-text-secondary mt-1">Notebook defaults are preserved and can be adjusted before launch.</p></div>
-              <button disabled={starting || workbench.job.status === "training" || !workbench.dataset.ready} onClick={() => void launchTraining()} className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-accent hover:bg-accent-hover text-white text-sm font-medium disabled:opacity-40 disabled:cursor-not-allowed transition-colors">
+              <button disabled={starting || workbench.job.status === "training" || !workbench.dataset.ready} onClick={() => void launchTraining("plate")} className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-accent hover:bg-accent-hover text-white text-sm font-medium disabled:opacity-40 disabled:cursor-not-allowed transition-colors">
                 {starting || workbench.job.status === "training" ? <Loader2 className="w-4 h-4 animate-spin" /> : <Play className="w-4 h-4" />}{workbench.job.status === "training" ? "Training in progress" : "Start training"}
               </button>
             </div>
@@ -290,6 +307,63 @@ export default function Training() {
 
           {workbench.run.artifacts.some((artifact) => artifact.exists) && (
             <section><div className="flex items-center gap-3 mb-4"><FileImage className="w-5 h-5 text-accent" /><h2 className="text-lg font-semibold text-text-primary">Training artifacts</h2></div><div className="grid grid-cols-1 xl:grid-cols-2 gap-4">{workbench.run.artifacts.filter((artifact) => artifact.exists).map((artifact) => <article key={artifact.name} className="bg-bg-card border border-border rounded-xl overflow-hidden"><div className="px-4 py-3 border-b border-border"><p className="text-sm font-medium text-text-primary">{artifact.label}</p></div>{artifact.url && <img src={artifact.url} alt={artifact.label} className="w-full bg-white object-contain max-h-[520px]" />}</article>)}</div></section>
+          )}
+        </div>
+      )}
+
+      {view === "characters" && workbench && (
+        <div className="space-y-5">
+          <section className="bg-bg-card border border-border rounded-xl p-6">
+            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+              <div className="flex-1">
+                <div className="flex items-center gap-3"><Type className="w-5 h-5 text-accent" /><h2 className="text-lg font-semibold text-text-primary">YOLO26 character detection</h2></div>
+                <p className="text-sm text-text-secondary mt-2">Train stage three on cropped Egyptian plates with per-character boxes, then decode stage-two plate crops in reading order.</p>
+                <div className="inline-flex items-center gap-2 mt-3 px-3 py-1.5 rounded-full bg-info/10 text-info text-xs"><CheckCircle2 className="w-3.5 h-3.5" /> Input comes directly from stage-two plate crops</div>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-5">
+                  <div className="bg-bg-primary rounded-lg p-3"><p className="text-xs text-text-muted">Classes</p><p className="text-lg font-mono text-text-primary mt-1">{workbench.character_dataset.class_count}</p></div>
+                  <div className="bg-bg-primary rounded-lg p-3"><p className="text-xs text-text-muted">Train</p><p className="text-lg font-mono text-text-primary mt-1">{workbench.character_dataset.splits.train.images}</p></div>
+                  <div className="bg-bg-primary rounded-lg p-3"><p className="text-xs text-text-muted">Validation</p><p className="text-lg font-mono text-text-primary mt-1">{workbench.character_dataset.splits.val.images}</p></div>
+                  <div className="bg-bg-primary rounded-lg p-3"><p className="text-xs text-text-muted">Checkpoint</p><p className={`text-sm font-medium mt-2 ${workbench.character_run.best_model_exists ? "text-success" : "text-warning"}`}>{workbench.character_run.best_model_exists ? "Ready" : "Required"}</p></div>
+                </div>
+              </div>
+              <button disabled={starting || workbench.job.status === "training" || !workbench.character_dataset.ready} onClick={() => void launchTraining("character")} className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-accent hover:bg-accent-hover text-white text-sm font-medium disabled:opacity-40 disabled:cursor-not-allowed transition-colors">
+                {starting || workbench.job.status === "training" ? <Loader2 className="w-4 h-4 animate-spin" /> : <Play className="w-4 h-4" />} Train characters
+              </button>
+            </div>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+              <label className="text-xs text-text-muted">Epochs<input type="number" min={1} max={1000} value={characterConfig.epochs} onChange={(event) => setCharacterConfig({ ...characterConfig, epochs: Number(event.target.value) })} className="mt-1.5 w-full bg-bg-primary border border-border rounded-lg px-3 py-2.5 text-sm text-text-primary" /></label>
+              <label className="text-xs text-text-muted">Image size<select value={characterConfig.imgsz} onChange={(event) => setCharacterConfig({ ...characterConfig, imgsz: Number(event.target.value) })} className="mt-1.5 w-full bg-bg-primary border border-border rounded-lg px-3 py-2.5 text-sm text-text-primary"><option value={640}>640 px</option><option value={960}>960 px</option></select></label>
+              <label className="text-xs text-text-muted">Batch size<input type="number" min={1} max={256} value={characterConfig.batch} onChange={(event) => setCharacterConfig({ ...characterConfig, batch: Number(event.target.value) })} className="mt-1.5 w-full bg-bg-primary border border-border rounded-lg px-3 py-2.5 text-sm text-text-primary" /></label>
+              <label className="text-xs text-text-muted">Device<select value={characterConfig.device} onChange={(event) => setCharacterConfig({ ...characterConfig, device: event.target.value })} className="mt-1.5 w-full bg-bg-primary border border-border rounded-lg px-3 py-2.5 text-sm text-text-primary"><option value="0">GPU 0</option><option value="cpu">CPU</option></select></label>
+            </div>
+            {!workbench.character_dataset.ready && <p className="text-sm text-warning mt-4">Character dataset is not ready at <span className="font-mono">{workbench.character_dataset.root}</span>.</p>}
+          </section>
+          <section className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div className="bg-bg-card border border-border rounded-xl p-5">
+              <h3 className="text-sm font-semibold text-text-primary">Decoder contract</h3>
+              <div className="mt-4 space-y-3 text-sm text-text-secondary">
+                <p className="flex gap-3"><span className="text-accent font-mono">01</span> Detect each digit or Arabic character box.</p>
+                <p className="flex gap-3"><span className="text-accent font-mono">02</span> Cluster characters into plate rows.</p>
+                <p className="flex gap-3"><span className="text-accent font-mono">03</span> Read each row right-to-left and separate letter/digit groups.</p>
+              </div>
+            </div>
+            <div className="bg-warning/5 border border-warning/25 rounded-xl p-5">
+              <h3 className="text-sm font-semibold text-warning">Benchmark note</h3>
+              <p className="text-sm text-text-secondary mt-3">The supplied split contains nine original base identities shared across train and validation/test. Regroup those identities before publishing final accuracy.</p>
+            </div>
+          </section>
+          {workbench.job.stage === "character" && workbench.job.status !== "idle" && (
+            <section className="bg-bg-card border border-border rounded-xl p-6 space-y-4">
+              <div className="flex items-center justify-between gap-4"><div><h3 className="font-semibold text-text-primary">{workbench.job.run_name}</h3><p className="text-xs text-text-muted mt-1 capitalize">{workbench.job.status} · YOLO26 characters</p></div><span className="text-sm font-mono text-text-secondary">{workbench.job.metrics.latest?.epoch || 0}/{workbench.job.epochs}</span></div>
+              <MetricTiles metrics={workbench.job.metrics.latest} />
+              {workbench.job.log_tail && <details className="bg-bg-primary border border-border rounded-lg"><summary className="cursor-pointer px-4 py-3 text-sm text-text-secondary flex items-center gap-2"><SquareTerminal className="w-4 h-4" /> Character training log</summary><pre className="px-4 pb-4 text-xs text-text-muted overflow-x-auto max-h-72 whitespace-pre-wrap">{workbench.job.log_tail}</pre></details>}
+            </section>
+          )}
+          {workbench.character_run.latest && (
+            <section className="bg-bg-card border border-border rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-4"><BarChart3 className="w-5 h-5 text-info" /><h2 className="text-lg font-semibold text-text-primary">Latest character run</h2></div>
+              <MetricTiles metrics={workbench.character_run.latest} />
+            </section>
           )}
         </div>
       )}

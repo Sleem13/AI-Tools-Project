@@ -32,6 +32,7 @@ class TrainingJobManager:
         run_dir: Path,
         log_path: Path,
         epochs: int,
+        stage: str = "plate",
     ) -> dict[str, Any]:
         with self._lock:
             if self._process is not None and self._process.poll() is None:
@@ -53,6 +54,7 @@ class TrainingJobManager:
                 "run_dir": str(run_dir),
                 "log_path": str(log_path),
                 "epochs": epochs,
+                "stage": stage,
                 "return_code": None,
             }
             snapshot = dict(self._state)

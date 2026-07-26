@@ -1,49 +1,35 @@
-# Per-dataset configuration.
+# Raw plate-detection datasets currently present under data/raw.
 #
-# IMPORTANT: `annotation_format`, `image_subdir`, `annotation_subdir` and
-# `class_map` below are placeholders based on the most common layouts for
-# Kaggle license-plate datasets (YOLO txt or a single CSV/COCO-JSON file).
-# Kaggle dataset internals change over time and this repo does not have
-# network access to Kaggle to introspect them directly — after you run
-# `kaggle datasets download`, run:
-#
-#     python scripts/run_inspection.py
-#
-# first, read reports/eda/dataset_summary.md, and adjust the fields below
-# to match what was actually scanned (image_format_counts /
-# annotation_formats will tell you immediately whether it's yolo / voc_xml
-# / coco_json / csv). The pipeline is designed so this is the ONLY file you
-# need to edit to onboard a new/changed dataset layout.
+# All three sources use YOLO-normalized bounding boxes. The harmonization
+# stage prefixes every output filename with the dataset name, preventing
+# collisions while mapping every local class 0 to the shared license-plate
+# class.
 
 datasets:
-  - name: "dataset_A"
-    root: "data/raw/dataset_A"
-    # One of: yolo | voc_xml | coco_json | csv | unknown
-    annotation_format: "voc_xml"
-    image_subdir: "Pics"        # images live in Pics/ subdirectory
-    annotation_subdir: "annotations"   # annotations live in annotations/ subdirectory
+  - name: "egyptian_vehicles"
+    root: "data/raw/dataset_Egyptian"
+    annotation_format: "yolo"
+    image_subdir: "Vehicles"
+    annotation_subdir: "Vehicles Labeling"
     class_map:
       0: "license_plate"
     notes: >
-      Kaggle: mahmoudkhater99/car-plate. Pascal VOC XML format with
-      images in Pics/ and annotations in annotations/. No class labels
-      in the XML files — defaults to class_id 0.
+      Egyptian vehicle images with a separate YOLO label directory.
 
-  - name: "dataset_B"
-    root: "data/raw/dataset_B"
+  - name: "egyptian_motorcycles"
+    root: "data/raw/dataset-Egyptian-motorcycle"
     annotation_format: "yolo"
     image_subdir: null
     annotation_subdir: null
     class_map:
       0: "license_plate"
     notes: >
-      Kaggle: mahmoudeldebase/egyptian-cars-plates. Verify actual
-      annotation format with scripts/run_inspection.py before running
-      downstream stages.
+      Roboflow export with train, valid, and test image/label directories.
 
-# The pipeline-wide unified schema that harmonization (Part 4) remaps every
-# dataset's local class_map into. Extend this if either dataset actually
-# distinguishes plate types (e.g. private / commercial / taxi / motorcycle
-# Egyptian plate categories) once you've inspected the real label files.
 unified_class_map:
   0: "license_plate"
+
+# data/raw/dataset_non_Egyptian is intentionally excluded from the default
+# target-domain run. Its 10k+ images would outnumber the Egyptian sources by
+# roughly 3:1. Add it as a third YOLO source for a separate generalization
+# experiment, not for the primary Egyptian benchmark.

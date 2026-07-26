@@ -1,10 +1,10 @@
-# Two-stage YOLO11 vehicle and plate detection
+# Vehicle, plate, and character detection
 
 The detection system is a cascade:
 
 1. **Vehicle detection:** COCO-pretrained YOLO11 detects `car`, `motorcycle`, `bus`, and `truck`.
 2. **Plate detection:** a custom YOLO11 model runs on each padded vehicle crop.
-3. **Character detection (future):** the cascade exposes full-resolution plate crops for a custom YOLO26 character model.
+3. **Character detection:** YOLO26 detects and classifies digits and Arabic characters inside every stage-two plate crop.
 
 Stage one works without custom training because `yolo11n.pt` is pretrained on COCO. Stage two must be trained on this project's license-plate annotations before the full cascade can run.
 
@@ -98,6 +98,32 @@ To use a checkpoint outside the configured location:
 
 Blue boxes identify vehicles; green boxes identify plates. JSON results include the vehicle box, globally mapped plate box, per-stage confidences, and a combined confidence used for duplicate suppression.
 
-## Future YOLO26 character stage
+## Train stage three: characters
 
-`TwoStageDetector.crop_plates()` returns `(plate_crop, detection_metadata)` pairs. A future character detector can consume each crop directly, sort detected characters from left to right (or by configured plate row), and attach the decoded text to the existing metadata. The reserved `character` section in `configs/model/two_stage.yaml` already defines the intended YOLO26 checkpoint and thresholds.
+The included `data/raw/dataset_Charcters_ready_plates` dataset contains cropped
+plates with YOLO boxes for 38 digit and Arabic-character classes.
+
+```powershell
+.\.venv-gpu\Scripts\python.exe scripts\train_detection.py `
+  --stage character `
+  --epochs 100 `
+  --imgsz 640 `
+  --batch 32 `
+  --device 0 `
+  --output models\character `
+  --name yolo26_characters
+```
+
+The backend discovers the newest character checkpoint automatically. During
+inference, `CharacterDetector` consumes each stage-two crop, clusters boxes
+into rows, sorts each row right-to-left, separates letter and digit groups,
+and maps the dataset's transliterated class names to Arabic glyphs. Character
+results are included in the API response with class, glyph, confidence, row,
+order, and crop-relative bounding box.
+
+CRNN OCR remains an optional fallback when stage-three weights are unavailable.
+
+Before publishing final metrics, create identity-grouped splits. The current
+export has nine original base names shared between train and validation/test,
+so its supplied split is suitable for development but not the final unbiased
+benchmark.

@@ -1,4 +1,5 @@
 """Tests for the vehicle-to-license-plate YOLO cascade."""
+# ruff: noqa: RUF001
 
 from __future__ import annotations
 
@@ -9,10 +10,12 @@ import numpy as np
 import pytest
 from src.detection.inference import (
     COCO_VEHICLE_CLASS_IDS,
+    CharacterResult,
     DetectionResult,
     TwoStageDetector,
     YOLODetector,
     build_two_stage_detector,
+    order_and_decode_characters,
 )
 
 
@@ -24,6 +27,17 @@ class StubDetector:
     def predict(self, image: np.ndarray) -> list[DetectionResult]:
         self.image_shapes.append(image.shape)
         return next(self.batches)
+
+
+class StubCharacterDetector:
+    def __init__(self, characters: tuple[CharacterResult, ...], text: str) -> None:
+        self.characters = characters
+        self.text = text
+        self.image_shapes: list[tuple[int, ...]] = []
+
+    def recognize(self, image: np.ndarray):
+        self.image_shapes.append(image.shape)
+        return self.characters, self.text
 
 
 def _detection(
@@ -144,6 +158,54 @@ def test_crop_plates_returns_global_plate_crop() -> None:
     assert np.all(crops[0][0] == 255)
 
 
+def test_stage_three_reads_the_stage_two_plate_crop() -> None:
+    image = np.zeros((60, 100, 3), dtype=np.uint8)
+    vehicle = _detection((10, 10, 80, 50), 0.9, 2, "car")
+    local_plate = _detection((20, 10, 40, 20), 0.8)
+    character = CharacterResult(_detection((1, 1, 4, 8), 0.95, 14, "alif"), "ا", 0, 0)
+    character_detector = StubCharacterDetector((character,), "ا")
+    detector = TwoStageDetector(
+        StubDetector([[vehicle]]),
+        StubDetector([[local_plate]]),
+        vehicle_padding=0,
+        character_detector=character_detector,
+    )
+
+    result = detector.predict(image)[0]
+
+    assert character_detector.image_shapes == [(10, 20, 3)]
+    assert result.character_text == "ا"
+    assert result.to_dict()["characters"][0]["glyph"] == "ا"
+
+
+def test_orders_egyptian_characters_right_to_left_and_separates_digits() -> None:
+    detections = [
+        _detection((10, 2, 18, 14), 0.9, 2, "2"),
+        _detection((50, 2, 58, 14), 0.9, 14, "alif"),
+        _detection((30, 2, 38, 14), 0.9, 30, "seen"),
+        _detection((2, 2, 8, 14), 0.9, 1, "1"),
+    ]
+
+    ordered, text = order_and_decode_characters(detections)
+
+    assert [item.glyph for item in ordered] == ["ا", "س", "2", "1"]
+    assert text == "اس 21"
+
+
+def test_character_decoder_preserves_separate_rows() -> None:
+    detections = [
+        _detection((30, 2, 38, 12), 0.9, 14, "alif"),
+        _detection((10, 2, 18, 12), 0.9, 30, "seen"),
+        _detection((30, 30, 38, 40), 0.9, 1, "1"),
+        _detection((10, 30, 18, 40), 0.9, 2, "2"),
+    ]
+
+    ordered, text = order_and_decode_characters(detections)
+
+    assert [item.row for item in ordered] == [0, 0, 1, 1]
+    assert text == "اس / 12"
+
+
 def test_builds_cascade_from_config(tmp_path: Path) -> None:
     config = {
         "vehicle": {"weights": "yolo11n.pt", "class_ids": [2, 3, 5, 7]},
@@ -158,3 +220,23 @@ def test_builds_cascade_from_config(tmp_path: Path) -> None:
     assert detector.plate_detector.weights_path == tmp_path / "models" / "plate" / "best.pt"
     assert detector.vehicle_padding == 0.1
     assert detector.plate_nms_iou == 0.4
+
+
+def test_builds_character_stage_when_checkpoint_exists(tmp_path: Path) -> None:
+    character_weights = tmp_path / "models" / "character" / "best.pt"
+    character_weights.parent.mkdir(parents=True)
+    character_weights.touch()
+    config = {
+        "vehicle": {"weights": "yolo11n.pt"},
+        "plate": {"weights": "plate.pt"},
+        "character": {
+            "enabled": True,
+            "weights": "models/character/best.pt",
+            "reading_direction": "rtl",
+        },
+    }
+
+    detector = build_two_stage_detector(config, tmp_path)
+
+    assert detector.character_detector is not None
+    assert detector.character_detector.weights_path == character_weights

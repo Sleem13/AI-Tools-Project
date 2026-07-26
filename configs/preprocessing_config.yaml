@@ -63,4 +63,5 @@ split:
   test_ratio: 0.15
   seed: 42
   stratify_by_class: true
-  copy_files: false
+  # Materialize the final YOLO dataset used by the Training page and CLI.
+  copy_files: true
