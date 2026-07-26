@@ -1,0 +1,37 @@
+{
+  "source": "Master_Plate_Dataset.ipynb",
+  "label": "Notebook reference run",
+  "environment": {
+    "python": "3.12.10",
+    "torch": "2.7.1+cu118",
+    "ultralytics": "8.4.102",
+    "gpu": "NVIDIA RTX 2000 Ada Generation",
+    "gpu_memory_mib": 16380
+  },
+  "dataset": {
+    "train_images": 2602,
+    "train_corrupt": 1,
+    "val_images": 527,
+    "val_instances": 545
+  },
+  "training": {
+    "model": "yolo11n.pt",
+    "epochs": 50,
+    "imgsz": 640,
+    "batch": 16,
+    "amp": true,
+    "duration_hours": 0.336
+  },
+  "metrics": {
+    "precision": 0.989,
+    "recall": 0.994,
+    "map50": 0.994,
+    "map50_95": 0.884,
+    "inference_ms_per_image": 1.9
+  },
+  "notes": [
+    "One truncated training image was ignored.",
+    "Mixed box and segment annotations were reduced to detection boxes by Ultralytics.",
+    "The notebook's results and weights paths were inconsistent; the app uses one run directory."
+  ]
+}

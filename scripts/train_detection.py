@@ -43,6 +43,7 @@ def main() -> None:
     parser.add_argument("--imgsz", type=int, default=None)
     parser.add_argument("--device", type=str, default=None, help="GPU id such as 0, or cpu")
     parser.add_argument("--output", type=Path, default=None)
+    parser.add_argument("--name", type=str, default=None, help="Override the Ultralytics run name")
     args = parser.parse_args()
 
     config_path = args.config or DEFAULT_CONFIGS[args.stage]
@@ -55,6 +56,8 @@ def main() -> None:
             hyperparameters[key] = value
     if args.device is not None:
         training["device"] = args.device
+    if args.name is not None:
+        training["name"] = args.name
 
     data_config = config.get("data", {})
     dataset_yaml = _project_path(args.data) if args.data else _project_path(data_config["dataset_yaml"])

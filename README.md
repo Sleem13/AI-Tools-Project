@@ -92,6 +92,10 @@ See [Two-stage YOLO11 vehicle and plate detection](docs/two_stage_yolo.md) for d
 
 For NVIDIA training, follow the [RTX 2000 Ada GPU environment setup](docs/gpu_setup.md). It uses a dedicated Python 3.12 environment and pinned CUDA-enabled PyTorch wheels.
 
+The [Master Plate workbench](docs/master_plate_workbench.md) moves the complete `Master_Plate_Dataset.ipynb` workflow into the React/FastAPI Training page, including runtime readiness, dataset samples, YOLO11 launch and monitoring, training artifacts, random validation inference, and enhanced plate crops.
+
+The [interactive workflow and media lab](docs/interactive_workflow.md) visualize the complete learning and inference lifecycle and support human-reviewed detection on real images and asynchronously processed videos.
+
 ## License
 
 MIT

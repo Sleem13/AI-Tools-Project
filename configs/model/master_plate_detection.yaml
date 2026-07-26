@@ -1,0 +1,53 @@
+# Exact productionized equivalent of Master_Plate_Dataset.ipynb.
+
+model:
+  name: yolo11n
+  weights: yolo11n.pt
+  architecture: yolo11n.yaml
+  pretrained: true
+
+data:
+  dataset_yaml: data/processed/Master_Plate_Dataset/data.yaml
+  names:
+    0: license_plate
+
+hyperparameters:
+  epochs: 50
+  batch: 16
+  imgsz: 640
+  optimizer: auto
+  lr0: 0.01
+  lrf: 0.01
+  momentum: 0.937
+  weight_decay: 0.0005
+  warmup_epochs: 3
+  box: 7.5
+  cls: 0.5
+  dfl: 1.5
+  hsv_h: 0.015
+  hsv_s: 0.7
+  hsv_v: 0.4
+  degrees: 0.0
+  translate: 0.1
+  scale: 0.5
+  shear: 0.0
+  perspective: 0.0
+  flipud: 0.0
+  fliplr: 0.5
+  mosaic: 1.0
+  mixup: 0.0
+  copy_paste: 0.0
+  patience: 100
+
+training:
+  device: 0
+  workers: 8
+  project: models/detection
+  name: master_plate_yolo11
+  exist_ok: false
+  save_period: -1
+  deterministic: true
+  seed: 0
+  plots: true
+  cache: false
+  amp: true

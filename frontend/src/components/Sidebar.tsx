@@ -5,12 +5,14 @@ import {
   BrainCircuit,
   Settings,
   ScanBox,
+  GitBranch,
 } from "lucide-react";
 
 const links = [
   { to: "/", label: "Dashboard", icon: LayoutDashboard },
   { to: "/datasets", label: "Datasets", icon: Database },
   { to: "/training", label: "Training", icon: BrainCircuit },
+  { to: "/workflow", label: "Workflow", icon: GitBranch },
   { to: "/settings", label: "Settings", icon: Settings },
 ];
 

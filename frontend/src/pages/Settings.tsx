@@ -137,8 +137,8 @@ export default function Settings() {
             License: MIT &middot; Python 3.12+ &middot; React + Vite
           </p>
           <p className="text-text-muted text-xs mt-3">
-            Built with YOLOv8 for detection, CRNN+CTC for OCR, and a 7-stage
-            dataset engineering pipeline.
+            Built with a two-stage YOLO11 detector, CRNN+CTC for OCR, and a
+            7-stage dataset engineering pipeline.
           </p>
         </div>
       </div>

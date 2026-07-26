@@ -198,3 +198,4 @@ wandb/
 # Ignore generated reports
 reports/*.pdf
 reports/*.html
+reports/video_jobs/
