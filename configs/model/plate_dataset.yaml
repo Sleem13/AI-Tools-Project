@@ -1,0 +1,7 @@
+names:
+  0: license_plate
+nc: 1
+path: C:\Users\Admin\Documents\GitHub\AI-Tools-Project
+test: C:\Users\Admin\Documents\GitHub\AI-Tools-Project\reports\splits\test.txt
+train: C:\Users\Admin\Documents\GitHub\AI-Tools-Project\reports\splits\train.txt
+val: C:\Users\Admin\Documents\GitHub\AI-Tools-Project\reports\splits\val.txt
