@@ -84,6 +84,12 @@ def train_crnn(
         )
 
     epochs = hp.get("epochs", 50)
+    patience = hp.get("patience", 10)
+    best_val_loss = float("inf")
+    epochs_without_improvement = 0
+    best_state = None
+    actual_epochs = epochs
+
     for epoch in range(1, epochs + 1):
         model.train()
         train_loss = 0.0
@@ -107,6 +113,7 @@ def train_crnn(
 
         scheduler.step()
 
+        current_val_loss = None
         if val_loader is not None:
             model.eval()
             val_loss = 0.0
@@ -119,15 +126,33 @@ def train_crnn(
                     )
                     loss = criterion(log_probs, targets, input_lengths, target_lengths)
                     val_loss += loss.item()
-            print(f"  Val loss: {val_loss / len(val_loader):.4f}")
+            current_val_loss = val_loss / len(val_loader)
+            print(f"  Val loss: {current_val_loss:.4f}")
+
+            if current_val_loss < best_val_loss:
+                best_val_loss = current_val_loss
+                epochs_without_improvement = 0
+                best_state = {k: v.cpu().clone() for k, v in model.state_dict().items()}
+                best_path = output_dir / "ocr_best.pth"
+                torch.save(best_state, best_path)
+                print(f"  New best model saved (val_loss={current_val_loss:.4f})")
+            else:
+                epochs_without_improvement += 1
+                print(f"  No improvement for {epochs_without_improvement}/{patience} epochs")
+                if epochs_without_improvement >= patience:
+                    print(f"  Early stopping at epoch {epoch}")
+                    actual_epochs = epoch
+                    break
 
         if epoch % config.get("training", {}).get("save_period", 5) == 0:
             ckpt_path = output_dir / f"ocr_epoch_{epoch:03d}.pth"
             torch.save(model.state_dict(), ckpt_path)
 
-    best_path = output_dir / "ocr_best.pth"
-    torch.save(model.state_dict(), best_path)
-    return {"best_path": str(best_path), "epochs": epochs}
+    if best_state is None:
+        best_path = output_dir / "ocr_best.pth"
+        torch.save(model.state_dict(), best_path)
+
+    return {"best_path": str(best_path), "epochs": actual_epochs, "best_val_loss": best_val_loss}
 
 
 def _ctc_collate(
