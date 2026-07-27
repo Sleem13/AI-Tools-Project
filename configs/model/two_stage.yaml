@@ -23,8 +23,9 @@ character:
   enabled: true
   model_family: yolo26
   weights: models/character/yolo26_characters/weights/best.pt
-  conf_threshold: 0.25
+  conf_threshold: 0.15
   iou_threshold: 0.45
+  agnostic_nms: false
   max_detections: 12
   reading_direction: rtl
   row_threshold: 0.60

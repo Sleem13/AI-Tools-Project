@@ -39,6 +39,30 @@ app.include_router(datasets.router, prefix="/api")
 app.include_router(training.router, prefix="/api")
 
 
+@app.on_event("startup")
+def startup_event():
+    import socket
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    try:
+        sock.bind(("127.0.0.1", 8000))
+    except OSError:
+        logging.getLogger(__name__).warning(
+            "Port 8000 may still be in use by a previous process. "
+            "Kill it with: netstat -ano | findstr :8000 && taskkill /PID <PID> /F"
+        )
+    finally:
+        sock.close()
+
+
+@app.on_event("shutdown")
+def shutdown_event():
+    from api.training_jobs import training_job_manager
+    from api.video_jobs import video_job_manager
+
+    training_job_manager.cleanup()
+    video_job_manager.cleanup()
+
+
 @app.get("/api/health")
 def health():
     from api.deps import get_detector, get_reader

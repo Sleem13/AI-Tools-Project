@@ -144,6 +144,10 @@ class YOLODetector:
         if not isinstance(image, np.ndarray) or image.ndim not in {2, 3} or image.size == 0:
             raise ValueError("image must be a non-empty grayscale or BGR numpy array")
 
+        h, w = image.shape[:2]
+        if h < 16 or w < 16:
+            return []
+
         model = self._load_model()
         predict_args: dict[str, Any] = {
             "source": image,
@@ -232,9 +236,10 @@ class CharacterDetector(YOLODetector):
         *args,
         reading_direction: str = "rtl",
         row_threshold: float = 0.6,
+        agnostic_nms: bool = False,
         **kwargs,
     ) -> None:
-        kwargs.setdefault("agnostic_nms", True)
+        kwargs.setdefault("agnostic_nms", agnostic_nms)
         super().__init__(*args, **kwargs)
         if reading_direction not in {"ltr", "rtl"}:
             raise ValueError("reading_direction must be 'ltr' or 'rtl'")
@@ -245,6 +250,7 @@ class CharacterDetector(YOLODetector):
 
     def recognize(self, plate_crop: np.ndarray) -> tuple[tuple[CharacterResult, ...], str]:
         detections = self.predict(plate_crop)
+        detections = _deduplicate_characters(detections, plate_crop.shape)
         return order_and_decode_characters(
             detections,
             reading_direction=self.reading_direction,
@@ -313,7 +319,9 @@ class TwoStageDetector:
                 character_text = ""
                 if self.character_detector is not None:
                     plate_crop = vehicle_crop[local_y1:local_y2, local_x1:local_x2]
-                    characters, character_text = self.character_detector.recognize(plate_crop)
+                    plate_crop = preprocess_plate(plate_crop)
+                    if plate_crop is not None:
+                        characters, character_text = self.character_detector.recognize(plate_crop)
                 candidates.append(
                     TwoStageDetection(
                         vehicle=vehicle,
@@ -378,12 +386,13 @@ def build_two_stage_detector(
         if _weights_exist(character_weights):
             character_detector = CharacterDetector(
                 weights_path=character_weights,
-                conf_threshold=character_config.get("conf_threshold", 0.25),
+                conf_threshold=character_config.get("conf_threshold", 0.15),
                 iou_threshold=character_config.get("iou_threshold", 0.45),
                 device=character_config.get("device", plate_config.get("device", vehicle_config.get("device", "cpu"))),
                 max_detections=character_config.get("max_detections", 12),
                 reading_direction=character_config.get("reading_direction", "rtl"),
                 row_threshold=character_config.get("row_threshold", 0.6),
+                agnostic_nms=character_config.get("agnostic_nms", False),
             )
     return TwoStageDetector(
         vehicle_detector=vehicle_detector,
@@ -523,4 +532,91 @@ def _deduplicate_plates(
     for candidate in sorted(detections, key=lambda item: item.combined_confidence, reverse=True):
         if all(_bbox_iou(candidate.plate.bbox, existing.plate.bbox) <= iou_threshold for existing in kept):
             kept.append(candidate)
+    return kept
+
+
+PLATE_TARGET_HEIGHT = 128
+PLATE_MIN_DIM = 32
+
+
+def preprocess_plate(plate_crop: np.ndarray) -> np.ndarray | None:
+    """Detect plate boundaries, perspective-warp to rectangle, and deskew.
+
+    Returns None if the crop is too small for reliable processing.
+    Falls back to the original crop if contour detection fails.
+    """
+    if plate_crop.size == 0:
+        return None
+
+    h, w = plate_crop.shape[:2]
+    if h < PLATE_MIN_DIM or w < PLATE_MIN_DIM:
+        return None
+
+    gray = cv2.cvtColor(plate_crop, cv2.COLOR_BGR2GRAY) if plate_crop.ndim == 3 else plate_crop
+    blurred = cv2.bilateralFilter(gray, 11, 17, 17)
+    edges = cv2.Canny(blurred, 30, 200)
+
+    contours, _ = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    if not contours:
+        return plate_crop
+
+    contours = sorted(contours, key=cv2.contourArea, reverse=True)[:5]
+    best_quad = None
+    for contour in contours:
+        peri = cv2.arcLength(contour, True)
+        approx = cv2.approxPolyDP(contour, 0.02 * peri, True)
+        if len(approx) == 4 and cv2.contourArea(approx) > 0.3 * h * w:
+            best_quad = approx.reshape(4, 2).astype(np.float32)
+            break
+
+    if best_quad is None:
+        return plate_crop
+
+    corners = _order_plate_corners(best_quad)
+    aspect = w / max(h, 1)
+    target_h = PLATE_TARGET_HEIGHT
+    target_w = max(PLATE_MIN_DIM, int(target_h * aspect))
+    if target_w > target_h * 4:
+        target_w = target_h * 4
+    dst = np.array([[0, 0], [target_w - 1, 0], [target_w - 1, target_h - 1], [0, target_h - 1]], dtype=np.float32)
+    matrix = cv2.getPerspectiveTransform(corners, dst)
+    warped = cv2.warpPerspective(plate_crop, matrix, (target_w, target_h))
+    if warped.shape[1] < PLATE_MIN_DIM or warped.shape[0] < PLATE_MIN_DIM:
+        return None
+    return warped
+
+
+def _order_plate_corners(pts: np.ndarray) -> np.ndarray:
+    """Order 4 points as: top-left, top-right, bottom-right, bottom-left."""
+    rect = np.zeros((4, 2), dtype=np.float32)
+    s = pts.sum(axis=1)
+    rect[0] = pts[np.argmin(s)]
+    rect[2] = pts[np.argmax(s)]
+    d = np.diff(pts, axis=1)
+    rect[1] = pts[np.argmin(d)]
+    rect[3] = pts[np.argmax(d)]
+    return rect
+
+
+def _deduplicate_characters(
+    detections: list[DetectionResult],
+    image_shape: tuple[int, ...],
+    distance_ratio: float = 0.15,
+) -> list[DetectionResult]:
+    """Remove duplicate character detections whose centers are too close."""
+    if len(detections) <= 1:
+        return list(detections)
+    h = float(image_shape[0])
+    threshold = max(4.0, h * distance_ratio)
+    kept: list[DetectionResult] = []
+    for det in sorted(detections, key=lambda d: d.confidence, reverse=True):
+        cx, cy = _bbox_center(det.bbox)
+        too_close = False
+        for existing in kept:
+            ex, ey = _bbox_center(existing.bbox)
+            if abs(cx - ex) < threshold and abs(cy - ey) < threshold:
+                too_close = True
+                break
+        if not too_close:
+            kept.append(det)
     return kept

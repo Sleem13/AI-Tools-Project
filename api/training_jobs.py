@@ -69,9 +69,25 @@ class TrainingJobManager:
                     self._state["return_code"] = return_code
                     self._state["status"] = "completed" if return_code == 0 else "error"
                     self._close_log()
+                elif return_code is None and self._state["status"] == "error":
+                    self._process.kill()
+                    self._process.wait(timeout=5)
+                    self._close_log()
             snapshot = dict(self._state)
         snapshot["log_tail"] = self._read_log_tail(snapshot.get("log_path"))
         return snapshot
+
+    def cleanup(self) -> None:
+        """Kill running training process and close log on server shutdown."""
+        with self._lock:
+            self._close_log()
+            if self._process is not None and self._process.poll() is None:
+                self._process.kill()
+                self._process.wait(timeout=5)
+            self._process = None
+            if self._state["status"] == "training":
+                self._state["status"] = "error"
+                self._state["return_code"] = -1
 
     def _close_log(self) -> None:
         if self._log_handle is not None:

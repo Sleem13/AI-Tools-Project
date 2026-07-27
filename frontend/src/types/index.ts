@@ -38,6 +38,7 @@ export interface VideoDetectionEvent {
   time_seconds: number;
   detections: number;
   plates: string[];
+  frame_url?: string;
 }
 
 export interface VideoJob {

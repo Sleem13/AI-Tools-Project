@@ -143,6 +143,37 @@ def video_result(job_id: str) -> FileResponse:
     return FileResponse(result_path, media_type="video/mp4", filename=f"{Path(job['filename']).stem}-annotated.mp4")
 
 
+@router.get("/detect/video/{job_id}/frame/{frame_index}")
+def video_frame(job_id: str, frame_index: int):
+    job = video_job_manager.get(job_id)
+    if job is None:
+        raise HTTPException(status_code=404, detail="Video job not found")
+    job_dir = VIDEO_JOB_ROOT / job_id
+    input_files = list(job_dir.glob("input.*"))
+    if not input_files:
+        raise HTTPException(status_code=404, detail="Source video not found")
+    capture = cv2.VideoCapture(str(input_files[0]))
+    if not capture.isOpened():
+        raise HTTPException(status_code=500, detail="Could not open source video")
+    capture.set(cv2.CAP_PROP_POS_FRAMES, frame_index)
+    ok, frame = capture.read()
+    capture.release()
+    if not ok or frame is None:
+        raise HTTPException(status_code=404, detail="Frame not found")
+    detector = get_detector()
+    if detector is not None:
+        conf = job.get("confidence", 0.25)
+        detector.plate_detector.conf_threshold = float(conf) if isinstance(conf, (int, float)) else 0.25
+        detections = detector.predict(frame)
+        labels = [getattr(cd, "character_text", "") for cd in detections]
+        frame = _draw_cascade(frame, detections, labels)
+    ok, encoded = cv2.imencode(".jpg", frame, [cv2.IMWRITE_JPEG_QUALITY, 90])
+    if not ok:
+        raise HTTPException(status_code=500, detail="Could not encode frame")
+    from fastapi.responses import Response
+    return Response(content=encoded.tobytes(), media_type="image/jpeg")
+
+
 def _process_video(job_id: str, input_path: Path, output_path: Path, confidence: float, frame_stride: int) -> None:
     capture = None
     writer = None
@@ -200,6 +231,7 @@ def _process_video(job_id: str, input_path: Path, output_path: Path, confidence:
                                 "time_seconds": round(frame_index / fps, 2),
                                 "detections": len(current_detections),
                                 "plates": [label for label in current_labels if label],
+                                "frame_url": f"/api/detect/video/{job_id}/frame/{frame_index}",
                             }
                         )
             annotated = _draw_cascade(frame, current_detections, current_labels)

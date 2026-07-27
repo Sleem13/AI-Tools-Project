@@ -50,5 +50,13 @@ class VideoJobManager:
         for job_id in completed[:-9]:
             self._jobs.pop(job_id, None)
 
+    def cleanup(self) -> None:
+        """Mark all active jobs as errored on server shutdown."""
+        with self._lock:
+            for job in self._jobs.values():
+                if job["status"] in {"queued", "processing"}:
+                    job["status"] = "error"
+                    job["error"] = "Server shutting down"
+
 
 video_job_manager = VideoJobManager()
