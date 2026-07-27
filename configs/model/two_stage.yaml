@@ -8,7 +8,7 @@ vehicle:
   max_detections: 100
 
 plate:
-  weights: models/detection/plate_yolo11/weights/best.pt
+  weights: models/detection/master_plate_yolo11/weights/best.pt
   conf_threshold: 0.25
   iou_threshold: 0.45
   max_detections: 20

@@ -30,7 +30,11 @@ def train_crnn(
     Returns:
         Dictionary of training results.
     """
-    device = torch.device(config.get("training", {}).get("device", "cpu"))
+    raw_device = config.get("training", {}).get("device", "cpu")
+    if isinstance(raw_device, int) or (isinstance(raw_device, str) and raw_device.isdigit()):
+        device = torch.device(f"cuda:{raw_device}")
+    else:
+        device = torch.device(raw_device)
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
