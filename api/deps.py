@@ -61,12 +61,17 @@ def get_detector():
         if character_ready:
             character_config["weights"] = str(configured_character_weights)
 
-        model_weights = (configured_plate_weights, configured_character_weights if character_ready else None)
-        if _detector is not None and _detector_weights == model_weights:
-            return _detector
         config["plate"]["weights"] = str(configured_plate_weights)
+        config_signature = yaml.safe_dump(config, sort_keys=True)
+        detector_cache_key = (
+            str(configured_plate_weights),
+            str(configured_character_weights) if character_ready else None,
+            config_signature,
+        )
+        if _detector is not None and _detector_weights == detector_cache_key:
+            return _detector
         _detector = build_two_stage_detector(config, PROJECT_ROOT)
-        _detector_weights = model_weights
+        _detector_weights = detector_cache_key
         logger.info(
             "Loaded detection cascade with plate model %s and character model %s",
             configured_plate_weights,

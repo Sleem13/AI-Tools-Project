@@ -7,6 +7,13 @@
     <title>ALPR Pipeline</title>
   </head>
   <body>
+    <script>
+      (() => {
+        const stored = localStorage.getItem("alpr-theme");
+        const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+        document.documentElement.dataset.theme = stored === "light" || stored === "dark" ? stored : prefersLight ? "light" : "dark";
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

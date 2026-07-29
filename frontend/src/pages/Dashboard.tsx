@@ -13,6 +13,7 @@ export default function Dashboard() {
   const [annotatedImage, setAnnotatedImage] = useState<string | null>(null);
   const [videoJob, setVideoJob] = useState<VideoJob | null>(null);
   const [reviews, setReviews] = useState<Record<string, ReviewDecision>>({});
+  const [corrections, setCorrections] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [timeMs, setTimeMs] = useState<number | null>(null);
@@ -39,6 +40,7 @@ export default function Dashboard() {
     setAnnotatedImage(null);
     setVideoJob(null);
     setReviews({});
+    setCorrections({});
     setTimeMs(null);
     setMediaName(file.name);
     try {
@@ -74,7 +76,34 @@ export default function Dashboard() {
   }, [videoJobId, videoJobStatus]);
 
   function exportReview() {
-    const payload = { media: mediaName, reviewed_at: new Date().toISOString(), detections, reviews, video_job: videoJob };
+    const reviewItems = detections.map((detection, index) => {
+      const correctedText = (corrections[detection.id] || "").trim();
+      return {
+        id: detection.id,
+        index,
+        decision: reviews[detection.id] || null,
+        model_text: detection.formatted_text || detection.plate_text || "",
+        raw_model_text: detection.plate_text || "",
+        corrected_text: correctedText || null,
+        final_text: correctedText || detection.formatted_text || detection.plate_text || "",
+        correction_changed: Boolean(correctedText && correctedText !== detection.formatted_text),
+        bbox: detection.bbox,
+        confidence: detection.confidence,
+        text_source: detection.text_source || null,
+        character_count: detection.characters?.length ?? 0,
+        characters: detection.characters || [],
+        character_preprocess: detection.character_preprocess || null,
+      };
+    });
+    const payload = {
+      media: mediaName,
+      reviewed_at: new Date().toISOString(),
+      detections,
+      reviews,
+      corrections,
+      review_items: reviewItems,
+      video_job: videoJob,
+    };
     const url = URL.createObjectURL(new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" }));
     const link = document.createElement("a");
     link.href = url;
@@ -83,7 +112,10 @@ export default function Dashboard() {
     URL.revokeObjectURL(url);
   }
 
-  const reviewedCount = Object.keys(reviews).length;
+  const reviewedCount = new Set([
+    ...Object.keys(reviews),
+    ...Object.entries(corrections).filter(([, value]) => value.trim()).map(([key]) => key),
+  ]).size;
   const averageConfidence = detections.length ? detections.reduce((sum, detection) => sum + detection.confidence, 0) / detections.length : 0;
 
   return (
@@ -123,7 +155,7 @@ export default function Dashboard() {
         <>
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-4"><StatsGrid icon={<ScanBox className="w-4 h-4" />} label="Plates detected" value={detections.length} color="text-accent" /><StatsGrid icon={<Clock className="w-4 h-4" />} label="Processing time" value={timeMs !== null ? `${timeMs.toFixed(0)}ms` : "—"} color="text-info" /><StatsGrid icon={<Zap className="w-4 h-4" />} label="Average confidence" value={`${(averageConfidence * 100).toFixed(1)}%`} color="text-success" /><StatsGrid icon={<ShieldCheck className="w-4 h-4" />} label="Human reviewed" value={`${reviewedCount}/${detections.length}`} color={reviewedCount === detections.length ? "text-success" : "text-warning"} /></div>
           {annotatedImage && <section className="bg-bg-card border border-border rounded-xl overflow-hidden"><div className="px-5 py-3 border-b border-border"><h2 className="text-sm font-semibold text-text-primary">Annotated pipeline output</h2></div><img src={annotatedImage} alt="Annotated vehicle and plate detections" className="w-full max-h-[680px] object-contain bg-bg-primary" /></section>}
-          <section><div className="flex items-center justify-between gap-4 mb-4"><h2 className="text-lg font-semibold text-text-primary">Human verification {mediaName && <span className="text-text-muted font-normal text-sm">— {mediaName}</span>}</h2><button onClick={exportReview} className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border bg-bg-card text-sm text-text-secondary hover:text-text-primary"><Download className="w-4 h-4" /> Export review JSON</button></div><div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">{detections.map((detection, index) => <PlateCard key={detection.id || index} detection={detection} index={index} review={reviews[detection.id]} onReview={(decision) => setReviews((current) => ({ ...current, [detection.id]: decision }))} />)}</div></section>
+          <section><div className="flex items-center justify-between gap-4 mb-4"><h2 className="text-lg font-semibold text-text-primary">Human verification {mediaName && <span className="text-text-muted font-normal text-sm">— {mediaName}</span>}</h2><button onClick={exportReview} className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border bg-bg-card text-sm text-text-secondary hover:text-text-primary"><Download className="w-4 h-4" /> Export review JSON</button></div><div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">{detections.map((detection, index) => <PlateCard key={detection.id || index} detection={detection} index={index} review={reviews[detection.id]} correction={corrections[detection.id] || ""} onCorrectionChange={(value) => setCorrections((current) => ({ ...current, [detection.id]: value }))} onReview={(decision) => setReviews((current) => ({ ...current, [detection.id]: decision }))} />)}</div></section>
         </>
       )}
 

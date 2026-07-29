@@ -1,7 +1,7 @@
 """Egyptian license plate formatting and validation.
 
 Egyptian plates follow patterns like:
-  - Private cars: 1234 ABC  (numbers then letters)
+  - Private cars: ABC 1234  (letters then numbers in app display)
   - Taxis: etc.
 
 This module provides regex-based formatting and confidence-based
@@ -25,9 +25,17 @@ def format_plate(raw_text: str) -> str:
     Returns:
         Formatted plate string, or empty string if unreadable.
     """
-    cleaned = re.sub(r"[^A-Za-z0-9\u0600-\u06FF ]", "", raw_text).strip().upper()
+    cleaned = re.sub(r"[^A-Za-z0-9\u0600-\u06FF ]", " ", raw_text).strip().upper()
     cleaned = re.sub(r"\s+", " ", cleaned)
-    return cleaned
+    tokens = re.findall(r"[A-Z\u0600-\u06FF]+|\d+", cleaned)
+    if not tokens:
+        return ""
+
+    letters = [token for token in tokens if re.search(r"[A-Z\u0600-\u06FF]", token)]
+    digits = [token for token in tokens if token.isdigit()]
+    if letters and digits:
+        return f"{''.join(letters)} {''.join(digits)}"
+    return "".join(tokens)
 
 
 def validate_plate(text: str, min_length: int = 3, max_length: int = 10) -> bool:

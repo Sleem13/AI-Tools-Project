@@ -24,7 +24,8 @@ src/
   visualization/        # Detection result visualization
 scripts/                # 14 CLI entry points
 configs/                # YAML-driven pipeline configuration
-app/                    # Streamlit dashboard
+api/                    # FastAPI backend
+frontend/               # Vite React application
 tests/                  # Unit tests
 ```
 
@@ -257,6 +258,18 @@ python scripts/train_ocr.py
 python scripts/run_detection_inference.py --input test_images/ --output reports/two_stage/
 python scripts/run_ocr_inference.py --weights models/weights/ocr_best.pth --input plate_crops/
 ```
+
+Human review corrections from the Vite media lab can be imported into a
+reviewed feedback folder:
+
+```powershell
+python scripts/import_review_feedback.py path\to\media-review.json
+```
+
+This writes corrected text, model output, detection boxes, diagnostics, and
+plate crop images under `data/reviewed/human_feedback/`. Use those artifacts
+for annotation and fine-tuning; YOLO weights are updated by retraining on
+reviewed labels, not by directly editing a `.pt` file.
 
 ## Frontend and Backend Configuration
 

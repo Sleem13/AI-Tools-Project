@@ -19,7 +19,6 @@ dependencies = [
     "rich>=13.0.0",
     "tqdm>=4.66.0",
     "PyYAML>=6.0.0",
-    "streamlit>=1.32.0",
     "fastapi>=0.111.0",
     "uvicorn>=0.30.0",
     "python-multipart>=0.0.9",
@@ -53,6 +52,7 @@ alpr-train-ocr = "scripts.train_ocr:main"
 alpr-infer-det = "scripts.run_detection_inference:main"
 alpr-infer-ocr = "scripts.run_ocr_inference:main"
 alpr-benchmark = "scripts.benchmark:main"
+alpr-import-review = "scripts.import_review_feedback:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

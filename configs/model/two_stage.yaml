@@ -29,3 +29,17 @@ character:
   max_detections: 12
   reading_direction: rtl
   row_threshold: 0.60
+  preprocess:
+    enabled: true
+    upscale_factor: 2
+    min_dim: 32
+    target_height: 128
+    clahe: true
+    clahe_clip_limit: 2.0
+    clahe_tile_grid_size: 8
+    sharpen: false
+    sharpen_amount: 0.4
+    rotation_variants: true
+    rotation_variant_min_aspect: 1.15
+    retry_min_characters: 6
+    retry_conf_threshold: 0.05

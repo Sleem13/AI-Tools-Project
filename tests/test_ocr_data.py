@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import pytest
+import numpy as np
 
 from alpr_dataset.annotations.schema import BoundingBox, ImageAnnotation
 from alpr_dataset.config import SplitConfig
@@ -62,3 +63,32 @@ class TestEncodeDecode:
         vocab = build_vocab("AB")
         decoded = decode_text([CTC_BLANK, vocab["A"], CTC_BLANK, vocab["B"]], vocab)
         assert decoded == "AB"
+
+
+def test_reader_preprocess_matches_training_width(monkeypatch: pytest.MonkeyPatch) -> None:
+    from src.ocr.inference import PlateReader
+
+    captured_shape: tuple[int, ...] | None = None
+
+    class FakeModel:
+        def forward_for_ctc(self, tensor):
+            nonlocal captured_shape
+            captured_shape = tuple(tensor.shape)
+            import torch
+
+            return torch.zeros((1, 1, 37))
+
+    def fake_init(self, *args, **kwargs):
+        self.device = "cpu"
+        self.input_height = 32
+        self.input_width = 128
+        self.beam_width = 1
+        self.vocab = {0: 0, "A": 1}
+        self.model = FakeModel()
+
+    monkeypatch.setattr(PlateReader, "__init__", fake_init)
+    reader = PlateReader("unused")
+
+    reader.read_plate(np.full((24, 56, 3), 255, dtype=np.uint8))
+
+    assert captured_shape == (1, 1, 32, 128)

@@ -49,6 +49,7 @@ coverage.xml
 *.py,cover
 .hypothesis/
 .pytest_cache/
+.pytest_tmp/
 cover/
 
 # Translations
@@ -192,6 +193,7 @@ models/**/*.pt
 models/**/*.pth
 models/**/*.h5
 models/**/*.weights
+app/*.pt
 runs/
 wandb/
 

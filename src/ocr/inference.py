@@ -20,10 +20,12 @@ class PlateReader:
         weights_path: str | Path,
         device: str = "cpu",
         input_height: int = 32,
+        input_width: int = 128,
         beam_width: int = 1,
     ) -> None:
         self.device = torch.device(device)
         self.input_height = input_height
+        self.input_width = input_width
         self.beam_width = beam_width
         self.vocab = build_vocab()
 
@@ -55,6 +57,18 @@ class PlateReader:
         if new_w == 0:
             new_w = 1
         resized = cv2.resize(gray, (new_w, self.input_height), interpolation=cv2.INTER_AREA)
+        if new_w < self.input_width:
+            resized = cv2.copyMakeBorder(
+                resized,
+                0,
+                0,
+                0,
+                self.input_width - new_w,
+                cv2.BORDER_CONSTANT,
+                value=255,
+            )
+        else:
+            resized = resized[:, : self.input_width]
 
         tensor = torch.from_numpy(resized).float().unsqueeze(0).unsqueeze(0) / 255.0
         tensor = tensor.to(self.device)

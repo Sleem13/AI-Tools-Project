@@ -15,6 +15,19 @@ export interface Detection {
     row: number;
     order: number;
   }>;
+  character_preprocess?: {
+    selected_variant?: string;
+    tried_variants?: number;
+    variants?: Array<{
+      name: string;
+      shape: number[];
+      characters: number;
+      average_confidence: number;
+      threshold?: number | null;
+      retry?: boolean;
+      text: string;
+    }>;
+  };
   plate_crop?: string;
   combined_confidence?: number;
   vehicle?: {

@@ -23,18 +23,37 @@ class ALPRResult:
 class ALPRPipeline:
     """Chain license plate detection with OCR and optional character detection fusion."""
 
-    def __init__(self, detector: LicensePlateDetector | TwoStageDetector, reader: PlateReader) -> None:
+    def __init__(
+        self,
+        detector: LicensePlateDetector | TwoStageDetector,
+        reader: PlateReader,
+        min_confidence: float = 0.25,
+    ) -> None:
         self.detector = detector
         self.reader = reader
+        self.min_confidence = min_confidence
 
     def _get_crops(self, image: np.ndarray):
         """Yield crops from detector, compatible with both detector types."""
-        for crop, _ in self.detector.crop_plates(image):
-            yield crop
+        try:
+            crops = self.detector.crop_plates(image, min_confidence=self.min_confidence)
+        except TypeError:
+            crops = self.detector.crop_plates(image)
+
+        for crop, detection_info in crops:
+            if hasattr(detection_info, "to_dict"):
+                metadata = detection_info.to_dict()
+            else:
+                metadata = {"detection_confidence": float(detection_info)}
+
+            detection_confidence = metadata.get("confidence", metadata.get("detection_confidence", 0.0))
+            if detection_confidence < self.min_confidence:
+                continue
+            yield crop, metadata
 
     def run(self, image: np.ndarray) -> list[dict]:
         results: list[dict] = []
-        for crop in self._get_crops(image):
+        for crop, metadata in self._get_crops(image):
             # OCR result
             text_ocr = self.reader.read_plate(crop)
             # Optional character detection
@@ -43,7 +62,7 @@ class ALPRPipeline:
             if hasattr(self.detector, "character_detector") and self.detector.character_detector is not None:
                 char_results, text_char = self.detector.character_detector.recognize(crop)
                 if char_results:
-                    confs = [getattr(r, "confidence", 0.0) for r in char_results]
+                    confs = [getattr(getattr(r, "detection", None), "confidence", 0.0) for r in char_results]
                     if confs:
                         conf_char_avg = sum(confs) / len(confs)
             # Fusion: use character detection if confident enough, else OCR
@@ -54,8 +73,14 @@ class ALPRPipeline:
                 final_text = text_ocr
                 confidence = 1.0  # placeholder; OCR confidence not used
             # Build a minimal detection dict; we could try to get metadata but keep simple.
-            item = {}
-            item.update({"plate_text": final_text, "formatted_text": format_plate(final_text)})
+            item = dict(metadata)
+            item.update(
+                {
+                    "plate_text": final_text,
+                    "formatted_text": format_plate(final_text),
+                    "confidence": confidence,
+                }
+            )
             results.append(item)
         return results
 

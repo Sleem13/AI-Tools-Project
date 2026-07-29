@@ -54,7 +54,7 @@ def create_dashboard_figure(
     detections: list[dict],
     max_width: int = 800,
 ) -> np.ndarray:
-    """Create a dashboard-ready figure annotated with detection + OCR results.
+    """Create a compact figure annotated with detection + OCR results.
 
     Args:
         original: Input BGR image.
@@ -62,7 +62,7 @@ def create_dashboard_figure(
         max_width: Maximum display width (resized proportionally).
 
     Returns:
-        Annotated RGB image suitable for Streamlit / matplotlib display.
+        Annotated RGB image suitable for UI or matplotlib display.
     """
     h, w = original.shape[:2]
     if w > max_width:

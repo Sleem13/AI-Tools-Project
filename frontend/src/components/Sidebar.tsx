@@ -1,18 +1,25 @@
 import { NavLink } from "react-router-dom";
 import { ScanBox } from "lucide-react";
 import { navigationLinks } from "./navigation";
+import ThemeToggle, { type ThemeMode } from "./ThemeToggle";
 
-export default function Sidebar() {
+interface Props {
+  theme: ThemeMode;
+  onToggleTheme: () => void;
+}
+
+export default function Sidebar({ theme, onToggleTheme }: Props) {
   return (
     <aside className="fixed left-0 top-0 bottom-0 hidden w-60 bg-bg-secondary border-r border-border lg:flex flex-col z-50">
       <div className="flex items-center gap-3 px-5 py-5 border-b border-border">
-        <ScanBox className="w-7 h-7 text-accent" />
-        <div>
+        <ScanBox className="w-7 h-7 shrink-0 text-accent" />
+        <div className="min-w-0 flex-1">
           <h1 className="text-base font-semibold text-text-primary leading-tight">
             ALPR Pipeline
           </h1>
           <p className="text-xs text-text-muted">Egyptian License Plates</p>
         </div>
+        <ThemeToggle theme={theme} onToggle={onToggleTheme} />
       </div>
 
       <nav className="flex-1 py-4 px-3 space-y-1">

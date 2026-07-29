@@ -5,7 +5,9 @@ interface Props {
   detection: Detection;
   index: number;
   review?: ReviewDecision;
+  correction?: string;
   onReview?: (decision: ReviewDecision) => void;
+  onCorrectionChange?: (value: string) => void;
 }
 
 const REVIEW_STYLES: Record<ReviewDecision, string> = {
@@ -14,8 +16,28 @@ const REVIEW_STYLES: Record<ReviewDecision, string> = {
   needs_review: "border-warning/60 bg-warning/5",
 };
 
-export default function PlateCard({ detection, index, review, onReview }: Props) {
+function PlateText({ value, className }: { value: string; className: string }) {
+  if (!value) {
+    return <span className={className}>—</span>;
+  }
+
+  const tokens = value.match(/[A-Za-z\u0600-\u06FF]+|\d+|[^\s]/g) ?? [value];
+  return (
+    <span className={`${className} inline-flex flex-wrap items-baseline gap-x-2`} dir="ltr">
+      {tokens.map((token, tokenIndex) => (
+        <bdi key={`${token}-${tokenIndex}`} dir={/[\u0600-\u06FF]/.test(token) ? "rtl" : "ltr"}>
+          {token}
+        </bdi>
+      ))}
+    </span>
+  );
+}
+
+export default function PlateCard({ detection, index, review, correction = "", onReview, onCorrectionChange }: Props) {
   const isValid = detection.formatted_text.length >= 3;
+  const selectedVariant = detection.character_preprocess?.selected_variant;
+  const selectedVariantLabel = selectedVariant?.replace(/_/g, " ");
+  const triedVariants = detection.character_preprocess?.tried_variants ?? 0;
 
   return (
     <div className={`bg-bg-card border rounded-xl overflow-hidden transition-colors ${review ? REVIEW_STYLES[review] : "border-border hover:border-accent/40"}`}>
@@ -29,8 +51,13 @@ export default function PlateCard({ detection, index, review, onReview }: Props)
           </div>
         </div>
         <div className="space-y-2">
-          <div><p className="text-xs text-text-muted mb-0.5">Decoded plate</p><p className="text-xl font-bold font-mono tracking-wider text-text-primary" dir="auto">{detection.formatted_text || "—"}</p></div>
-          <div><p className="text-xs text-text-muted mb-0.5">{detection.text_source === "character_detector" ? "Character detector" : "Raw OCR"}</p><p className="text-sm font-mono text-text-secondary" dir="auto">{detection.plate_text || "—"}</p></div>
+          <div><p className="text-xs text-text-muted mb-0.5">Decoded plate</p><p><PlateText value={detection.formatted_text} className="text-xl font-bold font-mono text-text-primary" /></p></div>
+          <div><p className="text-xs text-text-muted mb-0.5">{detection.text_source === "character_detector" ? "Character detector" : "Raw OCR"}</p><p><PlateText value={detection.plate_text} className="text-sm font-mono text-text-secondary" /></p></div>
+          {selectedVariantLabel && (
+            <p className="text-[11px] text-text-muted">
+              Stage-three crop: {selectedVariantLabel}{triedVariants ? ` · ${triedVariants} variant${triedVariants === 1 ? "" : "s"}` : ""}
+            </p>
+          )}
           {detection.characters && detection.characters.length > 0 && (
             <div className="pt-1">
               <p className="text-[10px] uppercase tracking-wide text-text-muted mb-2">{detection.characters.length} ordered characters</p>
@@ -44,6 +71,18 @@ export default function PlateCard({ detection, index, review, onReview }: Props)
             </div>
           )}
           {detection.vehicle && <p className="text-xs text-text-muted">Inside {detection.vehicle.class_name} · {(detection.vehicle.confidence * 100).toFixed(1)}% vehicle confidence</p>}
+          {onCorrectionChange && (
+            <label className="block pt-1">
+              <span className="text-xs text-text-muted">Corrected plate after review</span>
+              <input
+                value={correction}
+                onChange={(event) => onCorrectionChange(event.target.value)}
+                placeholder={detection.formatted_text || "Enter reviewed plate"}
+                dir="auto"
+                className="mt-1 w-full rounded-lg border border-border bg-bg-primary px-3 py-2 text-sm font-mono text-text-primary outline-none focus:border-accent"
+              />
+            </label>
+          )}
         </div>
         <div className="mt-3 pt-3 border-t border-border flex items-center justify-between">
           <span className="text-xs text-text-muted">Plate confidence</span>

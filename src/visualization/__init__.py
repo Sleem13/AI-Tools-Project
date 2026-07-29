@@ -3,7 +3,7 @@
 Provides:
   - draw_detections: overlay bounding boxes + labels on images
   - draw_plate_crops: side-by-side display of detected plate crops
-  - create_dashboard_figure: full pipeline visualization for Streamlit
+  - create_dashboard_figure: compact annotated detection figure
 """
 
 from src.visualization.detection_viz import (
