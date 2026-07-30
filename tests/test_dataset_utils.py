@@ -4,21 +4,13 @@ from __future__ import annotations
 
 from pathlib import Path
 
-import numpy as np
-import pytest
-
 from dataset.utils.filesystem import (
-    AnnotationFormat,
     should_ignore,
-    detect_image_files,
-    SUPPORTED_IMAGE_EXTENSIONS,
 )
-from dataset.utils.hashing import compute_md5, compute_phash
+from dataset.utils.hashing import compute_md5
 from dataset.utils.image import (
-    is_zero_byte,
     has_supported_extension,
-    is_readable,
-    is_corrupted,
+    is_zero_byte,
     validate_image,
 )
 

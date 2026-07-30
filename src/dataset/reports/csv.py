@@ -32,7 +32,7 @@ class CSVReportGenerator:
                 "path",
             ])
 
-            for scan, metadatas in zip(scan_results, metadata_list):
+            for scan, metadatas in zip(scan_results, metadata_list, strict=False):
                 for meta in metadatas:
                     writer.writerow([
                         scan.dataset_name,

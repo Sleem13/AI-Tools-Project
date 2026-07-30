@@ -14,8 +14,8 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
-from src.detection.data import create_dataset_yaml  # noqa: E402
-from src.detection.trainer import train_detector  # noqa: E402
+from src.detection.data import create_dataset_yaml
+from src.detection.trainer import train_detector
 
 DEFAULT_CONFIGS = {
     "plate": PROJECT_ROOT / "configs" / "model" / "detection.yaml",

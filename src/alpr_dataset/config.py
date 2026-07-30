@@ -29,7 +29,7 @@ class DatasetSpec:
     notes: str = ""
 
     @classmethod
-    def from_dict(cls, d: dict[str, Any], project_root: Path) -> "DatasetSpec":
+    def from_dict(cls, d: dict[str, Any], project_root: Path) -> DatasetSpec:
         return cls(
             name=d["name"],
             root=project_root / d["root"],
@@ -61,7 +61,7 @@ class PreprocessingConfig:
     before_after_sample_count: int = 20
 
     @classmethod
-    def from_dict(cls, d: dict[str, Any]) -> "PreprocessingConfig":
+    def from_dict(cls, d: dict[str, Any]) -> PreprocessingConfig:
         steps = [
             PreprocessingStepConfig(
                 name=s["name"],
@@ -100,7 +100,7 @@ class SplitConfig:
             )
 
     @classmethod
-    def from_dict(cls, d: dict[str, Any]) -> "SplitConfig":
+    def from_dict(cls, d: dict[str, Any]) -> SplitConfig:
         cfg = cls(
             train_ratio=d.get("train_ratio", 0.7),
             val_ratio=d.get("val_ratio", 0.15),
@@ -130,15 +130,15 @@ class PipelineConfig:
     unified_class_map: dict[int, str] = field(default_factory=dict)
 
     @classmethod
-    def load(cls, config_path: Path, datasets_path: Path) -> "PipelineConfig":
+    def load(cls, config_path: Path, datasets_path: Path) -> PipelineConfig:
         config_path = Path(config_path)
         datasets_path = Path(datasets_path)
         project_root = config_path.resolve().parent.parent
 
-        with open(config_path, "r", encoding="utf-8") as f:
+        with open(config_path, encoding="utf-8") as f:
             raw = yaml.safe_load(f)
 
-        with open(datasets_path, "r", encoding="utf-8") as f:
+        with open(datasets_path, encoding="utf-8") as f:
             raw_datasets = yaml.safe_load(f)
 
         datasets = [
@@ -162,17 +162,17 @@ class PipelineConfig:
         )
 
     def preprocessing_config(self, preprocessing_path: Path) -> PreprocessingConfig:
-        with open(preprocessing_path, "r", encoding="utf-8") as f:
+        with open(preprocessing_path, encoding="utf-8") as f:
             raw = yaml.safe_load(f)
         return PreprocessingConfig.from_dict(raw)
 
     def split_config(self, preprocessing_path: Path) -> SplitConfig:
-        with open(preprocessing_path, "r", encoding="utf-8") as f:
+        with open(preprocessing_path, encoding="utf-8") as f:
             raw = yaml.safe_load(f)
         return SplitConfig.from_dict(raw.get("split", {}))
 
 
 def load_yaml(path: Path) -> dict[str, Any]:
     """Generic YAML loader used across scripts."""
-    with open(Path(path), "r", encoding="utf-8") as f:
+    with open(Path(path), encoding="utf-8") as f:
         return yaml.safe_load(f) or {}

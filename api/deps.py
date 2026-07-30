@@ -13,6 +13,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DET_WEIGHTS = PROJECT_ROOT / "models" / "weights" / "detection_best.pt"
 TWO_STAGE_CONFIG = PROJECT_ROOT / "configs" / "model" / "two_stage.yaml"
 OCR_WEIGHTS = PROJECT_ROOT / "models" / "weights" / "ocr_best.pth"
+KERAS_OCR_WEIGHTS = PROJECT_ROOT / "models" / "weights" / "plate_ocr_weights.weights.h5"
 
 _detector = None
 _detector_weights = None
@@ -87,6 +88,15 @@ def get_reader():
     global _reader
     if _reader is not None:
         return _reader
+    if KERAS_OCR_WEIGHTS.exists():
+        try:
+            from src.ocr.keras_inference import KerasPlateReader
+
+            _reader = KerasPlateReader(weights_path=KERAS_OCR_WEIGHTS)
+            logger.info("Loaded Keras OCR model: %s", KERAS_OCR_WEIGHTS)
+            return _reader
+        except Exception as e:
+            logger.warning("Failed to load Keras OCR model: %s", e)
     if not OCR_WEIGHTS.exists():
         return None
     try:

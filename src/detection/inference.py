@@ -1,5 +1,4 @@
 """YOLO inference primitives for vehicle, plate, and cascaded detection."""
-# ruff: noqa: RUF001
 
 from __future__ import annotations
 
@@ -803,7 +802,7 @@ def _enhance_character_crop(plate_crop: np.ndarray, config: PlatePreprocessConfi
     if scale > 1:
         plate_crop = cv2.resize(
             plate_crop,
-            (max(config.min_dim, int(round(w * scale))), max(config.min_dim, int(round(h * scale)))),
+            (max(config.min_dim, round(w * scale)), max(config.min_dim, round(h * scale))),
             interpolation=cv2.INTER_LANCZOS4,
         )
 

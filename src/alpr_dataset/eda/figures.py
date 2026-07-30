@@ -65,7 +65,7 @@ def plot_dataset_size_comparison(counts: dict[str, int], output_dir: Path) -> No
     bars = ax.bar(names, values, color="#3d5a80", edgecolor="white", linewidth=0.6)
     ax.set_ylabel("Number of images")
     ax.set_title("Dataset Size Comparison")
-    for bar, v in zip(bars, values):
+    for bar, v in zip(bars, values, strict=False):
         ax.text(
             bar.get_x() + bar.get_width() / 2,
             v,
@@ -225,7 +225,7 @@ def plot_class_distribution(annotations: list[ImageAnnotation], output_dir: Path
         logger.warning("No class labels available for class distribution plot")
         return
     fig, ax = plt.subplots(figsize=_FIGSIZE)
-    names, values = zip(*sorted(counts.items(), key=lambda x: -x[1]))
+    names, values = zip(*sorted(counts.items(), key=lambda x: -x[1]), strict=False)
     ax.bar(names, values, color="#3d5a80", edgecolor="white", linewidth=0.6)
     ax.set_ylabel("Frequency")
     ax.set_title("Class Distribution")
@@ -392,7 +392,7 @@ def plot_color_distribution(image_paths: list[Path], output_dir: Path, sample_si
             hist = cv2.calcHist([img], [i], None, [256], [0, 256]).flatten()
             channel_hists[ch] += hist
     fig, ax = plt.subplots(figsize=_FIGSIZE)
-    for ch, color in zip(("B", "G", "R"), ("#3d5a80", "#4ba36f", "#ee6c4d")):
+    for ch, color in zip(("B", "G", "R"), ("#3d5a80", "#4ba36f", "#ee6c4d"), strict=False):
         ax.plot(channel_hists[ch], color=color, label=ch, linewidth=1.2)
     ax.set_title(f"Aggregate Colour Channel Distribution (n={len(sample)} sampled)")
     ax.set_xlabel("Pixel intensity")
@@ -484,7 +484,7 @@ def generate_all_eda_figures(
     valid = [s for s in stats if not s.is_corrupted]
     widths = [s.width for s in valid]
     heights = [s.height for s in valid]
-    ratios = [w / h for w, h in zip(widths, heights) if h > 0]
+    ratios = [w / h for w, h in zip(widths, heights, strict=False) if h > 0]
 
     plot_dataset_size_comparison(dataset_counts, output_dir)
     plot_resolution_histograms(widths, heights, output_dir)

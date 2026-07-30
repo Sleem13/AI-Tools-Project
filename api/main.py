@@ -69,11 +69,16 @@ def health():
 
     det = get_detector()
     ocr = get_reader()
+    ocr_path = str(getattr(ocr, "weights_path", "")) if ocr is not None else None
     return {
         "status": "ok",
         "models_loaded": {
             "detection": det is not None,
             "character": bool(det is not None and getattr(det, "character_detector", None) is not None),
             "ocr": ocr is not None,
+        },
+        "model_sources": {
+            "ocr": getattr(ocr, "source", None) if ocr is not None else None,
+            "ocr_path": ocr_path,
         },
     }

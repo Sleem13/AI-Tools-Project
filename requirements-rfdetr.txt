@@ -1,0 +1,5 @@
+# Optional RF-DETR experiment dependencies.
+# Install into a GPU-capable Python 3.12 environment before training:
+#   pip install -r requirements.txt -r requirements-rfdetr.txt
+
+rfdetr>=1.0.0

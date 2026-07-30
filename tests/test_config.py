@@ -8,9 +8,7 @@ import pytest
 
 from alpr_dataset.config import (
     DatasetSpec,
-    PipelineConfig,
     PreprocessingConfig,
-    PreprocessingStepConfig,
     SplitConfig,
     load_yaml,
 )
@@ -72,7 +70,7 @@ class TestSplitConfig:
 
     def test_invalid_ratios_raise(self) -> None:
         cfg = SplitConfig(train_ratio=0.5, val_ratio=0.3, test_ratio=0.3)
-        with pytest.raises(ValueError, match="must sum to 1.0"):
+        with pytest.raises(ValueError, match=r"must sum to 1\.0"):
             cfg.validate()
 
     def test_from_dict_valid(self) -> None:

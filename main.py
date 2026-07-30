@@ -5,7 +5,6 @@ import logging
 from pathlib import Path
 
 import yaml
-
 from src.dataset import DatasetInspector
 from src.dataset.inspector.metadata import ImageMetadata
 from src.dataset.inspector.scanner import ScanResult
@@ -23,7 +22,7 @@ logger = logging.getLogger(__name__)
 
 
 def load_config(config_path: str | Path) -> dict:
-    with open(config_path, "r", encoding="utf-8") as f:
+    with open(config_path, encoding="utf-8") as f:
         return yaml.safe_load(f)
 
 

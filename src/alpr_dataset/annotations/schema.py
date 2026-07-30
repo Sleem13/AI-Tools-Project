@@ -45,7 +45,7 @@ class BoundingBox:
         cx, cy = self.center
         return cx / img_w, cy / img_h, self.width / img_w, self.height / img_h
 
-    def iou(self, other: "BoundingBox") -> float:
+    def iou(self, other: BoundingBox) -> float:
         ix_min = max(self.x_min, other.x_min)
         iy_min = max(self.y_min, other.y_min)
         ix_max = min(self.x_max, other.x_max)

@@ -17,7 +17,6 @@ PROJECT_ROOT = SCRIPT_DIR.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 import cv2
-
 from src.ocr.inference import PlateReader
 
 

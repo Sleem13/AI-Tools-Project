@@ -8,7 +8,6 @@ and cross-dataset comparisons.
 from __future__ import annotations
 
 import logging
-from collections import Counter
 from pathlib import Path
 
 from alpr_dataset.annotations.schema import ImageAnnotation
@@ -53,7 +52,7 @@ def _stats_summary(stats: list[ImageStats]) -> dict[str, str]:
 
     widths = [s.width for s in valid]
     heights = [s.height for s in valid]
-    resolutions = [w * h for w, h in zip(widths, heights)]
+    resolutions = [w * h for w, h in zip(widths, heights, strict=False)]
 
     brightness = [s.brightness_mean for s in valid]
     contrast = [s.contrast_std for s in valid]
@@ -112,14 +111,14 @@ def generate_eda_report(
     lines: list[str] = []
     lines.append(f"# Exploratory Data Analysis — {dataset_name}")
     lines.append("")
-    lines.append(f"**Generated:** automatically by `scripts/run_eda.py`")
+    lines.append("**Generated:** automatically by `scripts/run_eda.py`")
     lines.append("")
     lines.append("---")
     lines.append("")
     lines.append("## Dataset Overview")
     lines.append("")
-    lines.append(f"| Metric | Value |")
-    lines.append(f"|--------|-------|")
+    lines.append("| Metric | Value |")
+    lines.append("|--------|-------|")
     lines.append(f"| Total images scanned | {stat_summary['count']} |")
     lines.append(f"| Corrupted / unreadable | {stat_summary['corrupted']} |")
     lines.append(f"| Width range | {stat_summary['width_range']} |")
@@ -132,8 +131,8 @@ def generate_eda_report(
     lines.append("")
     lines.append("### Annotations")
     lines.append("")
-    lines.append(f"| Metric | Value |")
-    lines.append(f"|--------|-------|")
+    lines.append("| Metric | Value |")
+    lines.append("|--------|-------|")
     lines.append(f"| Images with bounding boxes | {bbox_summary['images_with_boxes']} |")
     lines.append(f"| Total bounding boxes | {bbox_summary['total_boxes']} |")
     lines.append(f"| Near-duplicate pairs found | {dup_summary['near_duplicate_pairs']} |")
@@ -174,7 +173,7 @@ def generate_eda_report(
     if valid:
         widths = [s.width for s in valid]
         heights = [s.height for s in valid]
-        ratios = [w / h for w, h in zip(widths, heights) if h > 0]
+        ratios = [w / h for w, h in zip(widths, heights, strict=False) if h > 0]
         brightness = [s.brightness_mean for s in valid]
         blur = [s.blur_score for s in valid]
 

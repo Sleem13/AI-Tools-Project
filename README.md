@@ -21,7 +21,6 @@ src/
   ocr/                  # CRNN + CTC text recognition
   evaluation/           # End-to-end ALPR evaluation
   postprocessing/       # Egyptian plate text formatting
-  visualization/        # Detection result visualization
 scripts/                # 14 CLI entry points
 configs/                # YAML-driven pipeline configuration
 api/                    # FastAPI backend
@@ -249,6 +248,64 @@ For final benchmark reporting, regroup the character dataset by original plate
 identity before splitting. The current Roboflow export contains nine base
 image names shared across train/validation or train/test; leaving them in place
 can slightly inflate validation metrics.
+
+### Optional RF-DETR detector fine-tuning
+
+RF-DETR can be evaluated as an alternative detector for stage two plates or
+stage three characters. The project keeps RF-DETR optional so the normal
+FastAPI/Vite app does not depend on it. Install it only in the training
+environment:
+
+```powershell
+pip install -r requirements.txt -r requirements-rfdetr.txt
+```
+
+RF-DETR expects COCO split folders, while this project materializes YOLO
+labels. Convert the existing plate boxes first:
+
+```powershell
+python scripts/train_rfdetr.py --stage plate --convert-only
+```
+
+That creates:
+
+```text
+data/processed/Master_Plate_Dataset_RFDETR/
+  train/_annotations.coco.json
+  valid/_annotations.coco.json
+  test/_annotations.coco.json   # when a test split exists
+```
+
+Then fine-tune the plate detector:
+
+```powershell
+python scripts/train_rfdetr.py --stage plate `
+  --epochs 25 `
+  --batch-size 4 `
+  --grad-accum-steps 4 `
+  --resolution 672 `
+  --device cuda
+```
+
+For character detection, use an object-detection dataset where each visible
+character has its own bounding box and class. Do not depend on zero-shot
+segmentation for this OCR-like stage; the detector needs supervised examples
+of the exact Arabic letters and digits it must localize:
+
+```powershell
+python scripts/train_rfdetr.py --stage character --convert-only
+python scripts/train_rfdetr.py --stage character `
+  --epochs 50 `
+  --batch-size 4 `
+  --grad-accum-steps 4 `
+  --resolution 672 `
+  --device cuda
+```
+
+RF-DETR checkpoints are written under `models/rfdetr/plate/` or
+`models/rfdetr/character/`. Treat this as a side-by-side experiment until its
+validation metrics and low-resolution/tight-crop behavior beat the current
+YOLO checkpoints.
 
 The raw dataset engineering and optional OCR commands remain available:
 

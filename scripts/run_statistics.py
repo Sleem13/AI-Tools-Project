@@ -15,12 +15,12 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
-from alpr_dataset.annotations.loader import load_dataset_annotations  # noqa: E402
-from alpr_dataset.config import PipelineConfig  # noqa: E402
-from alpr_dataset.inspection.image_stats import batch_compute_stats  # noqa: E402
-from alpr_dataset.io_utils import list_images  # noqa: E402
-from alpr_dataset.logging_setup import setup_logging  # noqa: E402
-from alpr_dataset.statistics.stats_generator import generate_statistics_reports  # noqa: E402
+from alpr_dataset.annotations.loader import load_dataset_annotations
+from alpr_dataset.config import PipelineConfig
+from alpr_dataset.inspection.image_stats import batch_compute_stats
+from alpr_dataset.io_utils import list_images
+from alpr_dataset.logging_setup import setup_logging
+from alpr_dataset.statistics.stats_generator import generate_statistics_reports
 
 
 def main() -> None:

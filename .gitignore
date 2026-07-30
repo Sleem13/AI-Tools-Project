@@ -194,6 +194,7 @@ models/**/*.pth
 models/**/*.h5
 models/**/*.weights
 app/*.pt
+models/rfdetr/
 runs/
 wandb/
 

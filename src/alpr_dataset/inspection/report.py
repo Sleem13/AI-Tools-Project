@@ -39,7 +39,7 @@ def build_dataset_summary_row(
 
     widths = [s.width for s in valid_stats]
     heights = [s.height for s in valid_stats]
-    aspect_ratios = [w / h for w, h in zip(widths, heights) if h > 0]
+    aspect_ratios = [w / h for w, h in zip(widths, heights, strict=False) if h > 0]
     file_sizes_kb = [s.file_size_bytes / 1024 for s in valid_stats]
     color_spaces = pd.Series([s.color_space for s in valid_stats]).value_counts().to_dict()
 
@@ -122,7 +122,7 @@ def _write_markdown_summary(
     )
     lines.append("")
 
-    for (name, root), row in zip(dataset_specs, rows):
+    for (name, root), row in zip(dataset_specs, rows, strict=False):
         lines.append(f"## {name}")
         lines.append(f"- Root: `{root}`")
         lines.append(f"- Images: **{row['n_images']}**")

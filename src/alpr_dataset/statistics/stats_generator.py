@@ -29,7 +29,7 @@ def compute_dataset_statistics(
     valid = [s for s in stats if not s.is_corrupted]
     widths = [s.width for s in valid]
     heights = [s.height for s in valid]
-    resolutions = [w * h for w, h in zip(widths, heights)]
+    resolutions = [w * h for w, h in zip(widths, heights, strict=False)]
     file_sizes = [s.file_size_bytes for s in valid]
     boxes_per_image = [a.n_boxes for a in annotations]
 
@@ -108,8 +108,8 @@ def generate_statistics_reports(
     output_dir = ensure_dir(output_dir)
     all_summaries = []
 
-    for name, (stats, annotations) in per_dataset.items():
-        summary = compute_dataset_statistics(name, stats, annotations)
+    for name, (stats, annotation_records) in per_dataset.items():
+        summary = compute_dataset_statistics(name, stats, annotation_records)
         all_summaries.append(summary)
 
         res_table = build_resolution_table(stats)

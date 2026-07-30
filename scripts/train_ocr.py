@@ -17,7 +17,6 @@ PROJECT_ROOT = SCRIPT_DIR.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 import yaml
-
 from src.ocr.data import OCRPlateDataset, build_vocab
 from src.ocr.trainer import train_crnn
 

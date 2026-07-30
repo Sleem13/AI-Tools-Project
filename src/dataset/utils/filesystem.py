@@ -5,7 +5,6 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import Any
 
-
 SUPPORTED_IMAGE_EXTENSIONS: set[str] = {".jpg", ".jpeg", ".png", ".bmp", ".tiff", ".tif", ".webp"}
 
 SUPPORTED_ANNOTATION_EXTENSIONS: set[str] = {".xml", ".txt", ".json"}

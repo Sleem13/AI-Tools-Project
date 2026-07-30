@@ -9,10 +9,17 @@ import {
 } from "lucide-react";
 import LoadingSpinner from "../components/LoadingSpinner";
 import { getHealth } from "../api/client";
+import type { HealthResponse } from "../types";
 
 export default function Settings() {
-  const [health, setHealth] = useState<any>(null);
+  const [health, setHealth] = useState<HealthResponse | null>(null);
   const [loading, setLoading] = useState(true);
+  const ocrSourceLabel =
+    health?.model_sources?.ocr === "keras_crnn"
+      ? "Keras CRNN"
+      : health?.model_sources?.ocr === "crnn"
+        ? "PyTorch CRNN"
+        : null;
 
   useEffect(() => {
     getHealth()
@@ -21,6 +28,7 @@ export default function Settings() {
         setHealth({
           status: "offline",
           models_loaded: { detection: false, character: false, ocr: false },
+          model_sources: { ocr: null, ocr_path: null },
         })
       )
       .finally(() => setLoading(false));
@@ -103,9 +111,17 @@ export default function Settings() {
               ) : (
                 <XCircle className="w-4 h-4" />
               )}
-              {health?.models_loaded?.ocr ? "Loaded" : "Not loaded"}
+              {health?.models_loaded?.ocr ? `Loaded${ocrSourceLabel ? ` (${ocrSourceLabel})` : ""}` : "Not loaded"}
             </span>
           </div>
+          {health?.models_loaded?.ocr && health?.model_sources?.ocr_path && (
+            <div className="flex items-center justify-between py-2 border-t border-border">
+              <span className="text-sm text-text-secondary">OCR Weights</span>
+              <span className="max-w-md truncate text-right text-xs font-mono text-text-muted" title={health.model_sources.ocr_path}>
+                {health.model_sources.ocr_path}
+              </span>
+            </div>
+          )}
         </div>
       </div>
 
@@ -122,7 +138,7 @@ export default function Settings() {
             { label: "IOU Threshold", value: "0.45" },
             { label: "Character Confidence", value: "0.25" },
             { label: "Character Reading Order", value: "Right to left" },
-            { label: "CRNN Fallback", value: "Automatic" },
+            { label: "OCR Fallback", value: ocrSourceLabel ?? "Automatic" },
             { label: "Input Height (CRNN)", value: "32" },
             { label: "Duplicate Hash Threshold", value: "5" },
             { label: "Blur Threshold", value: "100.0" },

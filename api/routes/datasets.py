@@ -34,7 +34,7 @@ def list_datasets():
 
             # Detect format from annotations
             fmt = "unknown"
-            for f in d.rglob("*.xml"):
+            for _ in d.rglob("*.xml"):
                 fmt = "voc_xml"
                 break
             if fmt == "unknown":
@@ -44,11 +44,11 @@ def list_datasets():
                         fmt = "yolo"
                         break
             if fmt == "unknown":
-                for f in d.rglob("*.json"):
+                for _ in d.rglob("*.json"):
                     fmt = "coco_json"
                     break
             if fmt == "unknown":
-                for f in d.rglob("*.csv"):
+                for _ in d.rglob("*.csv"):
                     fmt = "csv"
                     break
 
