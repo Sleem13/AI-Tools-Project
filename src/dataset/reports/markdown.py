@@ -26,7 +26,7 @@ class MarkdownReportGenerator:
             "",
         ]
 
-        for i, (scan, metadatas, tree) in enumerate(zip(scan_results, metadata_list, tree_texts)):
+        for i, (scan, metadatas, tree) in enumerate(zip(scan_results, metadata_list, tree_texts, strict=False)):
             lines.append(f"## {i + 1}. {scan.dataset_name}")
             lines.append("")
             lines.append("### Overview")

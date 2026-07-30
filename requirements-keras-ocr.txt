@@ -1,0 +1,3 @@
+# Optional TensorFlow backend for notebook-exported plate_ocr_weights.weights.h5.
+tensorflow>=2.18.0
+h5py>=3.11.0

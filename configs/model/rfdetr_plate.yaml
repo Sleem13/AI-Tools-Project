@@ -1,0 +1,30 @@
+# RF-DETR stage-two license-plate detector fine-tuning.
+# Dataset is converted from an existing Ultralytics YOLO data.yaml into
+# RF-DETR's COCO folder layout before training.
+
+data:
+  source_yaml: data/processed/Master_Plate_Dataset/data.yaml
+  coco_dir: data/processed/Master_Plate_Dataset_RFDETR
+
+model:
+  # Leave empty to use the package default COCO-pretrained RF-DETR-B checkpoint.
+  pretrain_weights:
+
+training:
+  output_dir: models/rfdetr/plate
+  epochs: 25
+  batch_size: 4
+  grad_accum_steps: 4
+  lr: 0.0001
+  lr_encoder:
+  resolution: 672
+  weight_decay: 0.0001
+  device: cuda
+  use_ema: true
+  gradient_checkpointing: true
+  checkpoint_interval: 5
+  tensorboard: true
+  wandb: false
+  early_stopping: true
+  early_stopping_patience: 10
+  early_stopping_min_delta: 0.001

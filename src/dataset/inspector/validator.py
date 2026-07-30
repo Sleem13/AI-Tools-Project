@@ -6,10 +6,10 @@ from pathlib import Path
 
 from tqdm import tqdm
 
-from .scanner import ScanResult
 from ..utils.filesystem import AnnotationFormat
 from ..utils.hashing import find_exact_duplicates, find_near_duplicates
 from ..utils.image import has_supported_extension, is_corrupted, is_readable, is_zero_byte
+from .scanner import ScanResult
 
 
 @dataclass
@@ -334,7 +334,7 @@ class DatasetValidator:
             if img_stem not in ann_stems:
                 issues.append(ValidationIssue(
                     issue_type="missing_label",
-                    file_path=str([str(p) for p in scan_result.image_files if p.stem == img_stem][0]),
+                    file_path=str(next(str(p) for p in scan_result.image_files if p.stem == img_stem)),
                     message="Image has no corresponding annotation file",
                 ))
         return issues

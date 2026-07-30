@@ -8,7 +8,6 @@ a uniform view of a dataset, regardless of its original annotation format.
 from __future__ import annotations
 
 import logging
-from pathlib import Path
 
 from alpr_dataset.annotations.parsers import (
     parse_annotation_file,

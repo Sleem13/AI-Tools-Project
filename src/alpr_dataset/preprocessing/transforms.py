@@ -29,7 +29,7 @@ def letterbox(
     h, w = image.shape[:2]
     target_w, target_h = target_size
     scale = min(target_w / w, target_h / h)
-    new_w, new_h = int(round(w * scale)), int(round(h * scale))
+    new_w, new_h = round(w * scale), round(h * scale)
     resized = cv2.resize(image, (new_w, new_h), interpolation=cv2.INTER_AREA)
 
     pad_w = target_w - new_w

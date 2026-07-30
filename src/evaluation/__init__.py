@@ -6,12 +6,12 @@ Provides:
   - ALPREvaluator: combined evaluation across detection + OCR
 """
 
-from src.evaluation.metrics import DetectionMetrics, OCRMetrics, ALPREvaluator
+from src.evaluation.metrics import ALPREvaluator, DetectionMetrics, OCRMetrics
 from src.evaluation.pipeline import ALPRPipeline
 
 __all__ = [
-    "DetectionMetrics",
-    "OCRMetrics",
     "ALPREvaluator",
     "ALPRPipeline",
+    "DetectionMetrics",
+    "OCRMetrics",
 ]

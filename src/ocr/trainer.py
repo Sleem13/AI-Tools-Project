@@ -6,11 +6,10 @@ from pathlib import Path
 
 import torch
 import torch.nn as nn
-from torch.utils.data import DataLoader
-from tqdm import tqdm
-
 from src.ocr.data import OCRPlateDataset, build_vocab
 from src.ocr.model import CRNNModel
+from torch.utils.data import DataLoader
+from tqdm import tqdm
 
 
 def train_crnn(
@@ -163,7 +162,7 @@ def _ctc_collate(
     Returns:
         (images, targets, target_lengths)
     """
-    images, targets = zip(*batch)
+    images, targets = zip(*batch, strict=False)
     images = torch.stack(images, dim=0)
 
     target_lengths = torch.tensor([len(t) for t in targets], dtype=torch.long)

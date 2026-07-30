@@ -10,7 +10,6 @@ import pytest
 
 from alpr_dataset.annotations.schema import BoundingBox, ImageAnnotation
 from alpr_dataset.harmonization.harmonizer import (
-    HarmonizationRecord,
     harmonize_dataset,
     write_harmonization_metadata,
 )
@@ -156,7 +155,7 @@ class TestHarmonizeDataset:
         ann = _make_annotation(annotated_image, [box], width=128, height=64)
         output_root = tmp_path / "unified"
 
-        records = harmonize_dataset(
+        harmonize_dataset(
             dataset_name="ds_f",
             annotations=[ann],
             unified_class_map={0: "plate"},

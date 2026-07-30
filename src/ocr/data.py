@@ -10,7 +10,6 @@ import numpy as np
 import torch
 from torch.utils.data import Dataset
 
-
 # Characters that appear on Egyptian license plates (Arabic numerals + Latin letters).
 DEFAULT_CHARS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 PAD_TOKEN = "<PAD>"
@@ -96,7 +95,7 @@ class OCRPlateDataset(Dataset):
         target_w = self.input_width
 
         scale = target_h / h
-        new_w = int(round(w * scale))
+        new_w = round(w * scale)
         if new_w == 0:
             new_w = 1
         resized = cv2.resize(image, (new_w, target_h), interpolation=cv2.INTER_AREA)

@@ -62,6 +62,6 @@ def test_invalid_ratios_raise():
     config = SplitConfig(train_ratio=0.5, val_ratio=0.3, test_ratio=0.3)
     try:
         config.validate()
-        assert False, "Expected ValueError for ratios not summing to 1.0"
+        raise AssertionError("Expected ValueError for ratios not summing to 1.0")
     except ValueError:
         pass

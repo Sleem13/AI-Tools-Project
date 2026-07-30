@@ -1,5 +1,4 @@
 """Tests for the vehicle-to-license-plate YOLO cascade."""
-# ruff: noqa: RUF001
 
 from __future__ import annotations
 

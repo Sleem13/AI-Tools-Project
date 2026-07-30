@@ -2,17 +2,13 @@
 
 from __future__ import annotations
 
-import pytest
 import numpy as np
-
-from alpr_dataset.annotations.schema import BoundingBox, ImageAnnotation
-from alpr_dataset.config import SplitConfig
-from alpr_dataset.splitting.splitter import stratified_split
+import pytest
 
 
 class TestBuildVocab:
     def test_blank_token_at_index_zero(self) -> None:
-        from src.ocr.data import build_vocab, CTC_BLANK
+        from src.ocr.data import CTC_BLANK, build_vocab
 
         vocab = build_vocab()
         assert vocab[CTC_BLANK] == 0
@@ -42,7 +38,7 @@ class TestBuildVocab:
 
 class TestEncodeDecode:
     def test_roundtrip(self) -> None:
-        from src.ocr.data import build_vocab, encode_text, decode_text
+        from src.ocr.data import build_vocab, decode_text, encode_text
 
         vocab = build_vocab()
         text = "ABC123"
@@ -58,7 +54,7 @@ class TestEncodeDecode:
         assert encoded == [vocab["A"], vocab["B"], vocab["C"]]
 
     def test_decode_ignores_blank(self) -> None:
-        from src.ocr.data import build_vocab, decode_text, CTC_BLANK
+        from src.ocr.data import CTC_BLANK, build_vocab, decode_text
 
         vocab = build_vocab("AB")
         decoded = decode_text([CTC_BLANK, vocab["A"], CTC_BLANK, vocab["B"]], vocab)
@@ -92,3 +88,28 @@ def test_reader_preprocess_matches_training_width(monkeypatch: pytest.MonkeyPatc
     reader.read_plate(np.full((24, 56, 3), 255, dtype=np.uint8))
 
     assert captured_shape == (1, 1, 32, 128)
+
+
+def test_keras_notebook_decoder_matches_custom_alphabet() -> None:
+    from src.ocr.keras_inference import CHAR_VECTOR, NUM_CLASSES, UNIQUE_LETTERS, KerasPlateReader
+    from src.postprocessing.plate_formatter import format_plate
+
+    blank_idx = len(UNIQUE_LETTERS)
+    encoded_path = [
+        CHAR_VECTOR.index("5"),
+        CHAR_VECTOR.index("5"),
+        blank_idx,
+        CHAR_VECTOR.index("3"),
+        CHAR_VECTOR.index("X"),
+        CHAR_VECTOR.index("A"),
+        CHAR_VECTOR.index("Y"),
+        CHAR_VECTOR.index("E"),
+    ]
+    prediction = np.zeros((len(encoded_path), NUM_CLASSES), dtype=np.float32)
+    for row, class_idx in enumerate(encoded_path):
+        prediction[row, class_idx] = 1.0
+
+    text = KerasPlateReader.decode_prediction(prediction)
+
+    assert text == "ج ن ا 3 5"
+    assert format_plate(text) == "جنا 35"

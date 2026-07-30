@@ -18,10 +18,9 @@ PROJECT_ROOT = SCRIPT_DIR.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 import cv2
-from tqdm import tqdm
-
-from src.detection.inference import LicensePlateDetector
 from src.alpr_dataset.io_utils import list_images
+from src.detection.inference import LicensePlateDetector
+from tqdm import tqdm
 
 
 def main() -> None:

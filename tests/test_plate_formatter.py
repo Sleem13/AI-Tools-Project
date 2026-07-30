@@ -1,5 +1,4 @@
 """Tests for Egyptian plate text formatting."""
-# ruff: noqa: RUF001
 
 from src.postprocessing.plate_formatter import format_plate, validate_plate
 

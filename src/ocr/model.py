@@ -48,7 +48,7 @@ class CRNNModel(nn.Module):
         dummy = torch.zeros(1, cnn_channels[0], input_height, 128)
         with torch.no_grad():
             cnn_out = self.cnn(dummy)
-        feat_h, feat_w = cnn_out.shape[2:]
+        feat_h, _feat_w = cnn_out.shape[2:]
         cnn_feat_dim = cnn_channels[-1] * feat_h
 
         # BiLSTM

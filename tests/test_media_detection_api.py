@@ -1,5 +1,4 @@
 """Tests for annotated image responses and asynchronous video job setup."""
-# ruff: noqa: RUF001
 
 from __future__ import annotations
 
@@ -30,6 +29,8 @@ class FakeCascadeDetector:
 
 
 class FakeReader:
+    source = "keras_crnn"
+
     def read_plate(self, _crop):
         return "ABC123"
 
@@ -76,6 +77,7 @@ def test_image_detection_returns_annotated_image_and_crop(monkeypatch) -> None:
     assert payload["detections"][0]["plate_crop"].startswith("data:image/jpeg;base64,")
     assert payload["detections"][0]["vehicle"]["class_name"] == "car"
     assert payload["detections"][0]["plate_text"] == "ABC123"
+    assert payload["detections"][0]["text_source"] == "keras_crnn"
 
 
 def test_character_stage_takes_priority_over_crnn(monkeypatch) -> None:
@@ -93,6 +95,8 @@ def test_character_stage_takes_priority_over_crnn(monkeypatch) -> None:
     result = response.json()["detections"][0]
     assert result["plate_text"] == "ا 1"
     assert result["text_source"] == "character_detector"
+    assert result["ocr_text"] == "ABC123"
+    assert result["ocr_source"] == "keras_crnn"
     assert result["characters"][0]["glyph"] == "ا"
 
 

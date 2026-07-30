@@ -52,16 +52,21 @@ async def detect(
             continue
         x1, y1, x2, y2 = plate_box
         crop = image[y1:y2, x1:x2]
-        text = getattr(cascade_detection, "character_text", "")
-        text_source = "character_detector" if text else ""
-        if not text and reader is not None:
-            text = reader.read_plate(crop)
-            text_source = "crnn"
+        character_text = getattr(cascade_detection, "character_text", "")
+        ocr_text = ""
+        ocr_source = None
+        if reader is not None:
+            ocr_text = reader.read_plate(crop)
+            ocr_source = getattr(reader, "source", "crnn")
+        text = character_text or ocr_text
+        text_source = "character_detector" if character_text else ocr_source
         formatted = ""
+        ocr_formatted = ""
         if text:
             from src.postprocessing.plate_formatter import format_plate
 
             formatted = format_plate(text)
+            ocr_formatted = format_plate(ocr_text) if ocr_text else ""
         item = cascade_detection.to_dict()
         item.update(
             {
@@ -69,6 +74,9 @@ async def detect(
                 "plate_text": text,
                 "formatted_text": formatted,
                 "text_source": text_source or None,
+                "ocr_text": ocr_text,
+                "ocr_formatted": ocr_formatted,
+                "ocr_source": ocr_source,
                 "plate_crop": _image_data_url(natural_high_resolution_plate(crop, 4)),
             }
         )

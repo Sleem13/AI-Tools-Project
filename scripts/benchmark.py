@@ -18,8 +18,6 @@ PROJECT_ROOT = SCRIPT_DIR.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 import cv2
-import numpy as np
-
 from src.detection.inference import LicensePlateDetector
 from src.evaluation.pipeline import ALPRPipeline
 from src.ocr.inference import PlateReader
@@ -74,7 +72,7 @@ def main() -> None:
             print(f"  {img_path.name}: {r['plate_text']} (conf={r['confidence']:.2f})")
 
     avg_time = total_time / len(test_images) if test_images else 0.0
-    print(f"\nResults:")
+    print("\nResults:")
     print(f"  Images: {len(test_images)}")
     print(f"  Plates detected: {plate_count}")
     print(f"  Avg inference time: {avg_time:.1f} ms/image")

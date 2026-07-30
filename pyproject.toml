@@ -53,6 +53,7 @@ alpr-infer-det = "scripts.run_detection_inference:main"
 alpr-infer-ocr = "scripts.run_ocr_inference:main"
 alpr-benchmark = "scripts.benchmark:main"
 alpr-import-review = "scripts.import_review_feedback:main"
+alpr-train-rfdetr = "scripts.train_rfdetr:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -68,7 +69,14 @@ src = ["src", "tests"]
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "N", "UP", "B", "SIM", "RUF"]
-ignore = ["E501"]
+ignore = [
+    "E501",   # Long strings and generated report paths are clearer unwrapped.
+    "E402",   # CLI scripts add PROJECT_ROOT to sys.path before importing local modules.
+    "N812",   # Common local convention: transforms imported as T.
+    "N815",   # Keep metric field names such as mAP50 aligned with model reports.
+    "RUF001", # Arabic glyph literals are intentional for Egyptian plate OCR.
+    "SIM",    # Keep simplification rules advisory; avoid noisy rewrites in data code.
+]
 
 [tool.mypy]
 python_version = "3.12"

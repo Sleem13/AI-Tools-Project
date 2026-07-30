@@ -4,7 +4,10 @@ export interface Detection {
   confidence: number;
   plate_text: string;
   formatted_text: string;
-  text_source?: "character_detector" | "crnn" | null;
+  text_source?: "character_detector" | "crnn" | "keras_crnn" | null;
+  ocr_text?: string;
+  ocr_formatted?: string;
+  ocr_source?: "crnn" | "keras_crnn" | null;
   character_text?: string;
   characters?: Array<{
     bbox: [number, number, number, number];
@@ -217,5 +220,9 @@ export interface HealthResponse {
     detection: boolean;
     character: boolean;
     ocr: boolean;
+  };
+  model_sources?: {
+    ocr?: "crnn" | "keras_crnn" | null;
+    ocr_path?: string | null;
   };
 }

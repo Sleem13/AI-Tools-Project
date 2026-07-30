@@ -33,26 +33,46 @@ function PlateText({ value, className }: { value: string; className: string }) {
   );
 }
 
+function PlatePreview({ src, index }: { src: string; index: number }) {
+  return (
+    <div className="h-32 bg-bg-primary border-b border-border grid place-items-center px-4 py-3 overflow-hidden">
+      <div className="h-24 w-full max-w-72 overflow-hidden rounded-md bg-bg-secondary/45">
+        <img
+          src={src}
+          alt={`Plate crop ${index + 1}`}
+          loading="lazy"
+          decoding="async"
+          className="block h-full w-full object-contain object-center"
+        />
+      </div>
+    </div>
+  );
+}
+
 export default function PlateCard({ detection, index, review, correction = "", onReview, onCorrectionChange }: Props) {
   const isValid = detection.formatted_text.length >= 3;
   const selectedVariant = detection.character_preprocess?.selected_variant;
   const selectedVariantLabel = selectedVariant?.replace(/_/g, " ");
   const triedVariants = detection.character_preprocess?.tried_variants ?? 0;
+  const ocrLabel = detection.ocr_source === "keras_crnn" ? "Keras OCR comparison" : "OCR comparison";
 
   return (
     <div className={`bg-bg-card border rounded-xl overflow-hidden transition-colors ${review ? REVIEW_STYLES[review] : "border-border hover:border-accent/40"}`}>
-      {detection.plate_crop && <div className="h-28 bg-bg-primary border-b border-border grid place-items-center p-2"><img src={detection.plate_crop} alt={`Enhanced plate ${index + 1}`} className="max-w-full max-h-full object-contain" /></div>}
+      {detection.plate_crop && <PlatePreview src={detection.plate_crop} index={index} />}
       <div className="p-5">
         <div className="flex items-start justify-between mb-3">
           <div className="flex items-center gap-2"><CreditCard className="w-4 h-4 text-accent" /><span className="text-sm font-medium text-text-secondary">Plate #{index + 1}</span></div>
           <div className="flex items-center gap-2">
-            {detection.text_source && <span className={`text-[10px] px-2 py-1 rounded-full ${detection.text_source === "character_detector" ? "bg-accent/10 text-accent" : "bg-info/10 text-info"}`}>{detection.text_source === "character_detector" ? "YOLO26" : "CRNN fallback"}</span>}
+            {detection.text_source && <span className={`text-[10px] px-2 py-1 rounded-full ${detection.text_source === "character_detector" ? "bg-accent/10 text-accent" : "bg-info/10 text-info"}`}>{detection.text_source === "character_detector" ? "YOLO26" : detection.text_source === "keras_crnn" ? "Keras CRNN" : "CRNN fallback"}</span>}
             {isValid ? <CheckCircle className="w-4 h-4 text-success" /> : <AlertCircle className="w-4 h-4 text-warning" />}
           </div>
         </div>
         <div className="space-y-2">
           <div><p className="text-xs text-text-muted mb-0.5">Decoded plate</p><p><PlateText value={detection.formatted_text} className="text-xl font-bold font-mono text-text-primary" /></p></div>
           <div><p className="text-xs text-text-muted mb-0.5">{detection.text_source === "character_detector" ? "Character detector" : "Raw OCR"}</p><p><PlateText value={detection.plate_text} className="text-sm font-mono text-text-secondary" /></p></div>
+          {detection.text_source === "character_detector" && detection.ocr_text && (
+            <div><p className="text-xs text-text-muted mb-0.5">{ocrLabel}</p><p><PlateText value={detection.ocr_formatted || detection.ocr_text} className="text-sm font-mono text-text-secondary" /></p></div>
+          )}
           {selectedVariantLabel && (
             <p className="text-[11px] text-text-muted">
               Stage-three crop: {selectedVariantLabel}{triedVariants ? ` · ${triedVariants} variant${triedVariants === 1 ? "" : "s"}` : ""}

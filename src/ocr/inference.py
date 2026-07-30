@@ -7,7 +7,6 @@ from pathlib import Path
 import cv2
 import numpy as np
 import torch
-
 from src.ocr.data import build_vocab, decode_text
 from src.ocr.model import CRNNModel
 
@@ -53,7 +52,7 @@ class PlateReader:
 
         h, w = gray.shape
         scale = self.input_height / h
-        new_w = int(round(w * scale))
+        new_w = round(w * scale)
         if new_w == 0:
             new_w = 1
         resized = cv2.resize(gray, (new_w, self.input_height), interpolation=cv2.INTER_AREA)
@@ -98,17 +97,17 @@ class PlateReader:
         the highest-probability next characters.  Collapses consecutive
         duplicate characters and strips blanks per CTC convention.
         """
-        T, C = probs.shape
+        time_steps, class_count = probs.shape
         blank = 0
 
         # Each beam entry: (cumulative_log_prob, previous_index, current_sequence)
         # Start with a single beam containing only the blank token.
         beams: list[tuple[float, int, list[int]]] = [(0.0, blank, [])]
 
-        for t in range(T):
+        for t in range(time_steps):
             candidates: dict[tuple[int, ...], tuple[float, int]] = {}
-            for score, prev_idx, seq in beams:
-                for c in range(C):
+            for score, _prev_idx, seq in beams:
+                for c in range(class_count):
                     log_p = float(probs[t, c].log().item())
                     new_score = score + log_p
 
@@ -119,7 +118,7 @@ class PlateReader:
                         # keep the same sequence but the probability accumulates.
                         key = tuple(seq)
                     else:
-                        key = tuple(seq + [c])
+                        key = tuple([*seq, c])
 
                     if key not in candidates or new_score > candidates[key][0]:
                         candidates[key] = (new_score, c)

@@ -14,8 +14,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 @pytest.fixture()
 def tmp_image(tmp_path: Path) -> Path:
     """Create a small valid JPEG image and return its path."""
-    import numpy as np
     import cv2
+    import numpy as np
 
     img = np.zeros((64, 128, 3), dtype=np.uint8)
     img[:] = (100, 150, 200)
