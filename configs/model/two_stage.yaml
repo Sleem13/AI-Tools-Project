@@ -22,7 +22,10 @@ cascade:
 character:
   enabled: true
   model_family: yolo26
-  weights: models/character/yolo26_characters/weights/best.pt
+  auto_select: false
+  # Promoted after real-plate comparison: recovers the complete seven-character
+  # layout where the older finalized checkpoint drops multiple characters.
+  weights: models/character/yolo26_characters_20260727_152325/weights/best.pt
   conf_threshold: 0.15
   iou_threshold: 0.45
   agnostic_nms: false
@@ -41,5 +44,7 @@ character:
     sharpen_amount: 0.4
     rotation_variants: true
     rotation_variant_min_aspect: 1.15
-    retry_min_characters: 6
+    # Retry below the normal confidence threshold until a full 3-letter/4-digit
+    # plate can be considered; six-character plates remain valid downstream.
+    retry_min_characters: 7
     retry_conf_threshold: 0.05

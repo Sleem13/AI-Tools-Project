@@ -207,7 +207,7 @@ def test_stage_three_reads_the_stage_two_plate_crop() -> None:
 
     result = detector.predict(image)[0]
 
-    assert character_detector.image_shapes == [(32, 64, 3)]
+    assert character_detector.image_shapes == [(10, 20, 3), (32, 64, 3)]
     assert result.character_text == "ا"
     assert result.to_dict()["characters"][0]["glyph"] == "ا"
 
@@ -228,7 +228,7 @@ def test_stage_three_applies_configured_crop_enhancement_before_yolo26() -> None
 
     detector.predict(image)
 
-    assert character_detector.image_shapes == [(80, 160, 3)]
+    assert character_detector.image_shapes == [(40, 80, 3), (80, 160, 3)]
 
 
 def test_stage_three_tries_rotated_variants_for_portrait_crops() -> None:
@@ -252,12 +252,12 @@ def test_stage_three_tries_rotated_variants_for_portrait_crops() -> None:
 
     result = detector.predict(image)[0]
 
-    assert character_detector.image_shapes == [(96, 32, 3), (32, 96, 3), (32, 96, 3)]
+    assert character_detector.image_shapes == [(90, 30, 3), (96, 32, 3), (32, 96, 3), (32, 96, 3)]
     assert result.characters == strong
     assert result.character_text == "اس 2"
     assert result.character_preprocess["selected_variant"] == "rotated_clockwise"
-    assert result.character_preprocess["tried_variants"] == 3
-    assert result.to_dict()["character_preprocess"]["variants"][0]["name"] == "enhanced"
+    assert result.character_preprocess["tried_variants"] == 4
+    assert result.to_dict()["character_preprocess"]["variants"][0]["name"] == "raw"
 
 
 def test_stage_three_retries_low_character_threshold_when_read_is_short() -> None:

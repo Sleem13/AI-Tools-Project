@@ -18,7 +18,7 @@ from src.detection.data import create_dataset_yaml
 from src.detection.trainer import train_detector
 
 DEFAULT_CONFIGS = {
-    "plate": PROJECT_ROOT / "configs" / "model" / "detection.yaml",
+    "plate": PROJECT_ROOT / "configs" / "model" / "master_plate_detection.yaml",
     "vehicle": PROJECT_ROOT / "configs" / "model" / "vehicle_detection.yaml",
     "character": PROJECT_ROOT / "configs" / "model" / "character_detection.yaml",
 }

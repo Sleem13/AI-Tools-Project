@@ -30,7 +30,7 @@ tests/                  # Unit tests
 
 ## Prerequisites
 
-- Python 3.12 is recommended. The GPU setup is pinned to Python 3.12; do not
+- Python 3.11 or 3.12 is supported. New GPU environments should use Python 3.12; do not
   reuse an incompatible Python 3.13/3.14 environment.
 - Node.js 20.19+ or 22.12+.
 - An NVIDIA CUDA environment is optional for using the app, but recommended
@@ -390,7 +390,8 @@ All settings are YAML-driven in `configs/`:
 - `pipeline_config.yaml` — Global paths, thresholds, seeds
 - `datasets.yaml` — Per-dataset format, class maps, subdirectories
 - `preprocessing_config.yaml` — Transform chain and split ratios
-- `model/detection.yaml` — YOLO11 plate training
+- `model/master_plate_detection.yaml` — default YOLO11 Master Plate training
+- `model/detection.yaml` — legacy unified-manifest plate training (explicit opt-in)
 - `model/vehicle_detection.yaml` — optional YOLO11 vehicle fine-tuning
 - `model/character_detection.yaml` — YOLO26 character training on segmented plates
 - `model/two_stage.yaml` — three-stage cascade inference and decoding thresholds

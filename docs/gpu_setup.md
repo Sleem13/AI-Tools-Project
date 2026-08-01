@@ -1,6 +1,6 @@
 # NVIDIA GPU environment for YOLO training
 
-This project targets an NVIDIA RTX 2000 Ada Generation GPU with 16 GB VRAM. Use a dedicated Python 3.12 environment for training; do not reuse a CPU-only or Python 3.14 environment.
+This project targets an NVIDIA RTX 2000 Ada Generation GPU with 16 GB VRAM. Existing Python 3.11 CUDA environments are supported; use Python 3.12 for new environments. Do not reuse a CPU-only or Python 3.14 environment.
 
 ## 1. Install the NVIDIA driver
 
@@ -71,13 +71,15 @@ plate dataset.
 
 ## 5. Train the plate detector
 
-First prepare the actual dataset so the configured split manifests point to existing images and YOLO label files. Then run:
+First prepare `data/processed/Master_Plate_Dataset/data.yaml` and its image and
+label splits. Then run:
 
 ```powershell
 .\.venv-gpu\Scripts\python.exe scripts\train_detection.py --stage plate --device 0
 ```
 
-The default plate configuration uses `imgsz: 960`, `batch: 16`, and automatic mixed precision. This should be a reasonable starting point for 16 GB VRAM. If CUDA runs out of memory, reduce the batch first:
+The default Master Plate configuration uses `imgsz: 640`, `batch: 16`, and
+automatic mixed precision. If CUDA runs out of memory, reduce the batch first:
 
 ```powershell
 .\.venv-gpu\Scripts\python.exe scripts\train_detection.py --stage plate --device 0 --batch 8

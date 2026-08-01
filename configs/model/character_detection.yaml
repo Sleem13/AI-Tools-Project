@@ -11,7 +11,7 @@ data:
 
 hyperparameters:
   epochs: 100
-  batch: 32
+  batch: 16
   imgsz: 640
   optimizer: auto
   lr0: 0.01
@@ -39,7 +39,10 @@ hyperparameters:
 
 training:
   device: 0
-  workers: 8
+  # Keep validation/pinned-loader allocations below the 16 GiB workstation GPU limit.
+  # This permits batch 18 at 640, 8 at 960, and 4 at 1280; requested batches are capped.
+  max_batch_pixels: 7372800
+  workers: 2
   project: models/character
   name: yolo26_characters
   exist_ok: false

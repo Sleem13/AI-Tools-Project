@@ -90,7 +90,7 @@ export default function Training() {
   const [sampleSeed, setSampleSeed] = useState(42);
   const [samplesLoading, setSamplesLoading] = useState(false);
   const [trainingConfig, setTrainingConfig] = useState({ epochs: 50, imgsz: 640, batch: 16, device: "0" });
-  const [characterConfig, setCharacterConfig] = useState({ epochs: 100, imgsz: 640, batch: 32, device: "0" });
+  const [characterConfig, setCharacterConfig] = useState({ epochs: 100, imgsz: 640, batch: 16, device: "0" });
   const [starting, setStarting] = useState(false);
   const [evaluation, setEvaluation] = useState<EvaluationSample[]>([]);
   const [evaluating, setEvaluating] = useState(false);

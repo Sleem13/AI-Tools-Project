@@ -141,3 +141,43 @@ def test_start_character_training_uses_segmented_dataset(tmp_path: Path, monkeyp
     assert command[command.index("--data") + 1] == str(dataset_root / "data.yaml")
     assert command[command.index("--config") + 1].endswith("character_detection.yaml")
     assert captured["stage"] == "character"
+
+
+def test_character_training_caps_oom_prone_batch(tmp_path: Path, monkeypatch) -> None:
+    dataset_root = tmp_path / "characters"
+    for split in ("train", "valid"):
+        image_dir = dataset_root / split / "images"
+        label_dir = dataset_root / split / "labels"
+        image_dir.mkdir(parents=True)
+        label_dir.mkdir(parents=True)
+        cv2.imwrite(str(image_dir / f"{split}.jpg"), np.zeros((32, 32, 3), dtype=np.uint8))
+        (label_dir / f"{split}.txt").write_text("0 0.5 0.5 0.2 0.4", encoding="utf-8")
+    (dataset_root / "data.yaml").write_text(
+        "train: train/images\nval: valid/images\nnames: ['0']\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setenv("CHARACTER_DATASET_ROOT", str(dataset_root))
+    monkeypatch.setattr(training, "CHARACTER_OUTPUT_ROOT", tmp_path / "character-models")
+    monkeypatch.setattr(
+        training,
+        "_training_runtime",
+        lambda: {"ready": True, "cuda_available": True, "gpu_memory_gib": 16.0},
+    )
+    captured = {}
+
+    def fake_start(**kwargs):
+        captured.update(kwargs)
+        return {"status": "training", "run_name": kwargs["run_name"], "log_tail": ""}
+
+    monkeypatch.setattr(training.training_job_manager, "start", fake_start)
+    response = TestClient(app).post(
+        "/api/training/start",
+        json={"stage": "character", "epochs": 200, "imgsz": 960, "batch": 32, "device": "0"},
+    )
+
+    assert response.status_code == 200
+    command = captured["command"]
+    assert command[command.index("--batch") + 1] == "8"
+    assert response.json()["adjustments"] == [
+        "Character batch reduced from 32 to 8 at 960px to prevent CUDA OOM during validation."
+    ]

@@ -34,9 +34,9 @@ def get_detector():
             configured_plate_weights = PROJECT_ROOT / configured_plate_weights
         if not configured_plate_weights.exists() and DET_WEIGHTS.exists():
             configured_plate_weights = DET_WEIGHTS
-        from src.detection.workbench import discover_latest_run
+        from src.detection.workbench import discover_best_completed_run
 
-        latest_run = discover_latest_run(PROJECT_ROOT / "models" / "detection")
+        latest_run = discover_best_completed_run(PROJECT_ROOT / "models" / "detection")
         latest_weights = latest_run / "weights" / "best.pt" if latest_run else None
         if latest_weights and latest_weights.is_file():
             configured_mtime = configured_plate_weights.stat().st_mtime if configured_plate_weights.exists() else 0
@@ -49,7 +49,11 @@ def get_detector():
         configured_character_weights = Path(character_config.get("weights", ""))
         if configured_character_weights and not configured_character_weights.is_absolute():
             configured_character_weights = PROJECT_ROOT / configured_character_weights
-        latest_character_run = discover_latest_run(PROJECT_ROOT / "models" / "character")
+        latest_character_run = (
+            discover_best_completed_run(PROJECT_ROOT / "models" / "character")
+            if character_config.get("auto_select", True)
+            else None
+        )
         latest_character_weights = latest_character_run / "weights" / "best.pt" if latest_character_run else None
         if latest_character_weights and latest_character_weights.is_file():
             configured_mtime = (

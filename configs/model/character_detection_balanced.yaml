@@ -1,0 +1,52 @@
+# Rare-class fine-tuning for Egyptian plate characters.
+
+model:
+  name: yolo26n
+  weights: models/character/yolo26_characters_20260727_152325/weights/best.pt
+  architecture: yolo26n.yaml
+  pretrained: true
+
+data:
+  dataset_yaml: data/processed/character_balanced/data.yaml
+
+hyperparameters:
+  epochs: 30
+  batch: 16
+  imgsz: 640
+  optimizer: AdamW
+  lr0: 0.0005
+  lrf: 0.1
+  momentum: 0.937
+  weight_decay: 0.0005
+  warmup_epochs: 1
+  box: 7.5
+  cls: 1.0
+  dfl: 1.5
+  hsv_h: 0.01
+  hsv_s: 0.30
+  hsv_v: 0.20
+  degrees: 2.0
+  translate: 0.04
+  scale: 0.15
+  shear: 0.5
+  perspective: 0.0001
+  flipud: 0.0
+  fliplr: 0.0
+  mosaic: 0.25
+  mixup: 0.0
+  copy_paste: 0.0
+  patience: 12
+
+training:
+  device: 0
+  max_batch_pixels: 7372800
+  workers: 2
+  project: models/character
+  name: yolo26_characters_balanced
+  exist_ok: false
+  save_period: 5
+  deterministic: true
+  seed: 42
+  plots: true
+  cache: false
+  amp: true

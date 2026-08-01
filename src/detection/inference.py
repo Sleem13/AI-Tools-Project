@@ -362,13 +362,14 @@ class TwoStageDetector:
                 character_text = ""
                 character_preprocess: dict[str, Any] = {}
                 if self.character_detector is not None:
-                    plate_crop = vehicle_crop[local_y1:local_y2, local_x1:local_x2]
-                    plate_crop = preprocess_plate(plate_crop, self.character_preprocess)
+                    raw_plate_crop = vehicle_crop[local_y1:local_y2, local_x1:local_x2]
+                    plate_crop = preprocess_plate(raw_plate_crop, self.character_preprocess)
                     if plate_crop is not None:
                         characters, character_text, character_preprocess = _recognize_character_variants(
                             self.character_detector,
                             plate_crop,
                             self.character_preprocess,
+                            raw_plate_crop=raw_plate_crop,
                         )
                 candidates.append(
                     TwoStageDetection(
@@ -576,13 +577,19 @@ def _recognize_character_variants(
     character_detector: CharacterDetector,
     plate_crop: np.ndarray,
     config: PlatePreprocessConfig,
+    raw_plate_crop: np.ndarray | None = None,
 ) -> tuple[tuple[CharacterResult, ...], str, dict[str, Any]]:
     best_characters: tuple[CharacterResult, ...] = ()
     best_text = ""
     best_name = ""
     best_score = (-1, -1.0)
     variant_reports: list[dict[str, Any]] = []
-    for name, candidate in _character_crop_variants(plate_crop, config):
+    candidates = _character_crop_variants(plate_crop, config)
+    if raw_plate_crop is not None and (
+        raw_plate_crop.shape != plate_crop.shape or not np.array_equal(raw_plate_crop, plate_crop)
+    ):
+        candidates.insert(0, ("raw", raw_plate_crop))
+    for name, candidate in candidates:
         attempts = _recognize_character_attempts(character_detector, candidate, name, config)
         for attempt in attempts:
             variant_reports.append(attempt)

@@ -64,9 +64,10 @@ def _normalise_names(names: dict[int, str] | list[str] | None) -> dict[int, str]
 def _build_training_args(config: dict[str, Any]) -> dict[str, Any]:
     hp = config.get("hyperparameters", {})
     training = config.get("training", {})
+    batch = _memory_safe_batch(hp, training)
     return {
         "epochs": hp.get("epochs", 100),
-        "batch": hp.get("batch", 16),
+        "batch": batch,
         "imgsz": hp.get("imgsz", 640),
         "optimizer": hp.get("optimizer", "AdamW"),
         "lr0": hp.get("lr0", 0.001),
@@ -102,3 +103,21 @@ def _build_training_args(config: dict[str, Any]) -> dict[str, Any]:
         "cache": training.get("cache", False),
         "amp": training.get("amp", True),
     }
+
+
+def _memory_safe_batch(hyperparameters: dict[str, Any], training: dict[str, Any]) -> int:
+    """Cap batches by configured image pixels to leave room for YOLO validation.
+
+    Ultralytics validates with the training batch size. A batch that just fits the
+    forward/backward pass can therefore fail at the epoch boundary when validation
+    prefetches pinned tensors. Stages that need a cap opt in with
+    ``max_batch_pixels``; other configurations retain their exact batch value.
+    """
+    requested = int(hyperparameters.get("batch", 16))
+    max_batch_pixels = training.get("max_batch_pixels")
+    if max_batch_pixels is None:
+        return requested
+
+    image_size = int(hyperparameters.get("imgsz", 640))
+    safe_batch = max(1, int(max_batch_pixels) // (image_size * image_size))
+    return min(requested, safe_batch)

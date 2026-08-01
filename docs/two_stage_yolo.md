@@ -37,7 +37,9 @@ names:
   0: license_plate
 ```
 
-The repository's harmonization and splitting pipeline already produces YOLO plate labels and split manifests. Run it before training if `data/processed/unified` is not present.
+The default plate workflow uses the prepared Master Plate dataset at
+`data/processed/Master_Plate_Dataset`. Its `data.yaml` must contain populated
+train and validation splits before training.
 
 ## Train stage two: plates
 
@@ -48,9 +50,12 @@ The repository's harmonization and splitting pipeline already produces YOLO plat
 By default this uses:
 
 - model: `yolo11n.pt`
-- config: `configs/model/detection.yaml`
-- split manifests: `reports/splits/{train,val,test}.txt`
-- output: `models/detection/plate_yolo11/weights/best.pt`
+- config: `configs/model/master_plate_detection.yaml`
+- dataset: `data/processed/Master_Plate_Dataset/data.yaml`
+- output: `models/detection/master_plate_yolo11/weights/best.pt`
+
+The older harmonized/unified workflow remains available explicitly with
+`--config configs/model/detection.yaml`.
 
 For an independently prepared Ultralytics dataset:
 

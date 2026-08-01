@@ -167,7 +167,7 @@ export default function Settings() {
           </p>
           <p>Production-grade dataset engineering and ALPR for Egyptian license plates.</p>
           <p>
-            License: MIT &middot; Python 3.12+ &middot; React + Vite
+            License: MIT &middot; Python 3.11+ &middot; React + Vite
           </p>
           <p className="text-text-muted text-xs mt-3">
             Built as a three-stage cascade: YOLO11 vehicles, YOLO11 plates,

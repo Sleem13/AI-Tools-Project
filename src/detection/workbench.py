@@ -15,6 +15,7 @@ import numpy as np
 
 IMAGE_SUFFIXES = frozenset({".jpg", ".jpeg", ".png", ".bmp", ".webp"})
 SPLITS = ("train", "val", "test")
+SUPPORTED_PYTHON_VERSIONS = frozenset({(3, 11), (3, 12)})
 
 METRIC_COLUMNS = {
     "epoch": "epoch",
@@ -48,7 +49,7 @@ def inspect_runtime() -> dict[str, Any]:
     cuda_available = torch.cuda.is_available()
     runtime: dict[str, Any] = {
         "python": platform.python_version(),
-        "python_supported": sys.version_info[:2] == (3, 12),
+        "python_supported": sys.version_info[:2] in SUPPORTED_PYTHON_VERSIONS,
         "torch": torch.__version__,
         "torch_cuda": torch.version.cuda,
         "ultralytics": ultralytics.__version__,
@@ -161,6 +162,32 @@ def discover_latest_run(output_root: Path) -> Path | None:
         return None
     result_files = [path for path in output_root.rglob("results.csv") if path.is_file()]
     return max(result_files, key=lambda path: path.stat().st_mtime).parent if result_files else None
+
+
+def discover_best_completed_run(output_root: Path) -> Path | None:
+    """Select the strongest finalized run for production inference.
+
+    A checkpoint is written after every epoch, so ``best.pt`` alone does not
+    prove that training finished. Ultralytics writes ``results.png`` during its
+    final evaluation; requiring it prevents interrupted/OOM runs from silently
+    replacing a stable production model. Among finalized runs, prefer the best
+    observed mAP50-95 and use modification time only as a tie-breaker.
+    """
+    if not output_root.is_dir():
+        return None
+
+    candidates = []
+    for results_path in output_root.rglob("results.csv"):
+        run_dir = results_path.parent
+        if not results_path.is_file():
+            continue
+        if not (run_dir / "weights" / "best.pt").is_file() or not (run_dir / "results.png").is_file():
+            continue
+        history = read_training_history(results_path).get("history", [])
+        scores = [row["map50_95"] for row in history if row.get("map50_95") is not None]
+        if scores:
+            candidates.append((max(scores), results_path.stat().st_mtime, run_dir))
+    return max(candidates, default=(None, None, None))[-1]
 
 
 def training_artifacts(run_dir: Path | None) -> list[dict[str, Any]]:

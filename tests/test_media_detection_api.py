@@ -37,19 +37,22 @@ class FakeReader:
 
 class FakeCharacterCascadeDetector(FakeCascadeDetector):
     def predict(self, _image):
-        character = CharacterResult(
-            detection=DetectionResult((1, 1, 5, 8), 0.95, 14, "alif"),
-            glyph="ا",
-            row=0,
-            order=0,
+        characters = tuple(
+            CharacterResult(
+                detection=DetectionResult((index, 1, index + 1, 8), 0.95, 14, "alif"),
+                glyph="ا" if index < 2 else str(index),
+                row=0,
+                order=index,
+            )
+            for index in range(6)
         )
         return [
             TwoStageDetection(
                 vehicle=DetectionResult((2, 2, 38, 28), 0.9, 2, "car"),
                 plate=DetectionResult((10, 12, 30, 22), 0.8, 0, "license_plate"),
                 plate_bbox_in_vehicle=(8, 10, 28, 20),
-                characters=(character,),
-                character_text="ا 1",
+                characters=characters,
+                character_text="اا 2345",
             )
         ]
 
@@ -80,6 +83,25 @@ def test_image_detection_returns_annotated_image_and_crop(monkeypatch) -> None:
     assert payload["detections"][0]["text_source"] == "keras_crnn"
 
 
+def test_incomplete_ocr_is_not_presented_as_a_decoded_plate(monkeypatch) -> None:
+    monkeypatch.setattr(detection, "get_detector", lambda: FakeCascadeDetector())
+    monkeypatch.setattr(
+        detection,
+        "get_reader",
+        lambda: SimpleNamespace(source="crnn", read_plate=lambda _crop: "73"),
+    )
+
+    response = TestClient(app).post(
+        "/api/detect",
+        files={"file": ("car.jpg", _jpeg_bytes(), "image/jpeg")},
+        data={"conf": "0.25"},
+    )
+
+    result = response.json()["detections"][0]
+    assert result["plate_text"] == "73"
+    assert result["formatted_text"] == ""
+
+
 def test_character_stage_takes_priority_over_crnn(monkeypatch) -> None:
     monkeypatch.setattr(detection, "get_detector", lambda: FakeCharacterCascadeDetector())
     monkeypatch.setattr(detection, "get_reader", lambda: FakeReader())
@@ -93,11 +115,11 @@ def test_character_stage_takes_priority_over_crnn(monkeypatch) -> None:
 
     assert response.status_code == 200
     result = response.json()["detections"][0]
-    assert result["plate_text"] == "ا 1"
+    assert result["plate_text"] == "اا 2345"
     assert result["text_source"] == "character_detector"
     assert result["ocr_text"] == "ABC123"
     assert result["ocr_source"] == "keras_crnn"
-    assert result["characters"][0]["glyph"] == "ا"
+    assert len(result["characters"]) == 6
 
 
 def test_video_upload_creates_pollable_job(tmp_path: Path, monkeypatch) -> None:

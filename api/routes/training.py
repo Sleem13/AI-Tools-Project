@@ -41,6 +41,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 OUTPUT_ROOT = PROJECT_ROOT / "models" / "detection"
 CHARACTER_OUTPUT_ROOT = PROJECT_ROOT / "models" / "character"
 CHARACTER_DATASET_DEFAULT = PROJECT_ROOT / "data" / "raw" / "dataset_Charcters_ready_plates"
+CHARACTER_MAX_BATCH_PIXELS = 8 * 960 * 960
 REFERENCE_RUN_PATH = PROJECT_ROOT / "reports" / "training" / "master_plate_notebook_run.json"
 ARTIFACT_NAMES = {
     "results.png",
@@ -156,7 +157,7 @@ def training_workbench() -> dict[str, Any]:
         "character_run": _run_payload(character_run_dir, character_metrics, artifact_stage="character"),
         "reference_run": load_reference_run(REFERENCE_RUN_PATH),
         "defaults": {"epochs": 50, "imgsz": 640, "batch": 16, "device": "0"},
-        "character_defaults": {"epochs": 100, "imgsz": 640, "batch": 32, "device": "0"},
+        "character_defaults": {"epochs": 100, "imgsz": 640, "batch": 16, "device": "0"},
     }
 
 
@@ -216,6 +217,19 @@ def start_training(request: StartTrainingRequest) -> dict[str, Any]:
     run_name = f"{run_prefix}_{timestamp}"
     run_dir = output_root / run_name
     log_path = PROJECT_ROOT / "reports" / "training" / f"{run_name}.log"
+    effective_batch = request.batch
+    adjustments: list[str] = []
+    if request.stage == "character" and request.device != "cpu":
+        gpu_memory_gib = float(training_runtime.get("gpu_memory_gib") or 16.0)
+        memory_scaled_budget = int(CHARACTER_MAX_BATCH_PIXELS * gpu_memory_gib / 16.0)
+        safe_batch = max(1, memory_scaled_budget // (request.imgsz * request.imgsz))
+        if effective_batch > safe_batch:
+            effective_batch = safe_batch
+            adjustments.append(
+                f"Character batch reduced from {request.batch} to {effective_batch} at "
+                f"{request.imgsz}px to prevent CUDA OOM during validation."
+            )
+
     command = [
         str(training_python),
         str(PROJECT_ROOT / "scripts" / "train_detection.py"),
@@ -230,7 +244,7 @@ def start_training(request: StartTrainingRequest) -> dict[str, Any]:
         "--imgsz",
         str(request.imgsz),
         "--batch",
-        str(request.batch),
+        str(effective_batch),
         "--device",
         request.device,
         "--output",
@@ -250,7 +264,7 @@ def start_training(request: StartTrainingRequest) -> dict[str, Any]:
         )
     except RuntimeError as exc:
         raise HTTPException(status_code=409, detail=str(exc)) from exc
-    return {"job": job}
+    return {"job": job, "adjustments": adjustments}
 
 
 @router.get("/training/dataset/samples")

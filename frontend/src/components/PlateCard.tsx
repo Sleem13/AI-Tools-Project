@@ -54,7 +54,12 @@ export default function PlateCard({ detection, index, review, correction = "", o
   const selectedVariant = detection.character_preprocess?.selected_variant;
   const selectedVariantLabel = selectedVariant?.replace(/_/g, " ");
   const triedVariants = detection.character_preprocess?.tried_variants ?? 0;
-  const ocrLabel = detection.ocr_source === "keras_crnn" ? "Keras OCR comparison" : "OCR comparison";
+  const characterCount = detection.characters?.length ?? 0;
+  const hasCharacterCandidate = Boolean(detection.character_text && characterCount > 0);
+  const characterComplete = detection.text_source === "character_detector";
+  const ocrLabel = characterComplete
+    ? detection.ocr_source === "keras_crnn" ? "Keras OCR comparison" : "OCR comparison"
+    : "Raw OCR fallback";
 
   return (
     <div className={`bg-bg-card border rounded-xl overflow-hidden transition-colors ${review ? REVIEW_STYLES[review] : "border-border hover:border-accent/40"}`}>
@@ -63,15 +68,24 @@ export default function PlateCard({ detection, index, review, correction = "", o
         <div className="flex items-start justify-between mb-3">
           <div className="flex items-center gap-2"><CreditCard className="w-4 h-4 text-accent" /><span className="text-sm font-medium text-text-secondary">Plate #{index + 1}</span></div>
           <div className="flex items-center gap-2">
-            {detection.text_source && <span className={`text-[10px] px-2 py-1 rounded-full ${detection.text_source === "character_detector" ? "bg-accent/10 text-accent" : "bg-info/10 text-info"}`}>{detection.text_source === "character_detector" ? "YOLO26" : detection.text_source === "keras_crnn" ? "Keras CRNN" : "CRNN fallback"}</span>}
+            {hasCharacterCandidate && !characterComplete && <span className="text-[10px] px-2 py-1 rounded-full bg-warning/10 text-warning">YOLO26 partial</span>}
+            {detection.text_source && <span className={`text-[10px] px-2 py-1 rounded-full ${characterComplete ? "bg-accent/10 text-accent" : "bg-info/10 text-info"}`}>{characterComplete ? "YOLO26" : detection.text_source === "keras_crnn" ? "Keras CRNN" : "CRNN fallback"}</span>}
             {isValid ? <CheckCircle className="w-4 h-4 text-success" /> : <AlertCircle className="w-4 h-4 text-warning" />}
           </div>
         </div>
         <div className="space-y-2">
           <div><p className="text-xs text-text-muted mb-0.5">Decoded plate</p><p><PlateText value={detection.formatted_text} className="text-xl font-bold font-mono text-text-primary" /></p></div>
-          <div><p className="text-xs text-text-muted mb-0.5">{detection.text_source === "character_detector" ? "Character detector" : "Raw OCR"}</p><p><PlateText value={detection.plate_text} className="text-sm font-mono text-text-secondary" /></p></div>
-          {detection.text_source === "character_detector" && detection.ocr_text && (
+          {hasCharacterCandidate && (
+            <div>
+              <p className="text-xs text-text-muted mb-0.5">{characterComplete ? "YOLO26 character detector" : `YOLO26 partial candidate (${characterCount}/6 minimum)`}</p>
+              <p><PlateText value={detection.character_text || ""} className={`text-sm font-mono ${characterComplete ? "text-accent" : "text-warning"}`} /></p>
+            </div>
+          )}
+          {detection.ocr_text && (
             <div><p className="text-xs text-text-muted mb-0.5">{ocrLabel}</p><p><PlateText value={detection.ocr_formatted || detection.ocr_text} className="text-sm font-mono text-text-secondary" /></p></div>
+          )}
+          {!hasCharacterCandidate && !detection.ocr_text && detection.plate_text && (
+            <div><p className="text-xs text-text-muted mb-0.5">Model output</p><p><PlateText value={detection.plate_text} className="text-sm font-mono text-text-secondary" /></p></div>
           )}
           {selectedVariantLabel && (
             <p className="text-[11px] text-text-muted">
@@ -80,10 +94,10 @@ export default function PlateCard({ detection, index, review, correction = "", o
           )}
           {detection.characters && detection.characters.length > 0 && (
             <div className="pt-1">
-              <p className="text-[10px] uppercase tracking-wide text-text-muted mb-2">{detection.characters.length} ordered characters</p>
-              <div className="flex flex-wrap gap-1.5">
+              <p className="text-[10px] uppercase tracking-wide text-text-muted mb-2">{detection.characters.length} ordered characters · right to left</p>
+              <div className="flex flex-wrap justify-start gap-1.5" dir="rtl" aria-label="Ordered plate characters, read from right to left">
               {detection.characters.map((character) => (
-                <span key={`${character.row}-${character.order}`} title={`${character.class_name} · ${(character.confidence * 100).toFixed(1)}%`} className="px-2 py-1 rounded bg-bg-primary text-sm text-text-primary">
+                <span dir="auto" key={`${character.row}-${character.order}`} title={`${character.class_name} · ${(character.confidence * 100).toFixed(1)}%`} className="px-2 py-1 rounded bg-bg-primary text-sm text-text-primary">
                   {character.glyph}
                 </span>
               ))}

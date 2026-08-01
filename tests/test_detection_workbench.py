@@ -8,6 +8,8 @@ import cv2
 import numpy as np
 import pytest
 from src.detection.workbench import (
+    SUPPORTED_PYTHON_VERSIONS,
+    discover_best_completed_run,
     discover_latest_run,
     inspect_dataset,
     natural_high_resolution_plate,
@@ -15,6 +17,11 @@ from src.detection.workbench import (
     resolve_dataset_image,
     sample_images,
 )
+
+
+def test_python_311_and_312_are_supported_runtimes() -> None:
+    assert (3, 11) in SUPPORTED_PYTHON_VERSIONS
+    assert (3, 12) in SUPPORTED_PYTHON_VERSIONS
 
 
 def _write_image(path: Path) -> None:
@@ -93,3 +100,38 @@ def test_discovers_latest_training_run(tmp_path: Path) -> None:
     (newer / "results.csv").touch()
 
     assert discover_latest_run(tmp_path) == newer
+
+
+def test_inference_selector_ignores_newer_interrupted_run(tmp_path: Path) -> None:
+    completed = tmp_path / "completed"
+    interrupted = tmp_path / "interrupted"
+    for run in (completed, interrupted):
+        (run / "weights").mkdir(parents=True)
+        (run / "weights" / "best.pt").touch()
+    completed.joinpath("results.csv").write_text(
+        "epoch,metrics/mAP50-95(B)\n0,0.70\n1,0.82\n",
+        encoding="utf-8",
+    )
+    completed.joinpath("results.png").touch()
+    interrupted.joinpath("results.csv").write_text(
+        "epoch,metrics/mAP50-95(B)\n0,0.90\n",
+        encoding="utf-8",
+    )
+    interrupted.joinpath("results.csv").touch()
+
+    assert discover_best_completed_run(tmp_path) == completed
+
+
+def test_inference_selector_prefers_best_completed_metric(tmp_path: Path) -> None:
+    lower = tmp_path / "lower"
+    higher = tmp_path / "higher"
+    for run, score in ((lower, 0.75), (higher, 0.84)):
+        (run / "weights").mkdir(parents=True)
+        (run / "weights" / "best.pt").touch()
+        (run / "results.png").touch()
+        (run / "results.csv").write_text(
+            f"epoch,metrics/mAP50-95(B)\n0,{score}\n",
+            encoding="utf-8",
+        )
+
+    assert discover_best_completed_run(tmp_path) == higher

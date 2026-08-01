@@ -24,6 +24,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 VIDEO_JOB_ROOT = PROJECT_ROOT / "reports" / "video_jobs"
 VIDEO_SUFFIXES = frozenset({".mp4", ".mov", ".avi", ".mkv", ".webm", ".m4v"})
 MAX_VIDEO_BYTES = 512 * 1024 * 1024
+MIN_COMPLETE_CHARACTER_READ = 6
 
 
 @router.post("/detect")
@@ -53,20 +54,26 @@ async def detect(
         x1, y1, x2, y2 = plate_box
         crop = image[y1:y2, x1:x2]
         character_text = getattr(cascade_detection, "character_text", "")
+        character_text_usable = bool(
+            character_text
+            and len(getattr(cascade_detection, "characters", ())) >= MIN_COMPLETE_CHARACTER_READ
+        )
         ocr_text = ""
         ocr_source = None
         if reader is not None:
             ocr_text = reader.read_plate(crop)
             ocr_source = getattr(reader, "source", "crnn")
-        text = character_text or ocr_text
-        text_source = "character_detector" if character_text else ocr_source
+        text = character_text if character_text_usable else ocr_text
+        text_source = "character_detector" if character_text_usable else ocr_source
         formatted = ""
         ocr_formatted = ""
         if text:
-            from src.postprocessing.plate_formatter import format_plate
+            from src.postprocessing.plate_formatter import format_plate, validate_plate
 
             formatted = format_plate(text)
             ocr_formatted = format_plate(ocr_text) if ocr_text else ""
+            if text_source != "character_detector" and not validate_plate(formatted):
+                formatted = ""
         item = cascade_detection.to_dict()
         item.update(
             {
@@ -225,7 +232,9 @@ def _process_video(job_id: str, input_path: Path, output_path: Path, confidence:
                         continue
                     x1, y1, x2, y2 = plate_box
                     crop = frame[y1:y2, x1:x2]
-                    label = getattr(cascade_detection, "character_text", "")
+                    characters = getattr(cascade_detection, "characters", ())
+                    character_text = getattr(cascade_detection, "character_text", "")
+                    label = character_text if len(characters) >= MIN_COMPLETE_CHARACTER_READ else ""
                     if not label and reader is not None:
                         label = reader.read_plate(crop)
                     current_labels.append(label)
