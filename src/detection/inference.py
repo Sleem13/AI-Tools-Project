@@ -127,6 +127,7 @@ class PlatePreprocessConfig:
     sharpen_amount: float = 0.4
     rotation_variants: bool = True
     rotation_variant_min_aspect: float = 1.15
+    deskew_angles: tuple[float, ...] = ()
     retry_min_characters: int = 6
     retry_conf_threshold: float = 0.05
 
@@ -145,6 +146,8 @@ class PlatePreprocessConfig:
             raise ValueError("sharpen_amount must be non-negative")
         if self.rotation_variant_min_aspect <= 0:
             raise ValueError("rotation_variant_min_aspect must be positive")
+        if any(not -15 <= angle <= 15 or angle == 0 for angle in self.deskew_angles):
+            raise ValueError("deskew_angles must contain non-zero angles between -15 and 15 degrees")
         if self.retry_min_characters < 0:
             raise ValueError("retry_min_characters must be non-negative")
         if not 0 < self.retry_conf_threshold <= 1:
@@ -568,6 +571,7 @@ def _build_plate_preprocess_config(config: dict[str, Any] | None) -> PlatePrepro
         sharpen_amount=config.get("sharpen_amount", 0.4),
         rotation_variants=config.get("rotation_variants", True),
         rotation_variant_min_aspect=config.get("rotation_variant_min_aspect", 1.15),
+        deskew_angles=tuple(float(angle) for angle in config.get("deskew_angles", ())),
         retry_min_characters=config.get("retry_min_characters", 6),
         retry_conf_threshold=config.get("retry_conf_threshold", 0.05),
     )
@@ -582,7 +586,7 @@ def _recognize_character_variants(
     best_characters: tuple[CharacterResult, ...] = ()
     best_text = ""
     best_name = ""
-    best_score = (-1, -1.0)
+    best_score: tuple[int, int, int, int, int, float] = (-1, -1, -1, -99, -1, -1.0)
     variant_reports: list[dict[str, Any]] = []
     candidates = _character_crop_variants(plate_crop, config)
     if raw_plate_crop is not None and (
@@ -590,10 +594,20 @@ def _recognize_character_variants(
     ):
         candidates.insert(0, ("raw", raw_plate_crop))
     for name, candidate in candidates:
+        if (
+            name.startswith("deskew_")
+            and config.retry_min_characters
+            and len(best_characters) >= config.retry_min_characters
+        ):
+            continue
         attempts = _recognize_character_attempts(character_detector, candidate, name, config)
         for attempt in attempts:
             variant_reports.append(attempt)
-            score = (attempt["characters"], attempt["average_confidence"])
+            score = (
+                *_character_layout_score(attempt["ordered_characters"]),
+                attempt["characters"],
+                attempt["average_confidence"],
+            )
             if score > best_score:
                 best_characters = attempt["ordered_characters"]
                 best_text = attempt["text"]
@@ -678,13 +692,42 @@ def _character_crop_variants(plate_crop: np.ndarray, config: PlatePreprocessConf
     if config.rotation_variants and h > w * config.rotation_variant_min_aspect:
         variants.append(("rotated_clockwise", cv2.rotate(plate_crop, cv2.ROTATE_90_CLOCKWISE)))
         variants.append(("rotated_counterclockwise", cv2.rotate(plate_crop, cv2.ROTATE_90_COUNTERCLOCKWISE)))
+    elif w >= h:
+        variants.extend(
+            (f"deskew_{angle:+g}", _rotate_plate_crop(plate_crop, angle))
+            for angle in config.deskew_angles
+        )
     return variants
+
+
+def _rotate_plate_crop(plate_crop: np.ndarray, angle: float) -> np.ndarray:
+    """Rotate a landscape plate without introducing black triangular corners."""
+    h, w = plate_crop.shape[:2]
+    matrix = cv2.getRotationMatrix2D((w / 2.0, h / 2.0), angle, 1.0)
+    return cv2.warpAffine(
+        plate_crop,
+        matrix,
+        (w, h),
+        flags=cv2.INTER_CUBIC,
+        borderMode=cv2.BORDER_REPLICATE,
+    )
 
 
 def _average_character_confidence(characters: tuple[CharacterResult, ...]) -> float:
     if not characters:
         return 0.0
     return sum(character.detection.confidence for character in characters) / len(characters)
+
+
+def _character_layout_score(characters: tuple[CharacterResult, ...]) -> tuple[int, int, int, int]:
+    """Prefer plausible Egyptian plate layouts over equally long noisy reads."""
+    digit_count = sum(character.glyph.isdigit() for character in characters)
+    letter_count = len(characters) - digit_count
+    valid = int(2 <= letter_count <= 3 and 3 <= digit_count <= 4)
+    mixed = int(letter_count > 0 and digit_count > 0)
+    expected_coverage = min(letter_count, 3) + min(digit_count, 4)
+    distance = -(min(abs(letter_count - 2), abs(letter_count - 3)) + min(abs(digit_count - 3), abs(digit_count - 4)))
+    return valid, mixed, expected_coverage, distance
 
 
 def _weights_exist(value: str | Path) -> bool:
@@ -773,24 +816,17 @@ def preprocess_plate(
     blurred = cv2.bilateralFilter(gray, 11, 17, 17)
     edges = cv2.Canny(blurred, 30, 200)
 
-    contours, _ = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    if not contours:
-        return plate_crop
-
-    contours = sorted(contours, key=cv2.contourArea, reverse=True)[:5]
-    best_quad = None
-    for contour in contours:
-        peri = cv2.arcLength(contour, True)
-        approx = cv2.approxPolyDP(contour, 0.02 * peri, True)
-        if len(approx) == 4 and cv2.contourArea(approx) > 0.3 * h * w:
-            best_quad = approx.reshape(4, 2).astype(np.float32)
-            break
+    best_quad = _find_plate_quad(edges, w, h)
 
     if best_quad is None:
         return plate_crop
 
     corners = _order_plate_corners(best_quad)
-    aspect = w / max(h, 1)
+    top_width = np.linalg.norm(corners[1] - corners[0])
+    bottom_width = np.linalg.norm(corners[2] - corners[3])
+    left_height = np.linalg.norm(corners[3] - corners[0])
+    right_height = np.linalg.norm(corners[2] - corners[1])
+    aspect = max(top_width, bottom_width) / max(max(left_height, right_height), 1)
     target_h = config.target_height
     target_w = max(config.min_dim, int(target_h * aspect))
     if target_w > target_h * 4:
@@ -801,6 +837,44 @@ def preprocess_plate(
     if warped.shape[1] < config.min_dim or warped.shape[0] < config.min_dim:
         return None
     return warped
+
+
+def _find_plate_quad(edges: np.ndarray, width: int, height: int) -> np.ndarray | None:
+    """Find a large plate border, closing small gaps caused by glare or cropping."""
+    kernel_w = max(3, width // 50)
+    kernel_h = max(3, height // 30)
+    kernel_w += 1 - kernel_w % 2
+    kernel_h += 1 - kernel_h % 2
+    closed = cv2.morphologyEx(
+        edges,
+        cv2.MORPH_CLOSE,
+        cv2.getStructuringElement(cv2.MORPH_RECT, (kernel_w, kernel_h)),
+        iterations=2,
+    )
+    image_area = float(width * height)
+    candidates: list[tuple[float, np.ndarray]] = []
+    for edge_map in (edges, closed):
+        contours, _ = cv2.findContours(edge_map, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+        for contour in sorted(contours, key=cv2.contourArea, reverse=True)[:20]:
+            area = cv2.contourArea(contour)
+            if not 0.35 * image_area <= area <= 0.98 * image_area:
+                continue
+            perimeter = cv2.arcLength(contour, True)
+            for epsilon in (0.015, 0.02, 0.03, 0.04, 0.05):
+                approx = cv2.approxPolyDP(contour, epsilon * perimeter, True)
+                if len(approx) != 4 or not cv2.isContourConvex(approx):
+                    continue
+                quad = approx.reshape(4, 2).astype(np.float32)
+                corners = _order_plate_corners(quad)
+                top = np.linalg.norm(corners[1] - corners[0])
+                bottom = np.linalg.norm(corners[2] - corners[3])
+                left = np.linalg.norm(corners[3] - corners[0])
+                right = np.linalg.norm(corners[2] - corners[1])
+                aspect = max(top, bottom) / max(max(left, right), 1)
+                if 1.5 <= aspect <= 6.5:
+                    candidates.append((area, quad))
+                break
+    return max(candidates, key=lambda item: item[0])[1] if candidates else None
 
 
 def _enhance_character_crop(plate_crop: np.ndarray, config: PlatePreprocessConfig) -> np.ndarray:

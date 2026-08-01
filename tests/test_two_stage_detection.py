@@ -5,6 +5,7 @@ from __future__ import annotations
 from pathlib import Path
 from types import SimpleNamespace
 
+import cv2
 import numpy as np
 import pytest
 from src.detection.inference import (
@@ -14,8 +15,10 @@ from src.detection.inference import (
     PlatePreprocessConfig,
     TwoStageDetector,
     YOLODetector,
+    _character_layout_score,
     build_two_stage_detector,
     order_and_decode_characters,
+    preprocess_plate,
 )
 
 
@@ -258,6 +261,62 @@ def test_stage_three_tries_rotated_variants_for_portrait_crops() -> None:
     assert result.character_preprocess["selected_variant"] == "rotated_clockwise"
     assert result.character_preprocess["tried_variants"] == 4
     assert result.to_dict()["character_preprocess"]["variants"][0]["name"] == "raw"
+
+
+def test_stage_three_tries_small_deskew_variants_for_landscape_crops() -> None:
+    image = np.zeros((100, 200, 3), dtype=np.uint8)
+    vehicle = _detection((10, 10, 190, 90), 0.9, 2, "car")
+    local_plate = _detection((20, 10, 160, 50), 0.8)
+    character = CharacterResult(_detection((1, 1, 4, 8), 0.95, 14, "alif"), "ا", 0, 0)
+    character_detector = StubCharacterDetector((character,), "ا")
+    detector = TwoStageDetector(
+        StubDetector([[vehicle]]),
+        StubDetector([[local_plate]]),
+        vehicle_padding=0,
+        character_detector=character_detector,
+        character_preprocess=PlatePreprocessConfig(upscale_factor=1, deskew_angles=(-8, -4, 4, 8)),
+    )
+
+    result = detector.predict(image)[0]
+
+    assert character_detector.image_shapes == [(40, 140, 3)] * 5
+    assert [variant["name"] for variant in result.character_preprocess["variants"]] == [
+        "enhanced",
+        "deskew_-8",
+        "deskew_-4",
+        "deskew_+4",
+        "deskew_+8",
+    ]
+
+
+def test_preprocess_rectifies_a_trapezoidal_plate_border() -> None:
+    image = np.zeros((140, 360, 3), dtype=np.uint8)
+    corners = np.array([[30, 25], [330, 5], [350, 115], [10, 135]], dtype=np.int32)
+    cv2.fillConvexPoly(image, corners, (230, 230, 230))
+    cv2.polylines(image, [corners], True, (20, 20, 20), 4)
+
+    processed = preprocess_plate(
+        image,
+        PlatePreprocessConfig(upscale_factor=1, target_height=128, clahe=False),
+    )
+
+    assert processed is not None
+    assert processed.shape[0] == 128
+    assert processed.shape[1] > 360
+
+
+def test_layout_score_prefers_a_complete_mixed_plate() -> None:
+    letters = (
+        CharacterResult(_detection((1, 1, 4, 8), 0.8, 30, "seen"), "س", 0, 0),
+        CharacterResult(_detection((5, 1, 8, 8), 0.8, 14, "alif"), "ا", 0, 1),
+    )
+    digits = tuple(
+        CharacterResult(_detection((10 + index * 4, 1, 13 + index * 4, 8), 0.8, value, str(value)), str(value), 0, index + 2)
+        for index, value in enumerate((4, 5, 9))
+    )
+    noisy = (*letters[:1], *digits, *digits[:2])
+
+    assert _character_layout_score((*letters, *digits)) > _character_layout_score(noisy)
 
 
 def test_stage_three_retries_low_character_threshold_when_read_is_short() -> None:

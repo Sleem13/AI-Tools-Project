@@ -44,6 +44,9 @@ character:
     sharpen_amount: 0.4
     rotation_variants: true
     rotation_variant_min_aspect: 1.15
+    # Landscape plates can be clear but still tilted several degrees. Preserve
+    # the rectified crop and try small rotations, selecting the strongest read.
+    deskew_angles: [-8, -4, 4, 8]
     # Retry below the normal confidence threshold until a full 3-letter/4-digit
     # plate can be considered; six-character plates remain valid downstream.
     retry_min_characters: 7
