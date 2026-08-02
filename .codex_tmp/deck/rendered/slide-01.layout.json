@@ -1,0 +1,385 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/fczhss",
+    "id": "fczhss",
+    "slide": 1,
+    "layoutId": "cab0c1e8-9fa1-4019-9ff4-cf21fe171f8f",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "8fb66633-e084-4b34-a01d-448132151bef",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFFFFF",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Arial"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "cab0c1e8-9fa1-4019-9ff4-cf21fe171f8f",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "8fb66633-e084-4b34-a01d-448132151bef",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "8fb66633-e084-4b34-a01d-448132151bef",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bu1gvits",
+      "id": "1",
+      "bbox": [
+        48,
+        42,
+        600,
+        40
+      ],
+      "geometry": "rect",
+      "text": "FINAL PROJECT PRESENTATION",
+      "textPreview": "FINAL PROJECT PRESENTATION",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Arial",
+        "color": "#2E74B5",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "FINAL PROJECT PRESENTATION"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "FINAL PROJECT PRESENTATION",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "typeface": "Arial",
+            "color": "#2E74B5",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "FINAL PROJECT PRESENTATION",
+              "fontSize": 24,
+              "typeface": "Arial",
+              "color": "#2E74B5",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wvaxonad",
+      "id": "2",
+      "bbox": [
+        48,
+        178,
+        920,
+        220
+      ],
+      "geometry": "rect",
+      "text": "Egyptian Automatic\nLicense Plate Recognition",
+      "textPreview": "Egyptian Automatic | License Plate Recognition",
+      "resolvedFontSize": 66,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 66,
+        "typeface": "Arial",
+        "color": "#0B1725",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Egyptian Automatic"
+          },
+          {
+            "index": 2,
+            "text": "License Plate Recognition"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Egyptian Automatic",
+          "resolvedTextStyle": {
+            "fontSize": 66,
+            "typeface": "Arial",
+            "color": "#0B1725",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Egyptian Automatic",
+              "fontSize": 66,
+              "typeface": "Arial",
+              "color": "#0B1725",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "License Plate Recognition",
+          "resolvedTextStyle": {
+            "fontSize": 66,
+            "typeface": "Arial",
+            "color": "#0B1725",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "License Plate Recognition",
+              "fontSize": 66,
+              "typeface": "Arial",
+              "color": "#0B1725",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xwjyxsry",
+      "id": "3",
+      "bbox": [
+        48,
+        492,
+        780,
+        100
+      ],
+      "geometry": "rect",
+      "text": "Dataset engineering, multi-stage YOLO detection, Arabic character decoding, and deployment workbench",
+      "textPreview": "Dataset engineering, multi-stage YOLO detection, Arabic character decoding, and deployment workbench",
+      "resolvedFontSize": 27,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 27,
+        "typeface": "Arial",
+        "color": "#5B6573",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Dataset engineering, multi-stage YOLO detection, Arabic"
+          },
+          {
+            "index": 2,
+            "text": "character decoding, and deployment workbench"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Dataset engineering, multi-stage YOLO detection, Arabic character decoding, and deployment workbench",
+          "resolvedTextStyle": {
+            "fontSize": 27,
+            "typeface": "Arial",
+            "color": "#5B6573",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Dataset engineering, multi-stage YOLO detection, Arabic character decoding, and deployment workbench",
+              "fontSize": 27,
+              "typeface": "Arial",
+              "color": "#5B6573",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yhcfqxsj",
+      "id": "4",
+      "bbox": [
+        1005,
+        0,
+        275,
+        720
+      ],
+      "geometry": "rect",
+      "fillColor": "#17324D",
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jilgz294",
+      "id": "5",
+      "bbox": [
+        1040,
+        545,
+        190,
+        90
+      ],
+      "geometry": "rect",
+      "text": "ALPR",
+      "textPreview": "ALPR",
+      "resolvedFontSize": 52,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 52,
+        "typeface": "Arial",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ALPR"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ALPR",
+          "resolvedTextStyle": {
+            "fontSize": 52,
+            "typeface": "Arial",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "ALPR",
+              "fontSize": 52,
+              "typeface": "Arial",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

@@ -1,0 +1,593 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/7aqb05",
+    "id": "7aqb05",
+    "slide": 12,
+    "layoutId": "cab0c1e8-9fa1-4019-9ff4-cf21fe171f8f",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "8fb66633-e084-4b34-a01d-448132151bef",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Arial"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "cab0c1e8-9fa1-4019-9ff4-cf21fe171f8f",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "8fb66633-e084-4b34-a01d-448132151bef",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "8fb66633-e084-4b34-a01d-448132151bef",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qxkzup0r",
+      "id": "1",
+      "name": "slide-title",
+      "bbox": [
+        48,
+        34,
+        1138,
+        62
+      ],
+      "geometry": "rect",
+      "text": "References",
+      "textPreview": "References",
+      "resolvedFontSize": 42,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 42,
+        "typeface": "Arial",
+        "color": "#0B1725",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "References"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "References",
+          "resolvedTextStyle": {
+            "fontSize": 42,
+            "typeface": "Arial",
+            "color": "#0B1725",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "References",
+              "fontSize": 42,
+              "typeface": "Arial",
+              "color": "#0B1725",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d0vi54zi",
+      "id": "2",
+      "name": "slide-number",
+      "bbox": [
+        1185,
+        662,
+        45,
+        22
+      ],
+      "geometry": "rect",
+      "text": "12",
+      "textPreview": "12",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 14,
+        "typeface": "Arial",
+        "color": "#5B6573",
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "12"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "12",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "Arial",
+            "color": "#5B6573",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "12",
+              "fontSize": 14,
+              "typeface": "Arial",
+              "color": "#5B6573",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/czmhwzix",
+      "id": "3",
+      "bbox": [
+        48,
+        125,
+        550,
+        490
+      ],
+      "geometry": "rect",
+      "text": "[1] El-Adawi et al., Automated New License Plate Recognition in Egypt, 2013.\n\n[2] Abd El Rahman et al., Automatic Arabic Number Plate Recognition, 2013.\n\n[3] Redmon et al., You Only Look Once, CVPR 2016.\n\n[4] Masood et al., License Plate Detection and Recognition Using Deeply Learned CNNs, 2017.\n\n[5] Shi et al., CRNN for Image-Based Sequence Recognition, TPAMI 2017.",
+      "textPreview": "[1] El-Adawi et al., Automated New License Plate Recognition in Egypt, 2013. |  | [2] Abd El Rahman et al., Automatic Arabic Number Plate...",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 19,
+        "typeface": "Arial",
+        "color": "#0B1725",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 13,
+        "lines": [
+          {
+            "index": 1,
+            "text": "[1] El-Adawi et al., Automated New License Plate Recognition in"
+          },
+          {
+            "index": 2,
+            "text": "Egypt, 2013."
+          },
+          {
+            "index": 3,
+            "text": ""
+          },
+          {
+            "index": 4,
+            "text": "[2] Abd El Rahman et al., Automatic Arabic Number Plate"
+          },
+          {
+            "index": 5,
+            "text": "Recognition, 2013."
+          },
+          {
+            "index": 6,
+            "text": ""
+          },
+          {
+            "index": 7,
+            "text": "[3] Redmon et al., You Only Look Once, CVPR 2016."
+          },
+          {
+            "index": 8,
+            "text": ""
+          },
+          {
+            "index": 9,
+            "text": "[4] Masood et al., License Plate Detection and Recognition Using"
+          },
+          {
+            "index": 10,
+            "text": "Deeply Learned CNNs, 2017."
+          },
+          {
+            "index": 11,
+            "text": ""
+          },
+          {
+            "index": 12,
+            "text": "[5] Shi et al., CRNN for Image-Based Sequence Recognition,"
+          },
+          {
+            "index": 13,
+            "text": "TPAMI 2017."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "[1] El-Adawi et al., Automated New License Plate Recognition in Egypt, 2013.",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "typeface": "Arial",
+            "color": "#0B1725",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "[1] El-Adawi et al., Automated New License Plate Recognition in Egypt, 2013.",
+              "fontSize": 19,
+              "typeface": "Arial",
+              "color": "#0B1725",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "[2] Abd El Rahman et al., Automatic Arabic Number Plate Recognition, 2013.",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "typeface": "Arial",
+            "color": "#0B1725",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "[2] Abd El Rahman et al., Automatic Arabic Number Plate Recognition, 2013.",
+              "fontSize": 19,
+              "typeface": "Arial",
+              "color": "#0B1725",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 5,
+          "text": "[3] Redmon et al., You Only Look Once, CVPR 2016.",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "typeface": "Arial",
+            "color": "#0B1725",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "[3] Redmon et al., You Only Look Once, CVPR 2016.",
+              "fontSize": 19,
+              "typeface": "Arial",
+              "color": "#0B1725",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 7,
+          "text": "[4] Masood et al., License Plate Detection and Recognition Using Deeply Learned CNNs, 2017.",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "typeface": "Arial",
+            "color": "#0B1725",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "[4] Masood et al., License Plate Detection and Recognition Using Deeply Learned CNNs, 2017.",
+              "fontSize": 19,
+              "typeface": "Arial",
+              "color": "#0B1725",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 9,
+          "text": "[5] Shi et al., CRNN for Image-Based Sequence Recognition, TPAMI 2017.",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "typeface": "Arial",
+            "color": "#0B1725",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "[5] Shi et al., CRNN for Image-Based Sequence Recognition, TPAMI 2017.",
+              "fontSize": 19,
+              "typeface": "Arial",
+              "color": "#0B1725",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/z2d07eh8",
+      "id": "4",
+      "bbox": [
+        655,
+        125,
+        560,
+        490
+      ],
+      "geometry": "rect",
+      "text": "[6] Youssef et al., A New Benchmark Dataset for Egyptian LPR, ACIRS 2022.\n\n[7] Youssef et al., Real-time Egyptian LPR using YOLO, IJACSA 2022.\n\n[8] Abdellatif et al., Low-Cost IoT-Based Arabic LPR, ASEJ 2023.\n\n[9] Ultralytics, YOLO11 and performance-metrics documentation.\n\n[10] EALPR dataset repository and Roboflow Egyptian character dataset.",
+      "textPreview": "[6] Youssef et al., A New Benchmark Dataset for Egyptian LPR, ACIRS 2022. |  | [7] Youssef et al., Real-time Egyptian LPR using YOLO, IJA...",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 19,
+        "typeface": "Arial",
+        "color": "#0B1725",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 12,
+        "lines": [
+          {
+            "index": 1,
+            "text": "[6] Youssef et al., A New Benchmark Dataset for Egyptian LPR,"
+          },
+          {
+            "index": 2,
+            "text": "ACIRS 2022."
+          },
+          {
+            "index": 3,
+            "text": ""
+          },
+          {
+            "index": 4,
+            "text": "[7] Youssef et al., Real-time Egyptian LPR using YOLO, IJACSA"
+          },
+          {
+            "index": 5,
+            "text": "2022."
+          },
+          {
+            "index": 6,
+            "text": ""
+          },
+          {
+            "index": 7,
+            "text": "[8] Abdellatif et al., Low-Cost IoT-Based Arabic LPR, ASEJ 2023."
+          },
+          {
+            "index": 8,
+            "text": ""
+          },
+          {
+            "index": 9,
+            "text": "[9] Ultralytics, YOLO11 and performance-metrics documentation."
+          },
+          {
+            "index": 10,
+            "text": ""
+          },
+          {
+            "index": 11,
+            "text": "[10] EALPR dataset repository and Roboflow Egyptian character"
+          },
+          {
+            "index": 12,
+            "text": "dataset."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "[6] Youssef et al., A New Benchmark Dataset for Egyptian LPR, ACIRS 2022.",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "typeface": "Arial",
+            "color": "#0B1725",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "[6] Youssef et al., A New Benchmark Dataset for Egyptian LPR, ACIRS 2022.",
+              "fontSize": 19,
+              "typeface": "Arial",
+              "color": "#0B1725",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "[7] Youssef et al., Real-time Egyptian LPR using YOLO, IJACSA 2022.",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "typeface": "Arial",
+            "color": "#0B1725",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "[7] Youssef et al., Real-time Egyptian LPR using YOLO, IJACSA 2022.",
+              "fontSize": 19,
+              "typeface": "Arial",
+              "color": "#0B1725",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 5,
+          "text": "[8] Abdellatif et al., Low-Cost IoT-Based Arabic LPR, ASEJ 2023.",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "typeface": "Arial",
+            "color": "#0B1725",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "[8] Abdellatif et al., Low-Cost IoT-Based Arabic LPR, ASEJ 2023.",
+              "fontSize": 19,
+              "typeface": "Arial",
+              "color": "#0B1725",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 7,
+          "text": "[9] Ultralytics, YOLO11 and performance-metrics documentation.",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "typeface": "Arial",
+            "color": "#0B1725",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "[9] Ultralytics, YOLO11 and performance-metrics documentation.",
+              "fontSize": 19,
+              "typeface": "Arial",
+              "color": "#0B1725",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 9,
+          "text": "[10] EALPR dataset repository and Roboflow Egyptian character dataset.",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "typeface": "Arial",
+            "color": "#0B1725",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "[10] EALPR dataset repository and Roboflow Egyptian character dataset.",
+              "fontSize": 19,
+              "typeface": "Arial",
+              "color": "#0B1725",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}
